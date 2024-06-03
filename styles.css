@@ -1,50 +1,165 @@
 body, html {
     margin: 0;
-    padding: 0;
+    padding: 20px; /* Adjusts padding around the entire content of the page */
     scroll-behavior: smooth;
-    background-color: black; /* Background color for the entire page */
-    color: white; /* Text color for the entire page */
+    background-color: #0a192f; /* Background color for the entire page */
+    color: white; /* Default text color */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Font family for all text */
 }
 
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: black; /* Background color of the navbar */
+    width: calc(100% - 40px); /* Adjust width to account for body padding */
+    background-color: #0a192f; /* Match the overall background */
     color: white;
+    font-family: monospace;
     text-align: center;
-    margin-top: 10px; /* Space between the top of the page and the navbar */
+    padding-top: 10px;
 }
 
 .navbar a {
     color: white;
-    padding: 12px 20px; /* Padding for each link in the navbar */
+    padding: 12px 20px;
     text-decoration: none;
     font-size: 17px;
-    border-radius: 20px; /* Border radius for the pill-shaped hover effect */
-    transition: background 0.3s; /* Transition for the hover effect */
-    display: inline-block; /* Necessary for padding and border-radius to apply correctly */
+    border-radius: 20px;
+    transition: background 0.3s;
+    display: inline-block;
 }
 
-.navbar a:hover {
-    background-color: #555; /* Background color of links on hover */
+.navbar a:hover,
+.navbar a.active { /* Active state for the current section */
+    background-color: #555;
 }
 
 section {
-    min-height: 800px; /* Minimum height for each section */
-    padding-top: 50px; /* Padding to offset content from under the fixed navbar */
+    min-height: 800px;
+    padding-top: 60px; /* Adjust padding to offset the fixed navbar */
 }
 
-.line {
-    height: 8px;
-    width: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    margin-top: 50px; /* Vertical spacing between each line */
-    animation: fadeIn 3s infinite; /* Animation defined below */
+.center-text {
+    text-align: left; /* Align text to the left */
+    padding-left: 230px; /* Adjust left padding to move text to the right */
+    margin-top: 150px; /* Adjust margin-top to move the text down from the top */
 }
 
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    50% {opacity: 1;}
-    100% {opacity: 0;}
+.container {
+    display: inline-block;
+}
+
+.text {
+    font-size: 3em;
+    letter-spacing: 10px;
+    font-family: monospace; /* Consider changing this if you want all text to be consistent */
+    border-right: 5px solid;
+    border-color: #64ffda; /* Color of the cursor */
+    width: 28ch; /* Set the width to match the length of the text "Hi, I'm Daniel." */
+    white-space: nowrap;
+    overflow: hidden;
+    animation: 
+      typing 2s steps(19),
+      cursor .5s step-end infinite alternate;
+}
+
+.name {
+    color: #64ffda; /* Green color for 'Daniel' */
+}
+
+.subtitle {
+    color: #C0C2C9; /* Color for the subtitle */
+    opacity: 0; /* Start with the subtitle invisible */
+    transform: translateY(20px); /* Start slightly lower */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    font-size: 1.1em; /* Adjust this value to make the subtitle text bigger */
+}
+
+.container.active .subtitle {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+@keyframes cursor {
+    50% {border-color: transparent;}
+}
+
+@keyframes typing {
+    from {width: 0;}    
+    to {width: 28ch;} /* Width should match the length of the text "Hi, I'm Daniel." */
+}
+
+/* Adjust the padding-left in these classes to move the text further from the left edge of the screen */
+.text, .subtitle {
+    padding-left: 150px; /* Adjust this value to move text further from the left edge */
+}
+
+/* Fade-in animation for the About section */
+.about-header, .about-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.about-section.active .about-header, .about-section.active .about-text {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Fade-in animation for the About section */
+.about-header, .about-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    padding-left: 230px; /* Add padding to move the text to the right */
+}
+
+.about-section.active .about-header, .about-section.active .about-text {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/* Ensure the about header is the same size as the home header */
+.about-header {
+    font-size: 2.5em; /* Adjust this value to match the size of the home header */
+    letter-spacing: 10px; /* Match the spacing */
+    font-family: monospace; /* Keep the font consistent */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .center-text {
+        padding-left: 20px; /* Less padding on smaller screens */
+        margin-top: 100px; /* Adjust margin for smaller screens */
+    }
+
+    .text, .subtitle, .about-header, .about-text {
+        padding-left: 20px; /* Adjust this value for smaller screens */
+    }
+
+    .text {
+        font-size: 2em; /* Smaller font size for smaller screens */
+    }
+
+    .subtitle {
+        font-size: 1em; /* Adjust subtitle font size for smaller screens */
+    }
+
+    .about-header {
+        font-size: 2em; /* Adjust header size for smaller screens */
+        letter-spacing: 5px;
+    }
+
+    section {
+        padding-top: 50px; /* Adjust padding for smaller screens */
+    }
 }
