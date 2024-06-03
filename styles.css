@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: black; /* Background color for the entire page */
+    color: white; /* Text color for the entire page */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: black; /* Background color of the navbar */
+    color: white;
+    text-align: center;
+    margin-top: 10px; /* Space between the top of the page and the navbar */
+}
+
+.navbar a {
+    color: white;
+    padding: 12px 20px; /* Padding for each link in the navbar */
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 20px; /* Border radius for the pill-shaped hover effect */
+    transition: background 0.3s; /* Transition for the hover effect */
+    display: inline-block; /* Necessary for padding and border-radius to apply correctly */
+}
+
+.navbar a:hover {
+    background-color: #555; /* Background color of links on hover */
+}
+
+section {
+    min-height: 800px; /* Minimum height for each section */
+    padding-top: 50px; /* Padding to offset content from under the fixed navbar */
+}
+
+.line {
+    height: 8px;
+    width: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    margin-top: 50px; /* Vertical spacing between each line */
+    animation: fadeIn 3s infinite; /* Animation defined below */
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
