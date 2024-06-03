@@ -1,17 +1,17 @@
 body, html {
     margin: 0;
-    padding: 20px; /* Adjusts padding around the entire content of the page */
+    padding: 20px;
     scroll-behavior: smooth;
-    background-color: #0a192f; /* Background color for the entire page */
-    color: white; /* Default text color */
-    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Font family for all text */
+    background-color: #0a192f;
+    color: white;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
 
 .navbar {
     position: fixed;
     top: 0;
-    width: calc(100% - 40px); /* Adjust width to account for body padding */
-    background-color: #0a192f; /* Match the overall background */
+    width: calc(100% - 40px);
+    background-color: #0a192f;
     color: white;
     font-family: monospace;
     text-align: center;
@@ -29,19 +29,19 @@ body, html {
 }
 
 .navbar a:hover,
-.navbar a.active { /* Active state for the current section */
+.navbar a.active {
     background-color: #555;
 }
 
 section {
     min-height: 800px;
-    padding-top: 60px; /* Adjust padding to offset the fixed navbar */
+    padding-top: 60px;
 }
 
 .center-text {
-    text-align: left; /* Align text to the left */
-    padding-left: 230px; /* Adjust left padding to move text to the right */
-    margin-top: 150px; /* Adjust margin-top to move the text down from the top */
+    text-align: left;
+    padding-left: 230px;
+    margin-top: 150px;
 }
 
 .container {
@@ -51,10 +51,10 @@ section {
 .text {
     font-size: 3em;
     letter-spacing: 10px;
-    font-family: monospace; /* Consider changing this if you want all text to be consistent */
+    font-family: monospace;
     border-right: 5px solid;
-    border-color: #64ffda; /* Color of the cursor */
-    width: 28ch; /* Set the width to match the length of the text "Hi, I'm Daniel." */
+    border-color: #64ffda;
+    width: 22ch;
     white-space: nowrap;
     overflow: hidden;
     animation: 
@@ -63,15 +63,15 @@ section {
 }
 
 .name {
-    color: #64ffda; /* Green color for 'Daniel' */
+    color: #64ffda;
 }
 
 .subtitle {
-    color: #C0C2C9; /* Color for the subtitle */
-    opacity: 0; /* Start with the subtitle invisible */
-    transform: translateY(20px); /* Start slightly lower */
+    color: #C0C2C9;
+    opacity: 0;
+    transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    font-size: 1.1em; /* Adjust this value to make the subtitle text bigger */
+    font-size: 1.1em;
 }
 
 .container.active .subtitle {
@@ -85,19 +85,18 @@ section {
 
 @keyframes typing {
     from {width: 0;}    
-    to {width: 28ch;} /* Width should match the length of the text "Hi, I'm Daniel." */
+    to {width: 28ch;}
 }
 
-/* Adjust the padding-left in these classes to move the text further from the left edge of the screen */
 .text, .subtitle {
-    padding-left: 150px; /* Adjust this value to move text further from the left edge */
+    padding-left: 230px; /* Align with about section */
 }
 
-/* Fade-in animation for the About section */
 .about-header, .about-text {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    padding-left: 230px;
 }
 
 .about-section.active .about-header, .about-section.active .about-text {
@@ -105,27 +104,77 @@ section {
     transform: translateY(0px);
 }
 
-/* Fade-in animation for the About section */
-.about-header, .about-text {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    padding-left: 230px; /* Add padding to move the text to the right */
-}
-
-.about-section.active .about-header, .about-section.active .about-text {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-/* Ensure the about header is the same size as the home header */
 .about-header {
-    font-size: 2.5em; /* Adjust this value to match the size of the home header */
-    letter-spacing: 10px; /* Match the spacing */
-    font-family: monospace; /* Keep the font consistent */
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    font-family: monospace;
 }
 
-/* Media queries for responsive design */
+#projects {
+    background-color: #112240;
+    padding: 40px 20px;
+}
+
+.projects-header, .project-box {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.projects-header {
+    text-align: center;
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    margin-bottom: 40px;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 400px; /* Reduced width */
+    margin: 0 auto;
+    background-color: transparent;
+}
+
+.project-box {
+    position: relative; /* Required for positioning the logo inside the box */
+    border: 1px solid #64ffda;
+    padding: 20px;
+    margin: 10px 0;
+    width: 100%;
+    height: 350px; /* Allow height to adjust based on content */
+    box-sizing: border-box;
+    background-color: rgba(10, 25, 47, 0.9); /* Transparent background */
+    border-radius: 10px; /* Rounded edges */
+}
+
+.project-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px; /* Adjust the size of the logo as needed */
+    height: auto;
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #64ffda;
+    text-align: center; /* Center the title */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Match the home page subtitle font */
+}
+
+.project-description {
+    font-size: 1em;
+}
+
+.projects-section.active .projects-header, .projects-section.active .project-box {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 @media (max-width: 768px) {
     .navbar {
         width: 100%;
@@ -138,28 +187,32 @@ section {
     }
 
     .center-text {
-        padding-left: 20px; /* Less padding on smaller screens */
-        margin-top: 100px; /* Adjust margin for smaller screens */
+        padding-left: 20px;
+        margin-top: 100px;
     }
 
-    .text, .subtitle, .about-header, .about-text {
-        padding-left: 20px; /* Adjust this value for smaller screens */
+    .text, .subtitle, .about-header, .about-text, .projects-header, .project-box {
+        padding-left: 20px;
     }
 
     .text {
-        font-size: 2em; /* Smaller font size for smaller screens */
+        font-size: 2em;
     }
 
     .subtitle {
-        font-size: 1em; /* Adjust subtitle font size for smaller screens */
+        font-size: 1em;
     }
 
     .about-header {
-        font-size: 2em; /* Adjust header size for smaller screens */
+        font-size: 2em;
         letter-spacing: 5px;
     }
 
     section {
-        padding-top: 50px; /* Adjust padding for smaller screens */
+        padding-top: 50px;
+    }
+
+    .projects-container {
+        padding-left: 20px;
     }
 }

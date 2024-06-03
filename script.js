@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let index = sections.length;
 
-        while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
         navbarLinks.forEach((link) => link.classList.remove('active'));
         navbarLinks[index].classList.add('active');
@@ -32,4 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initial check
     checkSectionInView();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
