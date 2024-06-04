@@ -18,27 +18,29 @@
         <div class="center-text">
             <div class="container">
                 <div class="text" id="animated-name">Hi, I'm <span class="name">Daniel</span>.</div>
-                <p class="subtitle highlight">I am currently a junior at <span class="highlight">Hood College</span>, focusing on creating impactful applications for non-profits.<br>With a strong foundation in computer science, I aim to leverage technology to make a meaningful difference.<br>Join me on my journey as I blend innovation with purpose.</p>
+                <p class="subtitle">I am currently a junior at <span class="highlight">Hood College</span>, focusing on creating impactful applications for non-profits.<br>With a strong foundation in computer science, I aim to leverage technology to make a meaningful difference.<br>Join me on my journey as I blend innovation with purpose.</p>
             </div>
         </div>
     </section>
 
     <section id="about" class="about-section">
-        <h1 class="about-header">About Me</h1>
-        <p class="about-text">I am currently working as a web development intern at <span class="highlight">International Help</span>, working on creating internal tools. At the same time, I am pursuing my B.S. in Computer Science at <span class="highlight">Hood College</span>.</p>
-        <h2 class="tech-header">Technologies I Currently Use</h2>
-        <ul class="tech-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-            <li>Flask</li>
-            <li>Git</li>
-            <!-- Add more technologies as needed -->
-        </ul>
-        <p class="about-text">Outside of my studies, I am a traveler, an avid reader, and a music enthusiast. By exploring diverse interests, I bring a unique perspective to my work in computer science. I am always eager to connect with like-minded individuals. Thanks for visiting my page, and I look forward to connecting with you!</p>
+        <div class="about-container">
+            <h1 class="about-header">About Me</h1>
+            <p class="about-text">I am currently working as a web development intern at <span class="highlight-about">International Help</span>, working on creating internal tools. At the same time, I am pursuing my B.S. in Computer Science at <span class="highlight-about">Hood College</span>.</p>
+            <p class="about-text tech-header">Technologies I Currently Use</p>
+            <ul class="tech-list">
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>MySQL</li>
+                <li>Flask</li>
+                <li>Git</li>
+                <!-- Add more technologies as needed -->
+            </ul>
+            <p class="about-text">Outside of my studies, I am a traveler, an avid reader, and a music enthusiast. By exploring diverse interests, I bring a unique perspective to my work in computer science. I am always eager to connect with like-minded individuals. Thanks for visiting my page, and I look forward to connecting with you!</p>
+        </div>
     </section>
 
     <section id="projects" class="projects-section">
@@ -53,20 +55,26 @@
                 <p class="project-description highlight">
                     Developed an advanced text processing tool that utilizes various data structures and algorithms to tokenize input text into words for spell checking. This tool employs the Levenshtein distance algorithm to accurately suggest alternatives for misspelled words. Featuring a command-line interface, it allows users to efficiently input text, receive suggestions, and correct errors in large text documents.
                 </p>
-                <ul class="project-tech-list highlight">
-                    <li>Python</li>
-                    <li>Levenshtein Distance</li>
-                    <li>Command-line Interface</li>
-                </ul>
+                <p class="project-technologies highlight">Technologies: Python, Levenshtein Distance, Command-line Interface</p>
             </div>
-            <!-- Add more project boxes as needed -->
+    
+            <!-- New Project Box -->
+            <div class="project-box">
+                <a href="https://github.com/Daniel-C6/Tunetrackr" target="_blank">
+                    <img src="github_logo-removebg-preview (1).png" class="project-logo" alt="Project Logo">
+                </a>
+                <h2 class="project-title">ShowSeeker</h2>
+                <hr>
+                <p class="project-description highlight">
+                    Created a web application for discovering and purchasing tickets for local events and concerts. The platform features an intuitive interface for browsing events, buying tickets, and organizing schedules. It ensures user security and data integrity through robust backend functionalities, facilitating user registration and verifying credentials. With streamlined payment processing and reliable performance, the application provides a seamless and engaging user experience.
+                </p>
+                <p class="project-technologies highlight">Technologies: Python, HTML, CSS, Javascript, Flask, Git</p>
+            </div>
+            <!-- End of New Project Box -->
+    
         </div>
     </section>
-
-    <section id="contact">
-        <h1>Contact</h1>
-        <p>Information on how to contact me will go here.</p>
-    </section>
+    
 
     <script src="script.js"></script>
 </body>

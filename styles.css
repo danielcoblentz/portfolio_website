@@ -72,6 +72,9 @@ section {
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     font-size: 1.1em;
+    margin-left: 5px; /* Adjust alignment */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Ensure consistent font */
+    color: #C0C2C9; /* Ensure consistent text color */
 }
 
 .container.active .subtitle {
@@ -88,56 +91,65 @@ section {
     to {width: 28ch;}
 }
 
-.text, .subtitle {
-    padding-left: 230px; /* Align with about section */
-}
-
-.about-header, .about-text {
+.about-header, .about-text, .tech-header {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    padding-left: 230px;
-    color:#C0C2C9;
-    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
 
-.about-section.active .about-header, .about-section.active .about-text {
+.about-section.active .about-header, .about-section.active .about-text, .about-section.active .tech-header {
     opacity: 1;
     transform: translateY(0px);
-}
+    color: #C0C2C9;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+   
+};
+
 
 .about-header {
-    font-size: 2.5em;
+    font-size: 3em;
     letter-spacing: 10px;
     font-family: monospace;
+    color: #C0C2C9;
+}
+
+.about-text {
+    font-size: 1.1em; /* Ensure the text size for about-text remains the same */
+    color: #C0C2C9; /* Ensure it has the same color as other text */
 }
 
 .highlight {
-    color: #64ffda; /* Color matching the highlighted subtitle text */
+    color: #C0C2C9; /* Color matching the highlighted subtitle text */
+}
+
+.highlight-about {
+    color: #64ffda; /* Green color */
+}
+
+.about-container {
+    padding-left: 230px; /* Align all content in about section */
 }
 
 .tech-list {
     list-style-type: none; /* Remove default bullets */
     padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 16px 0; /* Add vertical gap between rows */
 }
 
 .tech-list li {
     flex: 0 0 25%; /* Each item takes up 25% of the row, so 4 items per row */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
-    padding: 8px; /* Add some space around each item */
-    color: ;
-    font-family: ;
+    padding-left: 10px; /* Adjust padding to align with the text */
+    color: #C0C2C9;
 }
 
 .tech-list li::before {
     content: "–"; /* Dash symbol */
     margin-right: 8px; /* Space between symbol and text */
-}
-.tech-header{
-    color: aqua;
-    font-family:  'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    color: #64ffda; /* Green color for dashes */
 }
 
 #projects {
@@ -161,23 +173,53 @@ section {
 
 .projects-container {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 400px; /* Reduced width */
+    flex-wrap: wrap;
+    gap: 10px; /* Space between project boxes */
+    justify-content: space-between; /* Distribute space between project boxes */
+    max-width: 100%; /* Adjust width as needed */
     margin: 0 auto;
     background-color: transparent;
 }
 
 .project-box {
-    position: relative; /* Required for positioning the logo inside the box */
-    border: 1px solid #64ffda;
+    width: 45%; /* Fixed width to ensure they fit next to each other with space in between */
+    border: 1px solid white;
     padding: 20px;
     margin: 10px 0;
-    width: 100%;
-    height: auto; /* Allow height to adjust based on content */
     box-sizing: border-box;
     background-color: rgba(10, 25, 47, 0.9); /* Transparent background */
     border-radius: 10px; /* Rounded edges */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Fixed height */
+}
+
+.project-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #64ffda;
+    text-align: center; /* Center the title */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Match the home page subtitle font */
+}
+
+.project-description {
+    font-size: 1em;
+    color: #C0C2C9; /* Matching color */
+    flex-grow: 1; /* Allow the description to grow and take available space */
+}
+
+.project-technologies {
+    font-size: 1em;
+    color: #C0C2C9; /* Matching color */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+    margin-top: 20px; /* Add space between the text and the technologies used */
+}
+
+.project-box hr {
+    border: 0;
+    border-top: 1px solid #C0C2C9; /* White color for the line */
+    margin: 10px 0; /* Adjust spacing as needed */
 }
 
 .project-logo {
@@ -199,18 +241,14 @@ section {
 .project-description {
     font-size: 1em;
     color: #C0C2C9; /* Matching color */
+    margin-bottom: 20px;
 }
 
-.project-tech-list {
-    list-style-type: none;
-    padding: 0;
+.project-technologies {
+    font-size: 1em;
     color: #C0C2C9; /* Matching color */
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-}
-
-.project-tech-list li::before {
-    content: "–"; /* Dash symbol */
-    margin-right: 8px; /* Space between symbol and text */
+    margin-top: 50px;
 }
 
 .projects-section.active .projects-header, .projects-section.active .project-box {
@@ -236,7 +274,6 @@ section {
 
     .text, .subtitle, .about-header, .about-text, .projects-header, .project-box {
         padding-left: 20px;
-       
     }
 
     .text {
@@ -260,3 +297,5 @@ section {
         padding-left: 20px;
     }
 }
+
+
