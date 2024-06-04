@@ -1,4 +1,3 @@
-
 :root {
     --about-padding-right: 230px; /* Default right padding for the about section */
 }
@@ -96,20 +95,18 @@ section {
     to {width: 28ch;}
 }
 
-.about-header, .about-text, .tech-header {
+.about-header, .about-text, .tech-header, .tech-list li {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.about-section.active .about-header, .about-section.active .about-text, .about-section.active .tech-header {
+.about-section.active .about-header, .about-section.active .about-text, .about-section.active .tech-header, .about-section.active .tech-list li {
     opacity: 1;
     transform: translateY(0px);
     color: white;
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-   
-};
-
+}
 
 .about-header {
     font-size: 3em;
@@ -135,7 +132,6 @@ section {
     padding-left: 230px; /* Align all content in about section */
     padding-right: 70px; /* Add adjustable right padding */
 }
-
 
 .tech-list {
     list-style-type: none; /* Remove default bullets */
@@ -304,6 +300,7 @@ section {
         padding-left: 20px;
     }
 }
+
 .contact-section {
     text-align: center;
     padding: 60px 20px;
@@ -363,5 +360,3 @@ section {
     opacity: 1;
     transform: translateY(0px);
 }
-
-
