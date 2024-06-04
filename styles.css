@@ -1,3 +1,8 @@
+
+:root {
+    --about-padding-right: 230px; /* Default right padding for the about section */
+}
+
 body, html {
     margin: 0;
     padding: 20px;
@@ -54,7 +59,7 @@ section {
     font-family: monospace;
     border-right: 5px solid;
     border-color: #64ffda;
-    width: 22ch;
+    width: 21ch;
     white-space: nowrap;
     overflow: hidden;
     animation: 
@@ -128,7 +133,9 @@ section {
 
 .about-container {
     padding-left: 230px; /* Align all content in about section */
+    padding-right: 70px; /* Add adjustable right padding */
 }
+
 
 .tech-list {
     list-style-type: none; /* Remove default bullets */
@@ -296,6 +303,65 @@ section {
     .projects-container {
         padding-left: 20px;
     }
+}
+.contact-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.contact-header {
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    font-family: monospace;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section.active .contact-header {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.circles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #64ffda; /* Adjust color as needed */
+    border-radius: 50%;
+    margin: 0 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.circle.left-circle,
+.circle.right-circle {
+    margin-top: 20px; /* Lower the left and right circles */
+}
+
+.contact-section.active .circle {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.contact-section p, 
+.contact-section ul {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contact-section.active p,
+.contact-section.active ul {
+    opacity: 1;
+    transform: translateY(0px);
 }
 
 
