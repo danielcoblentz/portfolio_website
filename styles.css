@@ -97,6 +97,8 @@ section {
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     padding-left: 230px;
+    color:#C0C2C9;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
 
 .about-section.active .about-header, .about-section.active .about-text {
@@ -108,6 +110,34 @@ section {
     font-size: 2.5em;
     letter-spacing: 10px;
     font-family: monospace;
+}
+
+.highlight {
+    color: #64ffda; /* Color matching the highlighted subtitle text */
+}
+
+.tech-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.tech-list li {
+    flex: 0 0 25%; /* Each item takes up 25% of the row, so 4 items per row */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    padding: 8px; /* Add some space around each item */
+    color: ;
+    font-family: ;
+}
+
+.tech-list li::before {
+    content: "–"; /* Dash symbol */
+    margin-right: 8px; /* Space between symbol and text */
+}
+.tech-header{
+    color: aqua;
+    font-family:  'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
 
 #projects {
@@ -144,7 +174,7 @@ section {
     padding: 20px;
     margin: 10px 0;
     width: 100%;
-    height: 350px; /* Allow height to adjust based on content */
+    height: auto; /* Allow height to adjust based on content */
     box-sizing: border-box;
     background-color: rgba(10, 25, 47, 0.9); /* Transparent background */
     border-radius: 10px; /* Rounded edges */
@@ -168,6 +198,19 @@ section {
 
 .project-description {
     font-size: 1em;
+    color: #C0C2C9; /* Matching color */
+}
+
+.project-tech-list {
+    list-style-type: none;
+    padding: 0;
+    color: #C0C2C9; /* Matching color */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
+}
+
+.project-tech-list li::before {
+    content: "–"; /* Dash symbol */
+    margin-right: 8px; /* Space between symbol and text */
 }
 
 .projects-section.active .projects-header, .projects-section.active .project-box {
@@ -193,6 +236,7 @@ section {
 
     .text, .subtitle, .about-header, .about-text, .projects-header, .project-box {
         padding-left: 20px;
+       
     }
 
     .text {
