@@ -105,7 +105,7 @@ section {
 .about-section.active .about-header, .about-section.active .about-text, .about-section.active .tech-header {
     opacity: 1;
     transform: translateY(0px);
-    color: #C0C2C9;
+    color: white;
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
    
 };
