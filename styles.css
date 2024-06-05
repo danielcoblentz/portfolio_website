@@ -208,7 +208,7 @@ section {
 }
 
 .project-description {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #C0C2C9; 
     flex-grow: 1; 
 }
@@ -395,23 +395,62 @@ textarea {
     margin: 100px auto;
 }
 
-.container2{
-    padding:10px 50px;
+.container2 {
+    padding: 10px 50px;
     position: relative;
     width: 50%;
-    background-color: rgba(0,0,0,0.3)
+    
 }
-.text-box{
+
+.text-box {
     padding: 20px 30px;
     background: #fff;
     position: relative;
     border-radius: 6px;
-    font-size: 15px;
-}
-.left-container2{
-    left:0;
+    font-size: 1.1em;
+    color:black;
 }
 
-.right-container2{
-    left:50%;
+.left-container2 {
+    left: 0;
+}
+
+.right-container2 {
+    left: 50%;
+}
+
+.container2 img {
+    position: absolute;
+    width: 60px;
+    border-radius: 50%;
+    right: -30px;
+    top: 32px;
+    z-index: 3;
+}
+
+.right-container2 img {
+    left: -30px;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: 2;
+}
+*{
+    padding:0; 
+    box-sizing:border-box;
+}
+.text-box h2{
+    font-weight: 600;;
+}
+.text-box small{
+    display:inline-block;
+    margin-bottom: 15px;
 }
