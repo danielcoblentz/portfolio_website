@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
         checkSectionInView();
     });
 
-    // Initial check
     checkSectionInView();
 });
 

@@ -1,5 +1,5 @@
 :root {
-    --about-padding-right: 230px; /* Default right padding for the about section */
+    --about-padding-right: 230px; 
 }
 
 body, html {
@@ -76,9 +76,9 @@ section {
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
     font-size: 1.1em;
-    margin-left: 5px; /* Adjust alignment */
-    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Ensure consistent font */
-    color: #C0C2C9; /* Ensure consistent text color */
+    margin-left: 5px; 
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; 
+    color: #C0C2C9; 
 }
 
 .container.active .subtitle {
@@ -116,43 +116,45 @@ section {
 }
 
 .about-text {
-    font-size: 1.1em; /* Ensure the text size for about-text remains the same */
-    color: #C0C2C9; /* Ensure it has the same color as other text */
+    font-size: 1.1em; 
+    color: #C0C2C9; 
 }
 
 .highlight {
-    color: #C0C2C9; /* Color matching the highlighted subtitle text */
+    color: #C0C2C9; 
 }
 
 .highlight-about {
-    color: #64ffda; /* Green color */
+    color: #64ffda; 
 }
 
 .about-container {
-    padding-left: 230px; /* Align all content in about section */
-    padding-right: 70px; /* Add adjustable right padding */
+    padding-left: 230px; 
+    padding-right: 70px; 
 }
 
 .tech-list {
-    list-style-type: none; /* Remove default bullets */
+    list-style-type: none; 
     padding: 0;
     margin: 0;
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 16px 0; /* Add vertical gap between rows */
+    flex-wrap: wrap; 
+    gap: 16px 0; 
 }
 
 .tech-list li {
-    flex: 0 0 25%; /* Each item takes up 25% of the row, so 4 items per row */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    padding-left: 10px; /* Adjust padding to align with the text */
+    flex: 0 0 25%; 
+    box-sizing: border-box; 
+    padding-left: 10px; 
     color: #C0C2C9;
 }
 
+
+/* Dash symbol */
 .tech-list li::before {
-    content: "–"; /* Dash symbol */
-    margin-right: 8px; /* Space between symbol and text */
-    color: #64ffda; /* Green color for dashes */
+    content: "–"; 
+    margin-right: 8px; 
+    color: #64ffda; 
 }
 
 #projects {
@@ -177,59 +179,58 @@ section {
 .projects-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* Space between project boxes */
-    justify-content: space-between; /* Distribute space between project boxes */
-    max-width: 100%; /* Adjust width as needed */
+    gap: 10px; 
+    justify-content: space-between; 
+    max-width: 100%; 
     margin: 0 auto;
     background-color: transparent;
 }
 
 .project-box {
-    width: 45%; /* Fixed width to ensure they fit next to each other with space in between */
-    border: 1px solid white;
+    width: 45%; 
     padding: 20px;
     margin: 10px 0;
     box-sizing: border-box;
-    background-color: rgba(10, 25, 47, 0.9); /* Transparent background */
-    border-radius: 10px; /* Rounded edges */
+    background-color: rgba(10, 25, 47, 0.9); 
+    border-radius: 10px; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 400px; /* Fixed height */
+    height: 400px; 
 }
 
 .project-title {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #64ffda;
-    text-align: center; /* Center the title */
-    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Match the home page subtitle font */
+    text-align: center; 
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; 
 }
 
 .project-description {
     font-size: 1em;
-    color: #C0C2C9; /* Matching color */
-    flex-grow: 1; /* Allow the description to grow and take available space */
+    color: #C0C2C9; 
+    flex-grow: 1; 
 }
 
 .project-technologies {
     font-size: 1em;
-    color: #C0C2C9; /* Matching color */
+    color: #C0C2C9; 
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
-    margin-top: 20px; /* Add space between the text and the technologies used */
+    margin-top: 20px; 
 }
 
 .project-box hr {
     border: 0;
-    border-top: 1px solid #C0C2C9; /* White color for the line */
-    margin: 10px 0; /* Adjust spacing as needed */
+    border-top: 1px solid #C0C2C9; 
+    margin: 10px 0; 
 }
 
 .project-logo {
     position: absolute;
     top: 10px;
     right: 10px;
-    width: 40px; /* Adjust the size of the logo as needed */
+    width: 40px; 
     height: auto;
 }
 
@@ -237,19 +238,19 @@ section {
     font-size: 1.5em;
     margin-bottom: 10px;
     color: #64ffda;
-    text-align: center; /* Center the title */
-    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; /* Match the home page subtitle font */
+    text-align: center; 
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; 
 }
 
 .project-description {
     font-size: 1em;
-    color: #C0C2C9; /* Matching color */
+    color: #C0C2C9; 
     margin-bottom: 20px;
 }
 
 .project-technologies {
     font-size: 1em;
-    color: #C0C2C9; /* Matching color */
+    color: #C0C2C9; 
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
     margin-top: 50px;
 }
@@ -300,63 +301,92 @@ section {
         padding-left: 20px;
     }
 }
-
-.contact-section {
-    text-align: center;
-    padding: 60px 20px;
+button, 
+input[type="submit"], 
+input[type="button"] {
+    background-color: #64ffda;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.contact-header {
+button:hover, 
+input[type="submit"]:hover, 
+input[type="button"]:hover {
+    background-color: #555;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #C0C2C9;
+    background-color: transparent;
+    color: white;
+}
+@media (max-width: 768px) {
+    .navbar a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+
+    .center-text,
+    .text,
+    .about-header,
+    .projects-header {
+        padding: 0 20px; /* Reduces padding/margin on smaller screens */
+        text-align: center; /* Centers text for better readability on small devices */
+    }
+
+    .circle {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.experience-section {
+    background-color: #0a192f;
+    padding: 40px 20px;
+}
+
+.experience-header {
+    text-align: center;
     font-size: 2.5em;
     letter-spacing: 10px;
     font-family: monospace;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+    margin-bottom: 40px;
+    color: #64ffda;
 }
 
-.contact-section.active .contact-header {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.circles-container {
+.experience-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin: 40px 0;
 }
 
-.circle {
-    width: 100px;
-    height: 100px;
-    background-color: #64ffda; /* Adjust color as needed */
-    border-radius: 50%;
-    margin: 0 20px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
+.experience-item {
+    width: 80%;
+    background-color: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: white;
 }
 
-.circle.left-circle,
-.circle.right-circle {
-    margin-top: 20px; /* Lower the left and right circles */
+.experience-item h3 {
+    color: #64ffda;
+    margin-bottom: 10px;
 }
 
-.contact-section.active .circle {
-    opacity: 1;
-    transform: translateY(0px);
-}
-
-.contact-section p, 
-.contact-section ul {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.contact-section.active p,
-.contact-section.active ul {
-    opacity: 1;
-    transform: translateY(0px);
-}
