@@ -389,4 +389,29 @@ textarea {
     color: #64ffda;
     margin-bottom: 10px;
 }
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+}
 
+.container2{
+    padding:10px 50px;
+    position: relative;
+    width: 50%;
+    background-color: rgba(0,0,0,0.3)
+}
+.text-box{
+    padding: 20px 30px;
+    background: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 15px;
+}
+.left-container2{
+    left:0;
+}
+
+.right-container2{
+    left:50%;
+}
