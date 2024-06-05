@@ -10,9 +10,10 @@
     <div class="navbar">
         <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
+       
+        
     </div>
 
     <section id="home">
@@ -30,9 +31,24 @@
     </section>
 
     <section id="about" class="about-section">
-        <h1 class="about-header">About Me</h1>
-        <p class="about-text">Hello, my name is Daniel Coblentz. I am currently a junior pursuing a B.S. in Computer Science at Hood College. I graduated from Frederick Community College in the Spring of 2023 as a dual enrollment student. Throughout my academic journey, I have not only enhanced my coding skills but also developed a deeper passion for computer science.</p>
-        <p class="about-text">Outside of my studies, I am a traveler, an avid reader, and a music enthusiast. By exploring diverse interests, I bring a unique perspective to my work in computer science. I am always eager to connect with like-minded individuals. Thanks for visiting my page, and I look forward to connecting with you!</p>
+        <div class="about-container">
+            <h1 class="about-header">About Me</h1>
+            <p class="about-text">I am currently working as a web development intern at <span class="highlight-about">International Help</span>, working on creating internal tools. At the same time, I am pursuing my B.S. in Computer Science and a minor in Math at <span class="highlight-about">Hood College</span>.</p>
+            <p class="about-text tech-header">Technologies I Currently Use</p>
+            <ul class="tech-list">
+                <li>Java</li>
+                <li>Python</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript</li>
+                <li>MySQL</li>
+                <li>Flask</li>
+                <li>Git</li>
+                <!-- Add more technologies as needed -->
+            </ul>
+            <p class="about-text">Outside of my studies, I am a traveler, an avid reader, and a music enthusiast. By exploring diverse interests, I bring a unique perspective to my work in computer science. I am always eager to connect with like-minded individuals. Thanks for visiting my page, and I look forward to connecting with you!</p>
+        </div>
+        
     </section>
 
     <section id="projects" class="projects-section">
@@ -50,22 +66,21 @@
                     Developed an advanced text processing tool that utilizes various data structures and algorithms to tokenize input text into words for spell checking. This tool employs the Levenshtein distance algorithm to accurately suggest alternatives for misspelled words. Featuring a command-line interface, it allows users to efficiently input text, receive suggestions, and correct errors in large text documents.
                 </p>
             </div>
-            <!-- Add more project boxes as needed -->
             <!--Show Seeker project box-->
-            <div class="projects-container">
-                <div class="project-box">
-                    <a href="https://github.com/Daniel-C6/Spell-checker-CS-202" target="_blank">
-                        <img src="/github_logo-removebg-preview (1).png" class="project-logo" alt="Project Logo">
-                    </a>
-                    <h2 class="project-title">Show Seeker</h2>
-                    <hr>
-                    <p class="project-description">
-                        Developed an advanced text processing tool that utilizes various data structures and algorithms to tokenize input text into words for spell checking. This tool employs the Levenshtein distance algorithm to accurately suggest alternatives for misspelled words. Featuring a command-line interface, it allows users to efficiently input text, receive suggestions, and correct errors in large text documents.
-                    </p>
-                </div>
-        </div>
+            <div class="project-box">
+                <a href="https://github.com/Daniel-C6/Tunetrackr" target="_blank">
+                    <img src="github_logo-removebg-preview (1).png" class="project-logo" alt="Project Logo">
+                </a>
+                <h2 class="project-title">ShowSeeker</h2>
+                <hr>
+                <p class="project-description highlight">
+                    Created a web application for discovering and purchasing tickets for local events and concerts. The platform features an intuitive interface for browsing events, buying tickets, and organizing schedules. It ensures user security and data integrity through robust backend functionalities, facilitating user registration and verifying credentials. With streamlined payment processing and reliable performance, the application provides a seamless and engaging user experience.
+                </p>
+                <p class="project-technologies highlight">Technologies: Python, HTML, CSS, Javascript, Flask, Git</p>
+            </div>
+        </div><!-- Add more project boxes as needed -->
     </section>
-
+    <!--Timeline for work exp section-->
 <section>
     <div class="timeline">
 
