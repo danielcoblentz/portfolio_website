@@ -104,7 +104,7 @@ section {
 .about-section.active .about-header, .about-section.active .about-text, .about-section.active .tech-header, .about-section.active .tech-list li {
     opacity: 1;
     transform: translateY(0px);
-    color: white;
+    color:#C0C2C9 ;
     font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif;
 }
 
@@ -430,6 +430,7 @@ textarea {
     font-size: 1.1em;
     color: black;
     z-index: 2; /* Ensure this is higher than the line */
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; 
 }
 
 .left-container2 {
@@ -485,6 +486,7 @@ textarea {
 
 .text-box h2 {
     font-weight: 600;
+    font-family: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui, sans-serif; 
 }
 
 .text-box small {
