@@ -44,7 +44,7 @@ a {
     top: 70px; 
 }
 
-nav-branding {
+.nav-branding {
     font-size: 2rem;
 }
 
@@ -89,5 +89,14 @@ nav-branding {
 
     .nav-item {
         margin: 8px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .nav-menu {
+        position: static; /* Remove the fixed position */
+        flex-direction: row; /* Align items horizontally */
+        gap: 20px; /* Adjust the gap between items */
+        background-color: transparent; /* Remove background color */
     }
 }
