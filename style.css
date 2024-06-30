@@ -1,11 +1,16 @@
+/* General styles */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Satoshi, sans-serif;
+    font-size: 1.125rem;
+    font-weight: 350;
+    font-feature-settings: "ss03";
 }
 
 header {
-    background-color: black;
+    background-color: #1e1e2e;
 }
 
 li {
@@ -26,9 +31,6 @@ a {
 }
 
 .nav-menu {
-    position: fixed;
-    top: -100%; 
-    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -38,10 +40,14 @@ a {
     width: 100%;
     text-align: center;
     transition: 0.8s ease;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    padding-bottom: 20px; /* Add padding to ensure space for footer */
 }
 
 .nav-menu.active {
-    top: 70px; 
+    top: 70px;
 }
 
 .nav-branding {
@@ -49,11 +55,30 @@ a {
 }
 
 .nav-link {
-    transition: 0.7s ease;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Underline effect for links in fullscreen view */
+@media (min-width: 769px) {
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 2px;
+        background-color: #cdd6f4;
+        transition: width 1s ease; /* Adjust speed here */
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
 }
 
 .nav-link:hover {
-    color: dodgerblue;
+    color: #cdd6f4;
 }
 
 .hamburger {
@@ -67,7 +92,45 @@ a {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: white;
+    background-color: #cdd6f4;
+}
+
+.dropdown-footer {
+    display: none;
+    width: 100%; /* Ensure alignment across the entire width */
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, width 1s ease; /* Adjust speed here */
+    position: relative;
+    margin-top: 0; /* Remove top margin */
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown-footer hr {
+    border: 1px solid #cdd6f4;
+    width: 0; /* Start with width 0 */
+    transition: width 1s ease; /* Adjust speed here */
+    margin: 0 auto; /* Center the line within the dropdown */
+    align-self: center; /* Center the line */
+    margin-left: 10%; /* Ensure it starts slightly inset from the left */
+}
+
+.dropdown-footer .footer-text {
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* Adjust width for alignment */
+    margin-top: 10px; /* Adjust margin to move text lower */
+}
+
+.dropdown-footer p {
+    color: #cdd6f4;
+    font-size: 1rem;
+    opacity: 0; /* Start with opacity 0 */
+    transition: opacity 0.5s ease; /* Add transition for smooth animation */
+    margin: 0 10px; /* Add margin to space out the items */
 }
 
 @media (max-width: 768px) {
@@ -89,14 +152,45 @@ a {
 
     .nav-item {
         margin: 8px 0;
+        opacity: 0; /* Start with opacity 0 */
+        animation: slideIn 0.5s forwards; /* Apply animation */
+    }
+
+    .nav-menu.active .nav-item {
+        animation-delay: 0.2s; /* Delay to stagger the links */
+        animation-duration: 0.3s; /* Duration of the animation */
+        opacity: 1; /* Ensure they are visible when the animation is done */
+    }
+
+    .nav-menu.active .dropdown-footer {
+        display: flex;
+        opacity: 1; /* Fade in the footer */
+    }
+
+    .nav-menu.active .dropdown-footer hr {
+        width: 80%; /* Transition to full width */
+    }
+
+    .nav-menu.active .dropdown-footer p {
+        opacity: 1; /* Transition to full opacity */
     }
 }
 
 @media (min-width: 769px) {
     .nav-menu {
-        position: static; /* Remove the fixed position */
-        flex-direction: row; /* Align items horizontally */
-        gap: 20px; /* Adjust the gap between items */
-        background-color: transparent; /* Remove background color */
+        position: static;
+        flex-direction: row;
+        gap: 60px;
+        background-color: transparent;
+        margin-left: auto;
+        width: auto;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .dropdown-footer {
+        display: none; /* Ensure it's hidden in full screen */
     }
 }
