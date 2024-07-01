@@ -9,6 +9,12 @@
     font-feature-settings: "ss03";
 }
 
+html, body {
+    height: 100%;
+    background-color: #1e1e2e; /* Same color as the header */
+    color: #cdd6f4; /* Same color as the links */
+}
+
 header {
     background-color: #1e1e2e;
 }
@@ -26,9 +32,10 @@ a {
     min-height: 70px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 24px;
+    align-items: center; 
+    padding: 0 25px;
 }
+
 
 .nav-menu {
     display: flex;
@@ -69,7 +76,7 @@ a {
         width: 0;
         height: 2px;
         background-color: #cdd6f4;
-        transition: width 1s ease; /* Adjust speed here */
+        transition: width 0.3s ease; 
     }
 
     .nav-link:hover::after {
@@ -97,12 +104,12 @@ a {
 
 .dropdown-footer {
     display: none;
-    width: 100%; /* Ensure alignment across the entire width */
+    width: 100%; 
     text-align: center;
     opacity: 0;
-    transition: opacity 0.5s ease, width 1s ease; /* Adjust speed here */
+    transition: opacity 0.5s ease, width 1s ease; 
     position: relative;
-    margin-top: 0; /* Remove top margin */
+    margin-top: 0; 
     margin: 5px auto;
     display: flex;
     flex-direction: column;
@@ -111,32 +118,36 @@ a {
 
 .dropdown-footer hr {
     border: 1px solid #cdd6f4;
-    width: 0; /* Start with width 0 */
-    transition: width 1s ease; /* Adjust speed here */
-    margin: 0 auto; /* Center the line within the dropdown */
-    align-self: center; /* Center the line */
-    margin-left: 10%; /* Ensure it starts slightly inset from the left */
+    width: 0; 
+    transition: width 2s ease; 
+    margin: 0 auto; 
+    align-self: center; 
+    margin-left: 10%; 
 }
 
 .dropdown-footer .footer-text {
     display: flex;
     justify-content: space-between;
-    width: 80%; /* Adjust width for alignment */
-    margin-top: 10px; /* Adjust margin to move text lower */
+    width: 80%; 
+    margin-top: 10px; 
 }
 
 .dropdown-footer p {
     color: #cdd6f4;
     font-size: 1rem;
-    opacity: 0; /* Start with opacity 0 */
-    transition: opacity 0.5s ease; /* Add transition for smooth animation */
-    margin: 0 10px; /* Add margin to space out the items */
+    opacity: 0; 
+    transition: opacity 1s ease; 
+    margin: 0 10px;
 }
 
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
+    .nav-menu {
+        background-color: 	 	 #0d0d26; /* background color of dropwoen menu */
+    }
+
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -152,27 +163,27 @@ a {
 
     .nav-item {
         margin: 8px 0;
-        opacity: 0; /* Start with opacity 0 */
-        animation: slideIn 0.5s forwards; /* Apply animation */
+        opacity: 0; 
+        animation: slideIn 1s forwards; 
     }
 
     .nav-menu.active .nav-item {
-        animation-delay: 0.2s; /* Delay to stagger the links */
-        animation-duration: 0.3s; /* Duration of the animation */
-        opacity: 1; /* Ensure they are visible when the animation is done */
+        animation-delay: 0.2s; 
+        animation-duration: 0.1s; 
+        opacity: 1; 
     }
 
     .nav-menu.active .dropdown-footer {
         display: flex;
-        opacity: 1; /* Fade in the footer */
+        opacity: 1; 
     }
 
     .nav-menu.active .dropdown-footer hr {
-        width: 80%; /* Transition to full width */
+        width: 80%; 
     }
 
     .nav-menu.active .dropdown-footer p {
-        opacity: 1; /* Transition to full opacity */
+        opacity: 1; 
     }
 }
 
@@ -191,6 +202,34 @@ a {
     }
 
     .dropdown-footer {
-        display: none; /* Ensure it's hidden in full screen */
+        display: none; 
     }
 }
+.centered-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+}
+
+.centered-text h1 {
+    font-size: 3rem; /* Larger font size for your name */
+    margin-bottom: 10px;
+}
+
+.centered-text p {
+    font-size: 1.5rem; /* Smaller font size for additional info */
+    margin-top: 0;
+}
+.site-footer {
+    background-color: #1e1e2e; /* Same color as the header */
+    color: #cdd6f4; /* Same color as the links */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+
