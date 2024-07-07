@@ -13,6 +13,7 @@ html, body {
     height: 100%;
     background-color: #1e1e2e; /* Same color as the header */
     color: #cdd6f4; /* Same color as the links */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 header {
@@ -35,7 +36,6 @@ a {
     align-items: center; 
     padding: 0 25px;
 }
-
 
 .nav-menu {
     display: flex;
@@ -145,9 +145,8 @@ a {
         display: block;
     }
     .nav-menu {
-        background-color: 	 	 #0d0d26; /* background color of dropwoen menu */
+        background-color: 	 	 #0d0d26; /* background color of dropdown menu */
     }
-
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -205,6 +204,7 @@ a {
         display: none; 
     }
 }
+
 .centered-section {
     display: flex;
     justify-content: center;
@@ -222,6 +222,93 @@ a {
     font-size: 1.5rem; /* Smaller font size for additional info */
     margin-top: 0;
 }
+
+/* Scroll container */
+.scroll-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    margin-top: 40px; /* Adjust position */
+}
+
+.scroll-text {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.arrow-box {
+    width: 60px; /* Increase size */
+    height: 60px; /* Increase size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #cdd6f4;
+    border-radius: 5px;
+    position: relative;
+}
+
+.down-arrow {
+    font-size: 2rem;
+    color: #cdd6f4;
+    text-decoration: none;
+    animation: bounce 2s infinite; /* Slow down animation */
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* About Me section */
+.about-section {
+    padding: 60px 20px;
+    background-color: #2e2e38;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.25rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+/* Projects section */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #1e1e2e;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1.125rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
 .site-footer {
     background-color: #1e1e2e; /* Same color as the header */
     color: #cdd6f4; /* Same color as the links */
@@ -231,5 +318,3 @@ a {
     bottom: 0;
     width: 100%;
 }
-
-
