@@ -11,7 +11,7 @@
 
 html, body {
     height: 100%;
-    background-color: #1e1e2e; /* Same color as the header */
+    background-color: #12121d; /* Same color as the header */
     color: #cdd6f4; /* Same color as the links */
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
@@ -145,7 +145,7 @@ a {
         display: block;
     }
     .nav-menu {
-        background-color: 	 	 #0d0d26; /* background color of dropdown menu */
+        background-color: #181825; /* background color of dropdown menu */
     }
 
     .hamburger.active .bar:nth-child(2) {
