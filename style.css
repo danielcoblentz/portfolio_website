@@ -318,3 +318,37 @@ a {
     bottom: 0;
     width: 100%;
 }
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align all boxes to the left */
+    gap: 20px; /* Space between the boxes */
+}
+
+.about-box {
+    width: 80%; /* Adjust width as needed */
+    background-color: #2e2e38;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #cdd6f4;
+    font-size: 1.125rem;
+    text-align: left; /* Align text to the left */
+}
+
+.tech-list {
+    display: flex;
+    gap: 40px; /* Space between the columns */
+}
+
+.tech-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between the items in a column */
+}
+
+.tech-item {
+    display: block;
+    text-indent: 0; /* Remove any text indent */
+    padding-left: 0; /* Remove any padding */
+}
