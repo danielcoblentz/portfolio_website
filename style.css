@@ -139,6 +139,12 @@ a {
     transition: opacity 1s ease; 
     margin: 0 10px;
 }
+.nav-menu.active .nav-link {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards;
+}
+
 
 @media (max-width: 768px) {
     .hamburger {
@@ -204,6 +210,38 @@ a {
         display: none; 
     }
 }
+@keyframes slideIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+.dropdown-footer hr {
+    transition: width 4s ease; /* Adjust duration to synchronize with link animations */
+    width: 0; /* Start with 0 width */
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer-link {
+    opacity: 0;
+    transform: translateY(20px);
+    animation-fill-mode: forwards; /* Keeps the element in the final state */
+}
+
+
+
 
 .centered-section {
     display: flex;
@@ -215,9 +253,14 @@ a {
 
 .centered-text h1 {
     font-size: 3rem; /* Larger font size for your name */
-    margin-bottom: 10px;
+    margin-bottom: 75px;
 }
-
+.centered-text .occupation {
+    margin-bottom: 30px; /* Adjust the space between occupation and educational details */
+}
+.centered-text .education {
+    white-space: pre-line; /* This will respect your formatting in HTML, including new lines */
+}
 .centered-text p {
     font-size: 1.5rem; /* Smaller font size for additional info */
     margin-top: 0;
@@ -237,7 +280,7 @@ a {
 }
 
 .arrow-box {
-    width: 60px; /* Increase size */
+    width: 50px; /* Increase size */
     height: 60px; /* Increase size */
     display: flex;
     justify-content: center;
@@ -336,6 +379,10 @@ a {
     text-align: left; /* Align text to the left */
 }
 
+.about-section p{
+    margin-bottom: 20px;;
+}
+
 .tech-list {
     display: flex;
     gap: 40px; /* Space between the columns */
@@ -345,10 +392,51 @@ a {
     display: flex;
     flex-direction: column;
     gap: 10px; /* Space between the items in a column */
+    padding-left: 35px;
 }
 
 .tech-item {
     display: block;
     text-indent: 0; /* Remove any text indent */
     padding-left: 0; /* Remove any padding */
+}
+@media (min-width: 769px) {
+    .about-container {
+        flex-direction: row; /* Align children side by side */
+        align-items: center; /* Center items vertically */
+        justify-content: space-between; /* Distribute space between children */
+    }
+
+    .about-content {
+        flex: 1; /* Allow content to grow */
+        margin: 10px; /* Add a little space */
+    }
+
+    .about-image {
+        flex: 0 1 50%; /* Flex-grow, Flex-shrink, Flex-basis */
+        margin: 10px; /* Add a little space */
+        max-width: 350px; /* Maximum width of the image container */
+    }
+
+    .about-image img {
+        width: 100%; /* Ensure the image uses all available space within its container */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Remove any extra line-height space below the image */
+    }
+}
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-box {
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(20px);
+    animation-fill-mode: forwards; /* Keeps the element in the final state */
 }
