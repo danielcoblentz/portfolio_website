@@ -15,14 +15,28 @@ html, body {
     color: #cdd6f4; /* Same color as the links */
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
-
 header {
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    background-color: rgba(30, 30, 46, 0.95); /* Semi-transparent background */
+    transition: backdrop-filter 0.3s ease-in-out; /* Smooth transition for blur effect */
+    z-index: 1000; /* Ensures the header is above other content */
+}
+
+
+.blur-header::after {
+    content: '';
+    position: absolute;
     width: 100%;
-    z-index: 1000;  /* Ensures the header is above other content */
-    background-color: #1e1e2e; /* Ensures the header is not transparent */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
+    backdrop-filter: blur(16px); /* Blur effect */
+    -webkit-backdrop-filter: blur(16px); /* For Safari */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Behind the content but above the background */
 }
 
 
@@ -393,21 +407,17 @@ a {
 .tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
-    padding: 0 20px;
+    gap: 40px;  /* Consistent gap */
+    padding: 0 20px;  /* Padding for all sides */
 }
 
 .tech-column {
-    flex: 1 1 200px;
-    min-width: 150px;
+    flex: 1 1 20%;  /* Consistent flex basis */
+    min-width: 150px;  /* Minimum width */
 }
 
 .tech-column:first-child {
-    margin-left: 320px; /* Keeps the first column where you want it */
-}
-
-.tech-column:not(:first-child) {
-    margin-left: -20px; /* Adjusts spacing for subsequent columns */
+    margin-left: auto;  /* Auto-margin for better alignment */
 }
 
 .tech-item {
@@ -419,24 +429,24 @@ a {
 @media (max-width: 768px) {
     .tech-list {
         flex-direction: column;
-        padding: 0 10px;
+        padding: 0 10px;  /* Slightly less padding for smaller screens */
     }
 
     .tech-column {
         flex: 1 1 100%;
         max-width: 100%;
-        margin-left: 0; /* Resets margin for mobile view */
+        margin-left: 0;  /* No extra margin for mobile layout */
     }
 }
 
 @media (min-width: 769px) {
     .tech-list {
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;  /* Align items to the start */
     }
 
     .tech-column {
-        flex: 1 1 20%;
+        /* Flex properties are already defined, no need to redefine unless changing */
     }
 }
 

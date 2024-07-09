@@ -57,3 +57,15 @@ document.addEventListener("DOMContentLoaded", function() {
         );
     }
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('header'); // Get the header element by ID
+
+    window.addEventListener('scroll', function() {
+        // Check if the page has been scrolled vertically more than 50 pixels
+        if (window.scrollY > 50) {
+            header.classList.add('blur-header'); // Add 'blur-header' class
+        } else {
+            header.classList.remove('blur-header'); // Remove 'blur-header' class
+        }
+    });
+});
