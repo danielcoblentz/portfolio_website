@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (navMenu.classList.contains("active")) {
                 link.style.animation = 'none';
                 link.offsetHeight; // Trigger reflow to restart animation
-                link.style.animation = `fadeUp 2s ease-out forwards ${index * 0.1}s`;
+                link.style.animation = `fadeUp 2.5s ease-out forwards ${index * 0.1}s`;
             } else {
                 link.style.animation = 'none';
             }
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Animation for the horizontal line
         horizontalLine.style.animation = 'none';
         horizontalLine.offsetHeight; // Trigger reflow to restart animation
-        horizontalLine.style.animation = 'slideIn 0.5s ease forwards';
+        horizontalLine.style.animation = 'slideIn 1.4s ease forwards';
 
         // Stagger animation for footer links, starting after the line
         footerLinks.forEach((link, index) => {
