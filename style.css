@@ -333,53 +333,182 @@ a {
 }
 
 /* About Me section */
+.about-section h2 {
+    font-size: 5rem;
+    margin-bottom: 0px;
+    padding-left: 30px; /* Adjust this value as needed */
+    text-align: left; /* Ensures alignment to the left */
+}
+/* Adjust the about-section container */
 .about-section {
     padding: 60px 20px;
     background-color: #12121d;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns children to the left */
 }
 
+
+/* Container for the heading and horizontal line */
+.about-header-container {
+    position: relative; /* Relative positioning for absolute child */
+    display: flex; /* Flex layout to keep elements in line */
+    align-items: center; /* Center items vertically */
+    padding-left: 20px; /* Alignment padding, adjust as needed */
+}
+
+/* Styles for the "/About Me" heading */
 .about-section h2 {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 0; /* Removes any space below the heading */
+    text-align: left; /* Ensures alignment to the left */
+    padding-right: 10px; /* Space between the text and the line */
 }
 
-.about-section p {
-    font-size: 1.25rem;
-    margin: 0 auto;
-    max-width: 800px;
+/* Horizontal line styling */
+.about-divider {
+    height: 2px;
+    background-color: #cdd6f4;
+    opacity: 0.2; /* Transparency for the line */
+    width: 550px; /* Fixed width for the line */
+    position: absolute; /* Absolute positioning relative to header container */
+    left: calc(100% - 0px); /* Position the line to start right after the heading */
+    top: 55%; /* Center the line vertically relative to the heading */
+    transform: translateY(-50%); /* Adjust vertical positioning */
 }
 
+.about-image {
+    flex: 0 1 50%; /* Do not grow, but can shrink, and basis is 50% of the container */
+}
+
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Projects section */
-.projects-section {
-    padding: 60px 20px;
-    background-color: #1e1e2e;
-    text-align: center;
+
+.section-header {
+    width: 100%; /* Full width to span the section */
+    text-align: left; /* Align the header text to the left */
+    padding-left: 20px; /* Add padding to indent the header text */
+    position: relative; /* Needed for absolute positioning of the line */
 }
 
 .projects-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Adjust size as necessary */
+    color: #cdd6f4; /* Adjust color as necessary */
+    margin-bottom: 10px; /* Reduce or increase as per the design needs */
+    padding-left: 30px;
+}
+
+
+.section-divider {
+    position: absolute; /* Positioning it relative to the section-header */
+    margin-top: -30px;
+    left: 200px; /* Aligning with the indentation of the header text */
+    width: 50%; /* Width of the line */
+    height: 2px; /* Height of the line */
+    background-color: #cdd6f4; /* Ensure it has a visible color */
+    opacity: 0.2; /* Full opacity to make it clearly visible */
+}
+
+.projects-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the start */
+    padding: 20px;
+    background-color: #12121d;
 }
 
 .project {
-    margin-bottom: 40px;
+    background-color: #2a2a3d;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Adjust width to fit three per row */
+    margin: 10px; /* Adjust margins to control space between boxes */
+    opacity: 0.9;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Include transform transition */
+    display: flex;
+    flex-direction: column;
 }
+
+.project:hover {
+    opacity: 1;
+    transform: scale(1.05); /* Slightly enlarges the project box */
+}
+
+
+
 
 .project h3 {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    color: #cdd6f4;
+    margin-bottom: 20px; /* Increased space below the project title */
 }
 
 .project p {
-    font-size: 1.125rem;
-    margin: 0 auto;
-    max-width: 800px;
+    font-size: 1.25rem;
+    color: #cdd6f4;
+    flex-grow: 1;
+    padding-bottom: 20px;
 }
 
+
+.project-footer {
+    font-size: 1rem;
+    color: #cdd6f4;
+    padding-top: 10px; /* Space at the top of the footer area */
+}
+
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px); /* Initial lower position */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.project {
+    visibility: hidden;
+    animation: slideUp 1.5s ease-out forwards; /* Extended duration for a smoother effect */
+}
+
+/*increases the space bween the sections*/
+#projects {
+    margin-bottom: 100px;  
+}
+
+.about-section {
+    padding-bottom: 600px;  
+}
+/*keeps spacing consistant for smaller screens*/
+@media (max-width: 768px) {
+    section {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {  
+    .project {
+        width: 100%;  
+        margin-bottom: 20px;  
+    }
+}
+
+
+
+
+
+
+/*Footer section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .site-footer {
-    background-color: #1e1e2e; /* Same color as the header */
+    background-color: #12121d; /* Same color as the header */
     color: #cdd6f4; /* Same color as the links */
     text-align: center;
     padding: 20px 0;
@@ -387,6 +516,25 @@ a {
     bottom: 0;
     width: 100%;
 }
+
+.footer-icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center;
+    margin-top: 10px; /* Add space between the text and the icons */
+}
+
+.footer-icons i {
+    font-size: 24px; /* Adjust the size of the icons */
+    color: #cdd6f4; /* Adjust the color of the icons */
+    margin: 0 10px; /* Add space between the icons */
+}
+
+.footer-icons i:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+
 .about-container {
     display: flex;
     flex-direction: column;
@@ -417,13 +565,10 @@ a {
 }
 
 .tech-column {
-    flex: 1 1 20%;  /* Consistent flex basis */
     min-width: 150px;  /* Minimum width */
 }
 
-.tech-column:first-child {
-    margin-left: auto;  /* Auto-margin for better alignment */
-}
+
 
 .tech-item {
     display: block;

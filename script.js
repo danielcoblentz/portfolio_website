@@ -69,3 +69,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.project');
+    const windowHeight = window.innerHeight;
+
+    function checkPosition() {
+        for (let i = 0; i < projects.length; i++) {
+            const project = projects[i];
+            const position = project.getBoundingClientRect().top;
+
+            if (position - windowHeight <= 0) {
+                project.style.visibility = 'visible';
+                project.style.animationDelay = `${0.2 * i}s`; // Adjust delay increment here
+            }
+        }
+    }
+
+    window.addEventListener('scroll', checkPosition);
+    checkPosition(); // Initialize on load
+});

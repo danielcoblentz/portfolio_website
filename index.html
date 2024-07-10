@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <!-- Add this link inside the <head> section of your HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
+
+    <title>Daniel Coblentz.com</title>
 </head>
 <body>
     <header id="header">
@@ -43,7 +46,7 @@
     <section id="home" class="centered-section">
         <div class="centered-text">
             <h1>Daniel Coblentz</h1>
-            <p class="occupation">Software Engineer @ Microsoft</p> <!-- Class added for styling -->
+            <p class="occupation">SWE @ Microsoft</p> <!-- Class added for styling -->
             <p class="education">Studying Computer science and <br> Mathematics at Hood College</p> <!-- Break line added -->
             <div class="scroll-container">
                 <div class="scroll-text">Scroll</div>
@@ -56,8 +59,13 @@
     
     
     <section id="about" class="about-section">
-        <h2>/About Me</h2>
-        <hr class="about-divider"> <!--Horizontal line after about text-->
+        <!-- Container for the heading and horizontal line -->
+        <div class="about-header-container">
+            <h2>/About Me</h2>
+            <hr class="about-divider"> <!-- Horizontal line after the heading -->
+        </div>
+    
+        <!-- Container for the additional content and image -->
         <div class="about-container">
             <div class="about-content">
                 <div class="about-box">
@@ -67,20 +75,20 @@
                     <p>Technologies I work with:</p>
                     <div class="tech-list">
                         <div class="tech-column">
-                            <span class="tech-item">> HTML</span>
-                            <span class="tech-item">> CSS</span>
-                            <span class="tech-item">> JavaScript</span>
+                            <span class="tech-item"><i class="ri-arrow-right-s-fill"></i> HTML</span>
+                            <span class="tech-item"><i class="ri-arrow-right-s-fill"></i> CSS</span>
+                            <span class="tech-item"><i class="ri-arrow-right-s-fill"></i> JavaScript</span>
                         </div>
                         <div class="tech-column">
-                            <span class="tech-item">> Python</span>
-                            <span class="tech-item">> SQL</span>
-                            <span class="tech-item">> Java</span>
+                            <span class="tech-item"><i class="ri-arrow-right-s-fill"></i> Python</span>
+                            <span class="tech-item"><i class="ri-arrow-right-s-fill"></i> SQL</span>
+                            <span class="tech-item"><i class="ri-arrow-right-s-fill"></i> Java</span>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="about-box">
-                    <p>Additional Information:</p>
-                    <p>Outside of my academic life. I enjoy traveling to new places. going to the gym and teaching others</p>
+                    <p>Outside of my academic life, I enjoy traveling to new places, going to the gym, and teaching others.</p>
                 </div>
             </div>
             <div class="about-image">
@@ -88,21 +96,37 @@
             </div>
         </div>
     </section>
+    
     <section id="projects" class="projects-section">
-        <h2>/Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
+        <div class="section-header">
+            <h2>Projects</h2>
+            <hr class="section-divider"> <!-- Horizontal line after the heading -->
         </div>
         <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of project 2.</p>
+            <h3>Spell Checker</h3>
+            <p>Description of project 1. Here you can talk about the key aspects of your project, what technologies were used, and the project's impact.</p>
+            <div class="project-footer">Java</div>
         </div>
-        <!-- Add more projects as needed -->
+        <div class="project">
+            <h3>Spotify API</h3>
+            <p>Description of project 2. Another project description goes here, detailing the work involved and any notable challenges faced.</p>
+            <div class="project-footer">HTML, CSS, Javascript, Python</div>
+        </div>
+        <!-- Repeat for more projects as needed -->
     </section>
+    
+    
     <footer class="site-footer">
         <p>&copy; 2024 Daniel Coblentz. All rights reserved.</p>
+        <div class="footer-icons">
+            <a href="mailto:Dan@thecoblentzs.com" target="_blank"><i class="ri-mail-line"></i></a>
+            <a href="https://github.com/Daniel-C6" target="_blank"><i class="ri-github-line"></i></a>
+            <a href="https://www.linkedin.com/in/danielcoblentz?trk=people-guest_people_search-card" target="_blank"><i class="ri-linkedin-line"></i></a>
+        </div>
     </footer>
+    
+    
+    
     <script src="script.js"></script>
 </body>
 </html>
