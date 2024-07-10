@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (navMenu.classList.contains("active")) {
                 link.style.animation = 'none';
                 link.offsetHeight; // Trigger reflow to restart animation
-                link.style.animation = `fadeUp 2.5s ease-out forwards ${index * 0.1}s`;
+                link.style.animation = `fadeUp 2.0s ease-out forwards ${index * 0.1}s`;
             } else {
                 link.style.animation = 'none';
             }
