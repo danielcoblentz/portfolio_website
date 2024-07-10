@@ -56,6 +56,10 @@ a {
     padding: 0 25px;
     min-height: 70px; /* Adjust if your actual header height is different */
 }
+/* Increase font size of links in the dropdown menu */
+.nav-item .nav-link {
+    font-size: 1.2rem; /* Set the desired font size */
+}
 
 
 .nav-menu {
@@ -345,6 +349,7 @@ a {
     margin: 0 auto;
     max-width: 800px;
 }
+
 
 /* Projects section */
 .projects-section {
