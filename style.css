@@ -25,6 +25,18 @@ header {
     z-index: 1000; /* Ensures the header is above other content */
 }
 
+.nav-branding {
+    display: flex;
+    align-items: center;
+    height: 50px; /* Adjust based on the desired height of your navbar */
+}
+
+.nav-logo {
+    height: 150px; /* This will make the logo fit the height of the nav-branding */
+    width: auto; /* Maintains the aspect ratio of the logo */
+    margin-top: 20px;
+    margin-left: 0px;
+}
 
 
 .blur-header::after {
@@ -77,6 +89,7 @@ a {
     top: -100%;
     left: 0;
     padding-bottom: 20px; /* Add padding to ensure space for footer */
+  
 }
 
 .nav-menu.active {
