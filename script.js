@@ -56,7 +56,29 @@ document.addEventListener("DOMContentLoaded", function() {
             rect.top < window.innerHeight - 100 && rect.bottom >= 0
         );
     }
+
+    // Intersection Observer for slide-up animation
+    const projects = document.querySelectorAll('.project');
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('slide-up');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    projects.forEach(project => {
+        observer.observe(project);
+    });
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.getElementById('header'); // Get the header element by ID
 
@@ -69,42 +91,3 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-document.addEventListener('DOMContentLoaded', function() {
-    const projects = document.querySelectorAll('.project');
-    const windowHeight = window.innerHeight;
-
-    function checkPosition() {
-        for (let i = 0; i < projects.length; i++) {
-            const project = projects[i];
-            const position = project.getBoundingClientRect().top;
-
-            if (position - windowHeight <= 0) {
-                project.style.visibility = 'visible';
-                project.style.animationDelay = `${0.2 * i}s`; // Adjust delay increment here
-            }
-        }
-    }
-
-    window.addEventListener('scroll', checkPosition);
-    checkPosition(); // Initialize on load
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const projects = document.querySelectorAll('.project');
-
-    projects.forEach(project => {
-        project.addEventListener('mouseenter', () => {
-            project.style.transform = 'scale(1.05)';
-            project.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
-            project.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-        });
-
-        project.addEventListener('mouseleave', () => {
-            project.style.transform = 'scale(1)';
-            project.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
-        });
-    });
-});
-
-
-

@@ -26,6 +26,7 @@ header {
 }
 
 
+
 .blur-header::after {
     content: '';
     position: absolute;
@@ -419,6 +420,7 @@ a {
     background-color: #12121d;
 }
 
+/* Zoom effect on hover */
 .project {
     background-color: #2a2a3d;
     border-radius: 10px;
@@ -429,10 +431,29 @@ a {
     display: flex;
     flex-direction: column;
     position: relative;
- 
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
+.project:hover {
+    transform: scale(1.05);
+}
 
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.project.slide-up {
+    animation: slideUp 0.5s forwards;
+}
 
 .project h3 {
     font-size: 1.5rem;
@@ -454,11 +475,11 @@ a {
 }
 
 #projects {
-    margin-bottom: 100px;  
+    margin-bottom: 100px;
 }
 
 .about-section {
-    padding-bottom: 600px;  
+    padding-bottom: 600px;
 }
 
 @media (max-width: 768px) {
@@ -471,6 +492,7 @@ a {
         margin-bottom: 20px;
     }
 }
+
 
 /*Footer section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .site-footer {
