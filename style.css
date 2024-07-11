@@ -401,7 +401,6 @@ a {
     padding-left: 30px;
 }
 
-
 .section-divider {
     position: absolute; /* Positioning it relative to the section-header */
     margin-top: -30px;
@@ -425,26 +424,20 @@ a {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px); /* Adjust width to fit three per row */
-    margin: 10px; /* Adjust margins to control space between boxes */
-    opacity: 0.9;
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Include transform transition */
+    width: calc(33.333% - 20px);
+    margin: 10px;
     display: flex;
     flex-direction: column;
+    position: relative;
+ 
 }
-
-.project:hover {
-    opacity: 1;
-    transform: scale(1.05); /* Slightly enlarges the project box */
-}
-
 
 
 
 .project h3 {
     font-size: 1.5rem;
     color: #cdd6f4;
-    margin-bottom: 20px; /* Increased space below the project title */
+    margin-bottom: 20px;
 }
 
 .project p {
@@ -454,31 +447,12 @@ a {
     padding-bottom: 20px;
 }
 
-
 .project-footer {
     font-size: 1rem;
     color: #cdd6f4;
-    padding-top: 10px; /* Space at the top of the footer area */
+    padding-top: 10px;
 }
 
-
-@keyframes slideUp {
-    from {
-        transform: translateY(50px); /* Initial lower position */
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.project {
-    visibility: hidden;
-    animation: slideUp 1.5s ease-out forwards; /* Extended duration for a smoother effect */
-}
-
-/*increases the space bween the sections*/
 #projects {
     margin-bottom: 100px;  
 }
@@ -486,25 +460,17 @@ a {
 .about-section {
     padding-bottom: 600px;  
 }
-/*keeps spacing consistant for smaller screens*/
+
 @media (max-width: 768px) {
     section {
         padding-top: 30px;
         padding-bottom: 30px;
     }
-}
-
-@media (max-width: 768px) {  
     .project {
-        width: 100%;  
-        margin-bottom: 20px;  
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
-
-
-
-
-
 
 /*Footer section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .site-footer {

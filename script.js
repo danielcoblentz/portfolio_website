@@ -88,3 +88,23 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkPosition);
     checkPosition(); // Initialize on load
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.project');
+
+    projects.forEach(project => {
+        project.addEventListener('mouseenter', () => {
+            project.style.transform = 'scale(1.05)';
+            project.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
+            project.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        });
+
+        project.addEventListener('mouseleave', () => {
+            project.style.transform = 'scale(1)';
+            project.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+        });
+    });
+});
+
+
+
