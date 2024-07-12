@@ -15,6 +15,80 @@ html, body {
     color: #cdd6f4; /* Same color as the links */
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
+
+/* Base animation for sliding up text */
+@keyframes slideUpText {
+    from {
+        transform: translateY(20px); /* Start slightly below the original position */
+        opacity: 0; /* Start fully transparent */
+    }
+    to {
+        transform: translateY(0); /* End at the original position */
+        opacity: 1; /* End fully opaque */
+    }
+}
+
+/* Apply animation to each piece of text with different delays */
+.name-slide-up, .occupation-slide-up, .education-slide-up {
+    opacity: 0; /* Start elements as invisible */
+    animation: slideUpText 0.8s ease-out forwards;
+}
+
+.name-slide-up {
+    animation-delay: 0.2s; /* Delays to stagger the appearance of each text element */
+}
+
+.occupation-slide-up {
+    animation-delay: 0.4s;
+}
+
+.education-slide-up {
+    animation-delay: 0.6s;
+}
+
+/* Existing styles for scroll arrow and container */
+/* Styles for the scroll container */
+.scroll-container {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    justify-content: center; /* Center items horizontally within the container */
+    gap: 10px; /* Adds space between the text and the arrow */
+}
+
+.scroll-text {
+    font-size: 1.5rem;
+    color: #cdd6f4; /* Adjust color as needed */
+}
+
+.arrow-box {
+    width: 50px; /* Keep the width to fit the arrow nicely */
+    height: 60px; /* Height to maintain proper aspect ratio */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #cdd6f4; /* Styling for the border of the arrow box */
+    border-radius: 5px; /* Rounded corners for aesthetic */
+    cursor: pointer; /* Changes the cursor on hover to indicate clickability */
+}
+
+.down-arrow {
+    font-size: 2rem; /* Sizing for the arrow */
+    color: #cdd6f4; /* Arrow color, adjust as needed */
+    text-decoration: none; /* Removes underlining from the link */
+    animation: bounce 2s infinite; /* Animation for bouncing effect */
+}
+
+/* Bounce animation for the arrow */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at normal position */
+    }
+    50% {
+        transform: translateY(-10px); /* Moves up halfway through the animation */
+    }
+}
+
+
 header {
     width: 100%;
     position: fixed;
@@ -71,7 +145,7 @@ a {
 }
 /* Increase font size of links in the dropdown menu */
 .nav-item .nav-link {
-    font-size: 1.2rem; /* Set the desired font size */
+    font-size: 1.3rem; /* Set the desired font size */
 }
 
 
@@ -318,33 +392,7 @@ a {
     font-size: 1.5rem;
 }
 
-.arrow-box {
-    width: 50px; /* Increase size */
-    height: 60px; /* Increase size */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #cdd6f4;
-    border-radius: 5px;
-    position: relative;
-}
 
-.down-arrow {
-    font-size: 2rem;
-    color: #cdd6f4;
-    text-decoration: none;
-    animation: bounce 2s infinite; /* Slow down animation */
-}
-
-/* Bounce animation */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-}
 
 /* About Me section */
 .about-section h2 {
