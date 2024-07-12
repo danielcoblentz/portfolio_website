@@ -425,48 +425,54 @@ a {
     opacity: 0.2; /* Full opacity to make it clearly visible */
 }
 
+/* Projects section styling */
 .projects-section {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Align items to the start */
+    justify-content: flex-start;
     padding: 20px;
-    background-color: #12121d;
+    background-color: #12121d; /* Background color of the projects section */
 }
 
-/* Zoom effect on hover */
 .project {
     background-color: #2a2a3d;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px);
+    width: calc(33.333% - 20px); /* Three items per row with spacing */
     margin: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.5s ease;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
+.project {
+    position: relative; /* Needed to position the icon absolutely within the container */
+    /* existing styles */
+}
+
+.github-icon {
+    position: absolute;
+    top: 10px;  /* Adjust based on your design preferences */
+    right: 10px;  /* Adjust based on your design preferences */
+    font-size: 30px;  /* Icon size, can be adjusted as needed */
+    color: #cdd6f4;  /* Icon color, adjust to fit your theme */
+    cursor: pointer;  /* Changes cursor to pointer when hovering over the icon */
+}
+
 
 .project:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Scale up slightly on hover */
 }
 
-/* Slide-up animation */
-@keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .project {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 20px;
     }
 }
 
-.project.slide-up {
-    animation: slideUp 0.5s forwards;
-}
 
 .project h3 {
     font-size: 1.5rem;
@@ -478,7 +484,7 @@ a {
     font-size: 1.25rem;
     color: #cdd6f4;
     flex-grow: 1;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .project-footer {
