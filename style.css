@@ -467,7 +467,7 @@ a {
     position: absolute; /* Positioning it relative to the section-header */
     margin-top: -30px;
     left: 200px; /* Aligning with the indentation of the header text */
-    width: 50%; /* Width of the line */
+    width: 23%; /* Width of the line */
     height: 2px; /* Height of the line */
     background-color: #cdd6f4; /* Ensure it has a visible color */
     opacity: 0.2; /* Full opacity to make it clearly visible */
