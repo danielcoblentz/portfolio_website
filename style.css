@@ -11,16 +11,16 @@
 
 html, body {
     height: 100%;
-    background-color: #12121d; /* Same color as the header */
-    color: #cdd6f4; /* Same color as the links */
+    background-color: #12121d; 
+    color: #cdd6f4; 
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
-/* Base animation for sliding up text */
+
 @keyframes slideUpText {
     from {
-        transform: translateY(20px); /* Start slightly below the original position */
-        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); 
+        opacity: 0; 
     }
     to {
         transform: translateY(0); /* End at the original position */
@@ -30,7 +30,7 @@ html, body {
 
 /* Apply animation to each piece of text with different delays */
 .name-slide-up, .occupation-slide-up, .education-slide-up {
-    opacity: 0; /* Start elements as invisible */
+    opacity: 0; 
     animation: slideUpText 0.8s ease-out forwards;
 }
 
@@ -46,45 +46,44 @@ html, body {
     animation-delay: 0.6s;
 }
 
-/* Existing styles for scroll arrow and container */
-/* Styles for the scroll container */
+
 .scroll-container {
     display: flex;
-    align-items: center; /* Aligns items vertically */
-    justify-content: center; /* Center items horizontally within the container */
+    align-items: center; 
+    justify-content: center; 
     gap: 10px; /* Adds space between the text and the arrow */
 }
 
 .scroll-text {
     font-size: 1.5rem;
-    color: #cdd6f4; /* Adjust color as needed */
+    color: #cdd6f4; 
 }
 
 .arrow-box {
-    width: 50px; /* Keep the width to fit the arrow nicely */
-    height: 60px; /* Height to maintain proper aspect ratio */
+    width: 50px; 
+    height: 60px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #cdd6f4; /* Styling for the border of the arrow box */
-    border-radius: 5px; /* Rounded corners for aesthetic */
-    cursor: pointer; /* Changes the cursor on hover to indicate clickability */
+    border: 2px solid #cdd6f4; 
+    border-radius: 5px; 
+    cursor: pointer; 
 }
 
 .down-arrow {
     font-size: 2rem; /* Sizing for the arrow */
-    color: #cdd6f4; /* Arrow color, adjust as needed */
-    text-decoration: none; /* Removes underlining from the link */
+    color: #cdd6f4; /* Arrow color*/
+    text-decoration: none; 
     animation: bounce 2s infinite; /* Animation for bouncing effect */
 }
 
 /* Bounce animation for the arrow */
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0); /* Start and end at normal position */
+        transform: translateY(0); 
     }
     50% {
-        transform: translateY(-10px); /* Moves up halfway through the animation */
+        transform: translateY(-10px); 
     }
 }
 
@@ -102,12 +101,12 @@ header {
 .nav-branding {
     display: flex;
     align-items: center;
-    height: 50px; /* Adjust based on the desired height of your navbar */
+    height: 50px; 
 }
 
 .nav-logo {
-    height: 150px; /* This will make the logo fit the height of the nav-branding */
-    width: auto; /* Maintains the aspect ratio of the logo */
+    height: 150px; 
+    width: auto; 
     margin-top: 20px;
     margin-left: 0px;
 }
@@ -123,7 +122,7 @@ header {
     -webkit-backdrop-filter: blur(16px); /* For Safari */
     top: 0;
     left: 0;
-    z-index: -1; /* Behind the content but above the background */
+    z-index: -1; 
 }
 
 
@@ -141,11 +140,11 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 0 25px;
-    min-height: 70px; /* Adjust if your actual header height is different */
+    min-height: 70px; 
 }
 /* Increase font size of links in the dropdown menu */
 .nav-item .nav-link {
-    font-size: 1.3rem; /* Set the desired font size */
+    font-size: 1.3rem; 
 }
 
 
@@ -350,11 +349,8 @@ a {
 .footer-link {
     opacity: 0;
     transform: translateY(20px);
-    animation-fill-mode: forwards; /* Keeps the element in the final state */
+    animation-fill-mode: forwards; 
 }
-
-
-
 
 .centered-section {
     display: flex;
@@ -365,26 +361,26 @@ a {
 }
 
 .centered-text h1 {
-    font-size: 4rem; /* Larger font size for your name */
+    font-size: 4rem; /* Large font for name */
     margin-bottom: 75px;
 }
 .centered-text .occupation {
     margin-bottom: 30px; /* Adjust the space between occupation and educational details */
 }
 .centered-text .education {
-    white-space: pre-line; /* This will respect your formatting in HTML, including new lines */
+    white-space: pre-line; 
 }
 .centered-text p {
-    font-size: 1.5rem; /* Smaller font size for additional info */
+    font-size: 1.5rem; 
     margin-top: 0;
 }
 
-/* Scroll container */
+
 .scroll-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
-    margin-top: 40px; /* Adjust position */
+    justify-content: center; 
+    margin-top: 40px; 
 }
 
 .scroll-text {
@@ -392,14 +388,12 @@ a {
     font-size: 1.5rem;
 }
 
-
-
-/* About Me section */
+/* About Me section----------------------------------------------------------------------------------------------------------------- */
 .about-section h2 {
     font-size: 5rem;
     margin-bottom: 0px;
-    padding-left: 30px; /* Adjust this value as needed */
-    text-align: left; /* Ensures alignment to the left */
+    padding-left: 30px; 
+    text-align: left; 
 }
 /* Adjust the about-section container */
 .about-section {
@@ -407,24 +401,24 @@ a {
     background-color: #12121d;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Aligns children to the left */
+    align-items: flex-start; 
 }
 
 
 /* Container for the heading and horizontal line */
 .about-header-container {
-    position: relative; /* Relative positioning for absolute child */
-    display: flex; /* Flex layout to keep elements in line */
-    align-items: center; /* Center items vertically */
-    padding-left: 20px; /* Alignment padding, adjust as needed */
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    padding-left: 20px; 
 }
 
-/* Styles for the "/About Me" heading */
+
 .about-section h2 {
     font-size: 2rem;
-    margin-bottom: 0; /* Removes any space below the heading */
-    text-align: left; /* Ensures alignment to the left */
-    padding-right: 10px; /* Space between the text and the line */
+    margin-bottom: 0; 
+    text-align: left;
+    padding-right: 10px;
 }
 
 /* Horizontal line styling */
@@ -446,24 +440,50 @@ a {
 
 
 /*Experience section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@keyframes slideUp { /*Slide up transition for this section.*/
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Apply the slide-up animation to the experience container, items, and details */
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0; /* Ensure it starts invisible */
+    animation-delay: 0.2s;
+}
 
+.experience-item, .experience-details {
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0; /* Ensure it starts invisible */
+    animation-delay: 0.4s;
+}
 
+/* Experience item styles */
 .experience-item {
     padding: 10px;
     cursor: pointer;
     margin: 10px 0;
     position: relative;
     color: #cdd6f4;
-    font-size: 1.4rem; /* Adjust font size as needed */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-    width: 100%; /* Ensure the item uses the full width of its container */
-    text-align: left; /* Align text to the right */
+    font-size: 1.3rem; 
+    transition: color 0.3s ease; 
+    width: 100%; 
+    text-align: left; 
 }
 
 .experience-item::after {
     content: '';
     position: absolute;
-    left: 20;
+    left: 0;
     bottom: -5px;
     width: 0; /* Start with no line */
     height: 2px;
@@ -473,38 +493,31 @@ a {
 
 /* Hover effect to expand the line */
 .experience-item:hover::after {
-    width: 40%; /* Expand the line under the item */
-   
+    width: 60%; /* Expand the line under the listed item */
 }
 
-/* Container styles */
-.experience-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 0;
-}
-
+/* Experience menu styles */
 .experience-menu {
     width: 30%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Keeps the container aligned to the left */
-    padding-left: 10%;/*controls the indentation of the menu items*/
+    align-items: flex-start; 
+    padding-left: 8%; 
 }
-
 .experience-details {
-    width: 60%;  /* Width for the details section */
-    padding: 20px;  /* Padding around the text */
-    border: 1px solid #ccc;  /* Border for clarity */
-    background-color: #12121d;  /* Background color to match your theme */
+    width: 60%; 
+    padding: 20px; 
+    background-color: #2a2a3d; 
+    border-radius: 10px;
+    margin-left: -50px;
 }
 
 .experience-details h3, .experience-details p {
-    color: #cdd6f4;  /* Text color to match the links */
-    margin: 0 0 10px 0;  /* Spacing below each element */
+    color: #cdd6f4; 
+    margin: 0 0 10px 0; 
 }
+
 .experience-divider {
     position: absolute;
     margin-top: -30px;
@@ -514,41 +527,74 @@ a {
     background-color: #cdd6f4;
     opacity: 0.2;
 }
+.experience-details h3 {
+    font-size: 1.8rem;
+    color: #cdd6f4;
+    margin-bottom: 10px;
+}
 
+#time-frame {
+    font-size: 1.3rem;
+    color: #cdd6f4;
+    margin-bottom: 20px;
+}
+
+#role-description {
+    font-size: 1.2rem;
+    color: #cdd6f4;
+    margin-bottom: 20px;
+}
+
+#tech-icons p {
+    font-size: 1.3rem;
+    color: #cdd6f4;
+    margin-bottom: 10px;
+}
+
+#tech-icons i {
+    font-size: 24px; 
+    color: #cdd6f4; 
+    margin-right: 10px;
+}
+
+/* Responsive styling for icons */
+@media (max-width: 768px) {
+    #tech-icons i {
+        font-size: 20px; /* Smaller size for mobile devices */
+    }
+}
 
 /* Projects section -------------------------------------------------------------------------------------------------*/
 
 .section-header {
-    width: 100%; /* Full width to span the section */
-    text-align: left; /* Align the header text to the left */
-    padding-left: 20px; /* Add padding to indent the header text */
-    position: relative; /* Needed for absolute positioning of the line */
+    width: 100%; 
+    text-align: left; 
+    padding-left: 20px; 
+    position: relative; 
 }
 
 .projects-section h2 {
-    font-size: 2rem; /* Adjust size as necessary */
-    color: #cdd6f4; /* Adjust color as necessary */
-    margin-bottom: 10px; /* Reduce or increase as per the design needs */
+    font-size: 2rem; 
+    color: #cdd6f4; 
+    margin-bottom: 10px; 
     padding-left: 30px;
 }
 
 .section-divider {
-    position: absolute; /* Positioning it relative to the section-header */
+    position: absolute; 
     margin-top: -30px;
-    left: 200px; /* Aligning with the indentation of the header text */
-    width: 23%; /* Width of the line */
-    height: 2px; /* Height of the line */
-    background-color: #cdd6f4; /* Ensure it has a visible color */
-    opacity: 0.2; /* Full opacity to make it clearly visible */
+    left: 200px; 
+    width: 23%; 
+    height: 2px; 
+    background-color: #cdd6f4; 
+    opacity: 0.2; 
 }
-
-/* Projects section styling */
 .projects-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 20px;
-    background-color: #12121d; /* Background color of the projects section */
+    background-color: #12121d; 
 }
 
 .project {
@@ -556,30 +602,27 @@ a {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(33.333% - 20px); /* Three items per row with spacing */
+    width: calc(33.333% - 20px); 
     margin: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    transition: transform 0.3s ease; 
 }
 .project {
-    position: relative; /* Needed to position the icon absolutely within the container */
-    /* existing styles */
+    position: relative; 
 }
 
 .github-icon {
     position: absolute;
-    top: 10px;  /* Adjust based on your design preferences */
-    right: 10px;  /* Adjust based on your design preferences */
-    font-size: 30px;  /* Icon size, can be adjusted as needed */
-    color: #cdd6f4;  /* Icon color, adjust to fit your theme */
-    cursor: pointer;  /* Changes cursor to pointer when hovering over the icon */
+    top: 10px;  
+    right: 10px;  
+    font-size: 30px;  
+    color: #cdd6f4;  
+    cursor: pointer;  
 }
-
-
 .project:hover {
-    transform: scale(1.05); /* Scale up slightly on hover */
+    transform: scale(1.05); 
 }
 
 /* Responsive adjustments for smaller screens */
@@ -589,8 +632,6 @@ a {
         margin-bottom: 20px;
     }
 }
-
-
 .project h3 {
     font-size: 1.5rem;
     color: #cdd6f4;
@@ -630,10 +671,10 @@ a {
 }
 
 
-/*Footer section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Footer section + icons --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .site-footer {
-    background-color: #12121d; /* Same color as the header */
-    color: #cdd6f4; /* Same color as the links */
+    background-color: #12121d; 
+    color: #cdd6f4; 
     text-align: center;
     padding: 20px 0;
     position: relative;
@@ -643,7 +684,7 @@ a {
 
 .footer-icons {
     display: flex;
-    justify-content: center; /* Center the icons horizontally */
+    justify-content: center; 
     align-items: center;
     margin-top: 10px; /* Add space between the text and the icons */
 }
@@ -655,26 +696,26 @@ a {
 }
 
 .footer-icons i:hover {
-    color: #ffffff; /* Change color on hover */
+    color: #ffffff; 
 }
 
 
 .about-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align all boxes to the left */
-    gap: 20px; /* Space between the boxes */
+    align-items: flex-start; 
+    gap: 20px; 
 }
 
 .about-box {
-    width: 80%; /* Adjust width as needed */
+    width: 80%; 
     background-color: #12121d;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: #cdd6f4;
     font-size: 1.125rem;
-    text-align: left; /* Align text to the left */
+    text-align: left; 
 }
 
 .about-section p{
@@ -684,15 +725,13 @@ a {
 .tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;  /* Consistent gap */
-    padding: 0 20px;  /* Padding for all sides */
+    gap: 40px; 
+    padding: 0 20px; 
 }
 
 .tech-column {
-    min-width: 150px;  /* Minimum width */
+    min-width: 150px; 
 }
-
-
 
 .tech-item {
     display: block;
@@ -703,51 +742,45 @@ a {
 @media (max-width: 768px) {
     .tech-list {
         flex-direction: column;
-        padding: 0 10px;  /* Slightly less padding for smaller screens */
+        padding: 0 10px;  
     }
 
     .tech-column {
         flex: 1 1 100%;
         max-width: 100%;
-        margin-left: 0;  /* No extra margin for mobile layout */
+        margin-left: 0; 
     }
 }
 
 @media (min-width: 769px) {
     .tech-list {
         flex-direction: row;
-        justify-content: flex-start;  /* Align items to the start */
+        justify-content: flex-start; 
     }
 
-    .tech-column {
-        /* Flex properties are already defined, no need to redefine unless changing */
-    }
 }
-
-
-
 @media (min-width: 769px) {
     .about-container {
-        flex-direction: row; /* Align children side by side */
-        align-items: center; /* Center items vertically */
-        justify-content: space-between; /* Distribute space between children */
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
     }
 
     .about-content {
-        flex: 1; /* Allow content to grow */
-        margin: 10px; /* Add a little space */
+        flex: 1; 
+        margin: 10px; 
     }
 
     .about-image {
-        flex: 0 1 50%; /* Flex-grow, Flex-shrink, Flex-basis */
-        margin: 10px; /* Add a little space */
-        max-width: 350px; /* Maximum width of the image container */
+        flex: 0 1 50%; 
+        margin: 10px; 
+        max-width: 350px; 
     }
 
     .about-image img {
-        width: 100%; /* Ensure the image uses all available space within its container */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove any extra line-height space below the image */
+        width: 100%; 
+        height: auto;
+        display: block; 
     }
 }
 @keyframes fadeUp {
@@ -762,27 +795,20 @@ a {
 }
 
 .about-box {
-    opacity: 0; /* Start with invisible text */
+    opacity: 0; 
     transform: translateY(20px);
-    animation-fill-mode: forwards; /* Keeps the element in the final state */
+    animation-fill-mode: forwards; 
 }
-
-
-/* Applying a general style to move all section content except header and home to the right */
+/*General stylees for the entire page excluding the #home section and inofrmation above that.----------------------------------------------------------------------------------*/
 section {
-    padding-left: 10%; /* Adds padding to the left of each section */
+    padding-left: 10%;
 }
-
-/* Exclude the header and home section from the padding adjustment */
 #header, #home {
-    padding-left: 0; /* Resets padding for these sections */
+    padding-left: 0; 
 }
-
-/* Alternatively, using margin-left if padding affects the design in undesired ways */
 section {
-    margin-left: 10%; /* Shifts the content to the right */
+    margin-left: 10%; 
 }
-
 #header, #home {
-    margin-left: 0; /* Ensures header and home sections are not affected */
+    margin-left: 0; /
 }

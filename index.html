@@ -106,25 +106,25 @@
         </div>
         <div class="experience-container">
             <div class="experience-menu">
-                <div class="experience-item" onclick="updateExperience('hack4impact')">
+                <div class="experience-item" onclick="updateExperience('hoodCollege')" id="Hood_College">
                     <p>Hood College</p>
                 </div>
-
-                <div class="experience-item" onclick="updateExperience('hack4impact')">
-                    <p>International help</p>
+                <div class="experience-item" onclick="updateExperience('internationalHelp')" id="International_Help">
+                    <p>International Help</p>
+                </div>
             </div>
-            <!--add more exp as needed-->
-
-            <div class="experince-details">
-                <h3 id="company-name"></h3>
-                <p id="time-frame">
-                    <p id="role-description">
-                        
-                    </p>
-                </p>
+            <div class="experience-details" id="experienceDetails">
+                <h3 id="company-name">Select an Experience</h3>
+                <p id="time-frame">Timeframe will appear here</p>
+                <p id="role-description">Details about the role will appear here.</p>
+                <div id="tech-icons">
+                    <p>Technologies Used:</p>
+                    <!-- Placeholder for icons -->
+                </div>
             </div>
         </div>
     </section>
+    
      <!--Project section----------------------------------------------------->
     <section id="projects" class="projects-section">
         <div class="section-header">
@@ -150,7 +150,7 @@
         </div>
 
         <div class="project">
-            <a href="https://github.com/YourUsername/YourProject" target="_blank">
+            <a href="https://github.com/Daniel-C6/EventFlow" target="_blank">
                 <i class="ri-github-fill github-icon"></i>
             </a>
             <h3>Orders Processor System</h3>

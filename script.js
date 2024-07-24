@@ -93,25 +93,65 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-//Experience section functions
+//Experience section functions -----------------------------------------------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', (event) => {
+    updateExperience('hoodCollege'); // Automatically display the first experience
 
-function updateExperience(company) {
+    // Intersection Observer to trigger animations
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target); 
+            }
+        });
+    }, observerOptions);
+
+    // Observe the experience container
+    const experienceContainer = document.querySelector('.experience-container');
+    observer.observe(experienceContainer);
+
+    // Make elements visible after the animation
+    const experienceItems = document.querySelectorAll('.experience-item');
+    experienceItems.forEach(item => observer.observe(item));
+
+    const experienceDetails = document.querySelector('.experience-details');
+    observer.observe(experienceDetails);
+});
+
+function updateExperience(experienceId) {
     const experiences = {
-        'internationalHelp': {
-            name: 'International Help',
-            timeframe: 'Jan 2022 - Present',
-            description: 'Lead efforts in global outreach initiatives, enhancing organizational impact across several countries.'
-        },
         'hoodCollege': {
             name: 'Hood College',
             timeframe: 'Sep 2019 - May 2023',
-            description: 'Assisted in academic research and tutoring, contributing to educational development and student success.'
+            description: 'Led discussions and held office hours for 40+ students, teaching Java programming concepts and providing constructive feedback.',
+            technologies: ['Java',] // Adjust according to actual tech used
+        },
+        'internationalHelp': {
+            name: 'International Help',
+            timeframe: 'Jan 2022 - Present',
+            description: 'Led the cleaning, analysis, and visualization of diverse datasets sourced from their database and used Google Data Studio to reflect those insights onto their website.',
+            technologies: ['HTML', 'CSS', 'Google Data Studio'] // Adjust based on actual technologies used
         }
-        // Add more experiences here
     };
 
-    const experience = experiences[company];
+    const experience = experiences[experienceId];
+
     document.getElementById('company-name').textContent = experience.name;
-    document.getElementById('timeframe').textContent = experience.timeframe;
+    document.getElementById('time-frame').textContent = experience.timeframe;
     document.getElementById('role-description').textContent = experience.description;
+
+    const techIcons = document.getElementById('tech-icons');
+    techIcons.innerHTML = '<p>Technologies Used:</p>'; // Reset and add title again
+    experience.technologies.forEach(tech => {
+        // Example: Adjust based on your icon library or image tags
+        const icon = document.createElement('i');
+        icon.className = 'tech-icon ' + 'ri-' + tech.toLowerCase().replace(' ', '-') + '-fill'; // Placeholder, replace with actual icons
+        techIcons.appendChild(icon);
+    });
 }
+
