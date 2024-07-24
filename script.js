@@ -154,4 +154,24 @@ function updateExperience(experienceId) {
         techIcons.appendChild(icon);
     });
 }
+// Add this to your existing script.js file or include it in a script tag at the end of your HTML
+document.addEventListener('DOMContentLoaded', function() {
+    const homeSection = document.getElementById('home');
+    const aboutSection = document.getElementById('about');
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                homeSection.classList.add('faded');
+            } else {
+                homeSection.classList.remove('faded');
+            }
+        });
+    }, {
+        threshold: 0.1 // Adjust this threshold as needed
+    });
+
+    observer.observe(aboutSection);
+});
+
 

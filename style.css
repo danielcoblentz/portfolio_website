@@ -449,7 +449,6 @@ a {
         opacity: 1;
     }
 }
-/* Apply the slide-up animation to the experience container, items, and details */
 .experience-container {
     display: flex;
     justify-content: space-between;
@@ -462,7 +461,7 @@ a {
 
 .experience-item, .experience-details {
     animation: slideUp 0.8s ease-out forwards;
-    opacity: 0; /* Ensure it starts invisible */
+    opacity: 0; 
     animation-delay: 0.4s;
 }
 
@@ -505,7 +504,7 @@ a {
     padding-left: 8%; 
 }
 .experience-details {
-    width: 60%; 
+    width: 70%; 
     padding: 20px; 
     background-color: #2a2a3d; 
     border-radius: 10px;
@@ -818,5 +817,19 @@ section {
 
 /* Add space above the projects section */
 #projects {
-    margin-top: 500px; /* Adjust the value to your preference */
+    margin-top: 500px; /
+}
+
+#home {
+    position: relative;
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 0.5s ease-out;
+}
+
+.faded {
+    opacity: 0;
 }
