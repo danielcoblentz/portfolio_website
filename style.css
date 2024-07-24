@@ -105,9 +105,9 @@ header {
 }
 
 .nav-logo {
-    height: 150px; 
+    height: 70px; 
     width: auto; 
-    margin-top: 20px;
+    margin-top: 0px;
     margin-left: 0px;
 }
 
@@ -118,8 +118,8 @@ header {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent overlay */
-    backdrop-filter: blur(16px); /* Blur effect */
-    -webkit-backdrop-filter: blur(16px); /* For Safari */
+    backdrop-filter: blur(16px); 
+    -webkit-backdrop-filter: blur(16px); 
     top: 0;
     left: 0;
     z-index: -1; 
@@ -356,16 +356,16 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     text-align: center;
 }
 
 .centered-text h1 {
-    font-size: 4rem; /* Large font for name */
+    font-size: 4rem; 
     margin-bottom: 75px;
 }
 .centered-text .occupation {
-    margin-bottom: 30px; /* Adjust the space between occupation and educational details */
+    margin-bottom: 30px; 
 }
 .centered-text .education {
     white-space: pre-line; 
@@ -395,7 +395,7 @@ a {
     padding-left: 30px; 
     text-align: left; 
 }
-/* Adjust the about-section container */
+
 .about-section {
     padding: 60px 20px;
     background-color: #12121d;
@@ -405,7 +405,6 @@ a {
 }
 
 
-/* Container for the heading and horizontal line */
 .about-header-container {
     position: relative; 
     display: flex; 
@@ -421,20 +420,20 @@ a {
     padding-right: 10px;
 }
 
-/* Horizontal line styling */
+
 .about-divider {
     height: 2px;
     background-color: #cdd6f4;
-    opacity: 0.2; /* Transparency for the line */
-    width: 550px; /* Fixed width for the line */
-    position: absolute; /* Absolute positioning relative to header container */
-    left: calc(100% - 0px); /* Position the line to start right after the heading */
-    top: 55%; /* Center the line vertically relative to the heading */
-    transform: translateY(-50%); /* Adjust vertical positioning */
+    opacity: 0.2; 
+    width: 550px; 
+    position: absolute; 
+    left: calc(100% - 0px); 
+    top: 55%; 
+    transform: translateY(-50%); 
 }
 
 .about-image {
-    flex: 0 1 50%; /* Do not grow, but can shrink, and basis is 50% of the container */
+    flex: 0 1 50%; 
 }
 
 
@@ -498,7 +497,7 @@ a {
 
 /* Experience menu styles */
 .experience-menu {
-    width: 30%;
+    width: 25%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -811,4 +810,13 @@ section {
 }
 #header, #home {
     margin-left: 0; /
+}
+/* Add space below the experience section */
+#experience {
+    margin-bottom: 100px; /* Adjust the value to your preference */
+}
+
+/* Add space above the projects section */
+#projects {
+    margin-top: 500px; /* Adjust the value to your preference */
 }
