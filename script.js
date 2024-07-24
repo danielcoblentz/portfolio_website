@@ -91,3 +91,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+//Experience section functions
+
+function updateExperience(company) {
+    const experiences = {
+        'internationalHelp': {
+            name: 'International Help',
+            timeframe: 'Jan 2022 - Present',
+            description: 'Lead efforts in global outreach initiatives, enhancing organizational impact across several countries.'
+        },
+        'hoodCollege': {
+            name: 'Hood College',
+            timeframe: 'Sep 2019 - May 2023',
+            description: 'Assisted in academic research and tutoring, contributing to educational development and student success.'
+        }
+        // Add more experiences here
+    };
+
+    const experience = experiences[company];
+    document.getElementById('company-name').textContent = experience.name;
+    document.getElementById('timeframe').textContent = experience.timeframe;
+    document.getElementById('role-description').textContent = experience.description;
+}

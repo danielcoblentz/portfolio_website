@@ -445,9 +445,78 @@ a {
 
 
 
-/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Experience section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* Projects section */
+
+.experience-item {
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px 0;
+    position: relative;
+    color: #cdd6f4;
+    font-size: 1.4rem; /* Adjust font size as needed */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    width: 100%; /* Ensure the item uses the full width of its container */
+    text-align: left; /* Align text to the right */
+}
+
+.experience-item::after {
+    content: '';
+    position: absolute;
+    left: 20;
+    bottom: -5px;
+    width: 0; /* Start with no line */
+    height: 2px;
+    background-color: #cdd6f4; /* Line color */
+    transition: width 0.3s ease;
+}
+
+/* Hover effect to expand the line */
+.experience-item:hover::after {
+    width: 40%; /* Expand the line under the item */
+   
+}
+
+/* Container styles */
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.experience-menu {
+    width: 30%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Keeps the container aligned to the left */
+    padding-left: 10%;/*controls the indentation of the menu items*/
+}
+
+.experience-details {
+    width: 60%;  /* Width for the details section */
+    padding: 20px;  /* Padding around the text */
+    border: 1px solid #ccc;  /* Border for clarity */
+    background-color: #12121d;  /* Background color to match your theme */
+}
+
+.experience-details h3, .experience-details p {
+    color: #cdd6f4;  /* Text color to match the links */
+    margin: 0 0 10px 0;  /* Spacing below each element */
+}
+.experience-divider {
+    position: absolute;
+    margin-top: -30px;
+    left: 250px;
+    width: 20%;
+    height: 2px;
+    background-color: #cdd6f4;
+    opacity: 0.2;
+}
+
+
+/* Projects section -------------------------------------------------------------------------------------------------*/
 
 .section-header {
     width: 100%; /* Full width to span the section */
@@ -696,4 +765,24 @@ a {
     opacity: 0; /* Start with invisible text */
     transform: translateY(20px);
     animation-fill-mode: forwards; /* Keeps the element in the final state */
+}
+
+
+/* Applying a general style to move all section content except header and home to the right */
+section {
+    padding-left: 10%; /* Adds padding to the left of each section */
+}
+
+/* Exclude the header and home section from the padding adjustment */
+#header, #home {
+    padding-left: 0; /* Resets padding for these sections */
+}
+
+/* Alternatively, using margin-left if padding affects the design in undesired ways */
+section {
+    margin-left: 10%; /* Shifts the content to the right */
+}
+
+#header, #home {
+    margin-left: 0; /* Ensures header and home sections are not affected */
 }
