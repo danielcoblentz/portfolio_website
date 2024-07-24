@@ -492,7 +492,7 @@ a {
 
 /* Hover effect to expand the line */
 .experience-item:hover::after {
-    width: 60%; /* Expand the line under the listed item */
+    width: 44%; /* Expand the line under the listed item */
 }
 
 /* Experience menu styles */
