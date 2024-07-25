@@ -491,12 +491,12 @@ a {
 
 /* Hover effect to expand the line */
 .experience-item:hover::after {
-    width: 44%; /* Expand the line under the listed item */
+    width: 50%; /* Expand the line under the listed item */
 }
 
 /* Experience menu styles */
 .experience-menu {
-    width: 25%;
+    width: 35%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
