@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Satoshi, sans-serif;
+    font-family: Cabinet Grotesk, sans-serif;
     font-size: 1.125rem;
     font-weight: 350;
     font-feature-settings: "ss03";
@@ -409,12 +409,12 @@ a {
     position: relative; 
     display: flex; 
     align-items: center;
-    padding-left: 20px; 
+    padding-left: 30px; 
 }
 
 
 .about-section h2 {
-    font-size: 2rem;
+    font-size: 2.6rem;
     margin-bottom: 0; 
     text-align: left;
     padding-right: 10px;
@@ -488,10 +488,24 @@ a {
     background-color: #cdd6f4; /* Line color */
     transition: width 0.3s ease;
 }
+#Hood_College p {
+    font-size: 24px; /* Change the size as needed */
+}
+#International_Help p {
+    font-size: 24px;
+}
+@media (max-width: 768px) {
+    #Hood_College p {
+        font-size: 18px; /* Smaller font size for mobile devices */
+    }
+    #International_Help p {
+        font-size: 18px;
+}
+}
 
 /* Hover effect to expand the line */
 .experience-item:hover::after {
-    width: 50%; /* Expand the line under the listed item */
+    width: 34%; /* Expand the line under the listed item */
 }
 
 /* Experience menu styles */
@@ -519,8 +533,8 @@ a {
 .experience-divider {
     position: absolute;
     margin-top: -30px;
-    left: 250px;
-    width: 20%;
+    left: 320px;
+    width: 23.5%;
     height: 2px;
     background-color: #cdd6f4;
     opacity: 0.2;
@@ -572,7 +586,7 @@ a {
 }
 
 .projects-section h2 {
-    font-size: 2rem; 
+    font-size: 2.6rem; 
     color: #cdd6f4; 
     margin-bottom: 10px; 
     padding-left: 30px;
@@ -580,9 +594,9 @@ a {
 
 .section-divider {
     position: absolute; 
-    margin-top: -30px;
-    left: 200px; 
-    width: 23%; 
+    margin-top: -35px;
+    left: 260px;
+    width: 26%; 
     height: 2px; 
     background-color: #cdd6f4; 
     opacity: 0.2; 
@@ -717,7 +731,9 @@ a {
 }
 
 .about-section p{
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 1.3rem;
 }
 
 .tech-list {
@@ -734,7 +750,7 @@ a {
 .tech-item {
     display: block;
     text-indent: 0;
-    padding-left: 0;
+    padding-left: 15px;
 }
 
 @media (max-width: 768px) {

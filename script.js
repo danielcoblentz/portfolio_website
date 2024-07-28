@@ -127,13 +127,13 @@ function updateExperience(experienceId) {
     const experiences = {
         'hoodCollege': {
             name: 'Hood College',
-            timeframe: 'Sep 2019 - May 2023',
+            timeframe: 'Aug 2024 - Dec 2024',
             description: 'Led discussions and held office hours for 40+ students, teaching Java programming concepts and providing constructive feedback.',
             technologies: ['Java',] // Adjust according to actual tech used
         },
         'internationalHelp': {
-            name: 'International Help',
-            timeframe: 'Jan 2022 - Present',
+            name: 'Web Development intern @ International Help',
+            timeframe: 'May 2024 - Aug 2024',
             description: 'Led the cleaning, analysis, and visualization of diverse datasets sourced from their database and used Google Data Studio to reflect those insights onto their website.',
             technologies: ['HTML', 'CSS', 'Google Data Studio'] // Adjust based on actual technologies used
         }
