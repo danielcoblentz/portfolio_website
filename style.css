@@ -131,7 +131,7 @@ li {
 }
 
 a {
-    color: white;
+    color: #cdd6f4;;
     text-decoration: none;
 }
 
@@ -345,6 +345,19 @@ a {
         transform: translateY(0);
     }
 }
+.scroll-text, .arrow-box, .down-arrow {
+    opacity: 0; /* Start invisible */
+    animation: slideUpText 0.8s ease-out forwards;
+}
+
+.scroll-text {
+    animation-delay: 0.8s; /* Example delay, adjust as necessary */
+}
+
+.arrow-box {
+    animation-delay: 1s; /* Later than text to create a staggered effect */
+}
+
 
 .footer-link {
     opacity: 0;
@@ -474,7 +487,7 @@ a {
     color: #cdd6f4;
     font-size: 1.3rem; 
     transition: color 0.3s ease; 
-    width: 100%; 
+    width: 60%; 
     text-align: left; 
 }
 
@@ -505,7 +518,8 @@ a {
 
 /* Hover effect to expand the line */
 .experience-item:hover::after {
-    width: 34%; /* Expand the line under the listed item */
+    width: 100%; /* Expand the line under the listed item */
+  
 }
 
 /* Experience menu styles */
@@ -523,6 +537,7 @@ a {
     background-color: #2a2a3d; 
     border-radius: 10px;
     margin-left: -50px;
+    margin-right: 100px;
 }
 
 .experience-details h3, .experience-details p {

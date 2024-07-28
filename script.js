@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function updateExperience(experienceId) {
     const experiences = {
         'hoodCollege': {
-            name: 'Hood College',
+            name: 'TA for Object-orientated programming I',
             timeframe: 'Aug 2024 - Dec 2024',
             description: 'Led discussions and held office hours for 40+ students, teaching Java programming concepts and providing constructive feedback.',
             technologies: ['Java',] // Adjust according to actual tech used
