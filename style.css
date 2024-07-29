@@ -401,46 +401,37 @@ a {
     font-size: 1.5rem;
 }
 
-/* About Me section----------------------------------------------------------------------------------------------------------------- */
-.about-section h2 {
-    font-size: 5rem;
-    margin-bottom: 0px;
-    padding-left: 30px; 
-    text-align: left; 
-}
-
+/* About Me section ----------------------------------------------------------------------------------------------------------------- */
 .about-section {
     padding: 60px 20px;
     background-color: #12121d;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
-
 
 .about-header-container {
-    position: relative; 
-    display: flex; 
+    position: relative;
+    display: flex;
     align-items: center;
-    padding-left: 30px; 
+    padding-left: 30px;
 }
-
 
 .about-section h2 {
-    font-size: 2.6rem;
+    font-size: 2.6rem; /* Assuming 2.6rem is the intended size */
     margin-bottom: 0; 
     text-align: left;
+    padding-left: 30px; /* Maintaining consistency with the left padding */
     padding-right: 10px;
 }
-
 
 .about-divider {
     height: 2px;
     background-color: #cdd6f4;
     opacity: 0.2; 
-    width: 550px; 
-    position: absolute; 
-    left: calc(100% - 0px); 
+    width: 320px;
+    position: absolute;
+    left: calc(100% - 0px);
     top: 55%; 
     transform: translateY(-50%); 
 }
@@ -449,10 +440,15 @@ a {
     flex: 0 1 50%; 
 }
 
-
+@media (max-width: 768px) {
+    .about-section h2 {
+        font-size: 1.8rem; /* Example: smaller font size for mobile devices */
+    }
+}
 
 /*Experience section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@keyframes slideUp { /*Slide up transition for this section.*/
+/* Keyframes and base animations */
+@keyframes slideUp {
     from {
         transform: translateY(20px);
         opacity: 0;
@@ -462,20 +458,17 @@ a {
         opacity: 1;
     }
 }
+
 .experience-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 20px 0;
-    animation: slideUp 0.8s ease-out forwards;
-    opacity: 0; /* Ensure it starts invisible */
-    animation-delay: 0.2s;
+    animation: slideUp 0.8s ease-out forwards 0.2s;
 }
 
 .experience-item, .experience-details {
-    animation: slideUp 0.8s ease-out forwards;
-    opacity: 0; 
-    animation-delay: 0.4s;
+    animation: slideUp 0.8s ease-out forwards 0.4s;
 }
 
 /* Experience item styles */
@@ -485,10 +478,10 @@ a {
     margin: 10px 0;
     position: relative;
     color: #cdd6f4;
-    font-size: 1.3rem; 
-    transition: color 0.3s ease; 
-    width: 60%; 
-    text-align: left; 
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+    width: 60%;
+    text-align: left;
 }
 
 .experience-item::after {
@@ -496,53 +489,39 @@ a {
     position: absolute;
     left: 0;
     bottom: -5px;
-    width: 0; /* Start with no line */
+    width: 0; 
     height: 2px;
-    background-color: #cdd6f4; /* Line color */
+    background-color: #cdd6f4;
     transition: width 0.3s ease;
 }
-#Hood_College p {
-    font-size: 24px; /* Change the size as needed */
-}
-#International_Help p {
-    font-size: 24px;
-}
-@media (max-width: 768px) {
-    #Hood_College p {
-        font-size: 18px; /* Smaller font size for mobile devices */
-    }
-    #International_Help p {
-        font-size: 18px;
-}
-}
 
-/* Hover effect to expand the line */
 .experience-item:hover::after {
-    width: 100%; /* Expand the line under the listed item */
-  
+    width: 100%;
 }
 
-/* Experience menu styles */
+/* Experience menu and details styling */
 .experience-menu {
     width: 35%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    padding-left: 8%; 
+    align-items: flex-start;
+    padding-left: 8%;
 }
+
 .experience-details {
-    width: 70%; 
-    padding: 20px; 
-    background-color: #2a2a3d; 
+    width: 70%;
+    padding: 20px;
+    background-color: #2a2a3d;
     border-radius: 10px;
     margin-left: -50px;
     margin-right: 100px;
 }
 
 .experience-details h3, .experience-details p {
-    color: #cdd6f4; 
-    margin: 0 0 10px 0; 
+    color: #cdd6f4;
+    margin: 0 0 10px 0;
+    font-size: 1.8rem;
 }
 
 .experience-divider {
@@ -554,40 +533,23 @@ a {
     background-color: #cdd6f4;
     opacity: 0.2;
 }
-.experience-details h3 {
-    font-size: 1.8rem;
-    color: #cdd6f4;
-    margin-bottom: 10px;
+.experience-details p {
+    font-size: 1.25rem; /* This sets the font size smaller for all paragraphs within the details */
+    margin-top: 20px; /* Adds space above each paragraph */
 }
 
-#time-frame {
-    font-size: 1.3rem;
-    color: #cdd6f4;
-    margin-bottom: 20px;
-}
 
-#role-description {
-    font-size: 1.2rem;
-    color: #cdd6f4;
-    margin-bottom: 20px;
-}
-
-#tech-icons p {
-    font-size: 1.3rem;
-    color: #cdd6f4;
-    margin-bottom: 10px;
-}
-
-#tech-icons i {
-    font-size: 24px; 
-    color: #cdd6f4; 
-    margin-right: 10px;
-}
-
-/* Responsive styling for icons */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+    #Hood_College p, #International_Help p {
+        font-size: 20px;
+    }
     #tech-icons i {
-        font-size: 20px; /* Smaller size for mobile devices */
+        font-size: 20px;
+    }
+    .experience-details {
+        margin-left: 0;
+        margin-right: 200px;
     }
 }
 
@@ -699,33 +661,32 @@ a {
 
 
 /*Footer section + icons --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Footer section + icons */
 .site-footer {
-    background-color: #12121d; 
-    color: #cdd6f4; 
+    background-color: #12121d;
+    color: #cdd6f4;
     text-align: center;
     padding: 20px 0;
     position: relative;
-    bottom: 0;
-    width: 100%;
+    width: 100%; /* Ensuring it spans the full width without 'bottom: 0;' */
 }
 
 .footer-icons {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Add space between the text and the icons */
+    margin-top: 10px; /* Space between text and icons */
 }
 
 .footer-icons i {
-    font-size: 24px; /* Adjust the size of the icons */
-    color: #cdd6f4; /* Adjust the color of the icons */
-    margin: 0 10px; /* Add space between the icons */
+    font-size: 24px; /* Icon size */
+    color: #cdd6f4; /* Icon color */
+    margin: 0 10px; /* Space between icons */
 }
 
 .footer-icons i:hover {
-    color: #ffffff; 
+    color: #ffffff; /* Hover effect for icons */
 }
-
 
 .about-container {
     display: flex;
@@ -828,6 +789,7 @@ a {
     transform: translateY(20px);
     animation-fill-mode: forwards; 
 }
+
 /*General stylees for the entire page excluding the #home section and inofrmation above that.----------------------------------------------------------------------------------*/
 section {
     padding-left: 10%;
