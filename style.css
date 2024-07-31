@@ -549,9 +549,21 @@ a {
     }
     .experience-details {
         margin-left: 0;
-        margin-right: 200px;
+        margin-right: 10px;
     }
 }
+.experience-details .tech-item {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    margin: 5px 0;
+}
+
+.experience-details .tech-item i {
+    margin-right: 10px;
+    color: #cdd6f4;
+}
+
 
 /* Projects section -------------------------------------------------------------------------------------------------*/
 
@@ -566,7 +578,7 @@ a {
     font-size: 2.6rem; 
     color: #cdd6f4; 
     margin-bottom: 10px; 
-    padding-left: 30px;
+    padding-left: 40px;
 }
 
 .section-divider {

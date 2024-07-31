@@ -126,15 +126,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
 function updateExperience(experienceId) {
     const experiences = {
         'hoodCollege': {
-            name: 'TA for Object-orientated programming I',
+            name: 'TA for Object-oriented Programming I',
             timeframe: 'Aug 2024 - Dec 2024',
             description: 'Led discussions and held office hours for 40+ students, teaching Java programming concepts and providing constructive feedback.',
-            technologies: ['Java',] // Adjust according to actual tech used
+            roleDetail: 'During this time, I assisted students with their understanding of object-oriented principles, debugging Java code, and preparing for exams. I also created supplementary materials to help students grasp complex topics more effectively.',
+            technologies: ['Java'] // Adjust according to actual tech used
         },
         'internationalHelp': {
-            name: 'Web Development intern @ International Help',
+            name: 'Web Development Intern @ International Help',
             timeframe: 'May 2024 - Aug 2024',
             description: 'Led the cleaning, analysis, and visualization of diverse datasets sourced from their database and used Google Data Studio to reflect those insights onto their website.',
+            roleDetail: 'My role involved significant data manipulation and visualization tasks. I streamlined the process of data cleaning and ensured the accurate presentation of data on the website, making it accessible to a broader audience. Additionally, I collaborated with team members to develop new features and improve the user interface of the site.',
             technologies: ['HTML', 'CSS', 'Google Data Studio'] // Adjust based on actual technologies used
         }
     };
@@ -144,16 +146,19 @@ function updateExperience(experienceId) {
     document.getElementById('company-name').textContent = experience.name;
     document.getElementById('time-frame').textContent = experience.timeframe;
     document.getElementById('role-description').textContent = experience.description;
+    document.getElementById('role-detail').textContent = experience.roleDetail;
 
     const techIcons = document.getElementById('tech-icons');
     techIcons.innerHTML = '<p>Technologies Used:</p>'; // Reset and add title again
     experience.technologies.forEach(tech => {
-        // Example: Adjust based on your icon library or image tags
-        const icon = document.createElement('i');
-        icon.className = 'tech-icon ' + 'ri-' + tech.toLowerCase().replace(' ', '-') + '-fill'; // Placeholder, replace with actual icons
-        techIcons.appendChild(icon);
+        const techItem = document.createElement('div');
+        techItem.className = 'tech-item';
+        techItem.innerHTML = `<i class="ri-arrow-right-s-fill"></i> ${tech}`;
+        techIcons.appendChild(techItem);
     });
 }
+
+
 // Add this to your existing script.js file or include it in a script tag at the end of your HTML
 document.addEventListener('DOMContentLoaded', function() {
     const homeSection = document.getElementById('home');
