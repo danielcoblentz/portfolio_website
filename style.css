@@ -49,43 +49,43 @@ html, body {
 
 .scroll-container {
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
     gap: 10px; /* Adds space between the text and the arrow */
+    margin-top: 40px;
 }
 
 .scroll-text {
     font-size: 1.5rem;
-    color: #cdd6f4; 
+    color: #cdd6f4;
 }
 
 .arrow-box {
-    width: 50px; 
-    height: 60px; 
+    width: 50px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #cdd6f4; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    border: 2px solid #cdd6f4;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .down-arrow {
-    font-size: 2rem; /* Sizing for the arrow */
-    color: #cdd6f4; /* Arrow color*/
-    text-decoration: none; 
-    animation: bounce 2s infinite; /* Animation for bouncing effect */
+    font-size: 2rem;
+    color: #cdd6f4;
+    text-decoration: none;
+    animation: bounce 2s infinite; /* Infinite bouncing animation */
 }
 
 /* Bounce animation for the arrow */
 @keyframes bounce {
     0%, 100% {
-        transform: translateY(0); 
+        transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); 
-    }
-}
+        transform: translateY(-10px);
+    }}
 
 
 header {
@@ -144,7 +144,7 @@ a {
 }
 /* Increase font size of links in the dropdown menu */
 .nav-item .nav-link {
-    font-size: 1.3rem; 
+    font-size: 1.4rem; 
 }
 
 
@@ -402,12 +402,31 @@ a {
 }
 
 /* About Me section ----------------------------------------------------------------------------------------------------------------- */
+@keyframes slideUp {
+    from {
+        transform: translateY(60px); /* Increased translateY value for a longer slide */
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .about-section {
     padding: 60px 20px;
     background-color: #12121d;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    opacity: 0;
+    transform: translateY(50px); /* Match the starting point with the keyframes */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Increase duration to 1.5s */
+}
+
+.about-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .about-header-container {
@@ -418,39 +437,123 @@ a {
 }
 
 .about-section h2 {
-    font-size: 2.6rem; /* Assuming 2.6rem is the intended size */
-    margin-bottom: 0; 
+    font-size: 2.6rem;
+    margin-bottom: 0;
     text-align: left;
-    padding-left: 30px; /* Maintaining consistency with the left padding */
+    padding-left: 30px;
     padding-right: 10px;
 }
 
 .about-divider {
     height: 2px;
     background-color: #cdd6f4;
-    opacity: 0.2; 
+    opacity: 0.2;
     width: 320px;
     position: absolute;
     left: calc(100% - 0px);
-    top: 55%; 
-    transform: translateY(-50%); 
+    top: 55%;
+    transform: translateY(-50%);
 }
 
-.about-image {
-    flex: 0 1 50%; 
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 }
 
+.about-box {
+    width: 80%;
+    background-color: #12121d;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #cdd6f4;
+    font-size: 1.125rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(60px); /* Match the starting point with the keyframes */
+    animation-fill-mode: forwards;
+    animation: slideUp 1.5s ease-out forwards; 
+}
+
+.about-section p {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 1.3rem;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.tech-column {
+    min-width: 150px;
+}
+
+.tech-item {
+    display: block;
+    text-indent: 0;
+    padding-left: 15px;
+}
+
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .about-section h2 {
-        font-size: 1.8rem; /* Example: smaller font size for mobile devices */
+        font-size: 1.8rem;
+    }
+
+    .tech-list {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .tech-column {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-left: 0;
     }
 }
 
-/*Experience section--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* Keyframes and base animations */
+@media (min-width: 769px) {
+    .tech-list {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .about-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .about-content {
+        flex: 1;
+        margin: 10px;
+    }
+
+    .about-image {
+        flex: 0 1 50%;
+        margin: 10px;
+        max-width: 350px;
+    }
+
+    .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+
+/* Experience section styles----------------------------------------------------------- */
+
 @keyframes slideUp {
     from {
-        transform: translateY(20px);
+        transform: translateY(50px); /* Increased translateY value for a longer slide */
         opacity: 0;
     }
     to {
@@ -459,23 +562,42 @@ a {
     }
 }
 
+/* Experience section styles */
+.experience-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.experience-section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.experience-item, .experience-details {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.experience-item.in-view, .experience-details.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 .experience-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     padding: 20px 0;
-    animation: slideUp 0.8s ease-out forwards 0.2s;
-}
-
-.experience-item, .experience-details {
-    animation: slideUp 0.8s ease-out forwards 0.4s;
 }
 
 /* Experience item styles */
 .experience-item {
-    padding: 10px;
+    padding: 5px 10px;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 5px 0;
     position: relative;
     color: #cdd6f4;
     font-size: 1.3rem;
@@ -484,24 +606,24 @@ a {
     text-align: left;
 }
 
-.experience-item::after {
+.experience-item::after {  
     content: '';
     position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0; 
-    height: 2px;
+    left: 10px;
+    bottom: 13px;
+    width: 0;
+    height: 2.5px;
     background-color: #cdd6f4;
     transition: width 0.3s ease;
 }
 
 .experience-item:hover::after {
-    width: 100%;
+    width: 83%;
 }
 
 /* Experience menu and details styling */
 .experience-menu {
-    width: 35%;
+    width: 32%;
     background-color: transparent;
     display: flex;
     flex-direction: column;
@@ -510,52 +632,31 @@ a {
 }
 
 .experience-details {
-    width: 70%;
+    width: 65%;
     padding: 20px;
     background-color: #2a2a3d;
     border-radius: 10px;
-    margin-left: -50px;
-    margin-right: 100px;
+    margin-right: 580px;
 }
 
-.experience-details h3, .experience-details p {
+.experience-details h3,
+.experience-details p,
+#Hood_College p,
+#International_Help p {
     color: #cdd6f4;
     margin: 0 0 10px 0;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
-.experience-divider {
-    position: absolute;
-    margin-top: -30px;
-    left: 320px;
-    width: 23.5%;
-    height: 2px;
-    background-color: #cdd6f4;
-    opacity: 0.2;
-}
-.experience-details p {
-    font-size: 1.25rem; /* This sets the font size smaller for all paragraphs within the details */
-    margin-top: 20px; /* Adds space above each paragraph */
+.experience-details p,
+.experience-details .tech-item {
+    font-size: 1.25rem;
+    margin-top: 20px;
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    #Hood_College p, #International_Help p {
-        font-size: 20px;
-    }
-    #tech-icons i {
-        font-size: 20px;
-    }
-    .experience-details {
-        margin-left: 0;
-        margin-right: 10px;
-    }
-}
 .experience-details .tech-item {
     display: flex;
     align-items: center;
-    font-size: 1.25rem;
     margin: 5px 0;
 }
 
@@ -563,6 +664,52 @@ a {
     margin-right: 10px;
     color: #cdd6f4;
 }
+
+#tech-icons i {
+    font-size: 18px;
+}
+
+.experience-details h3 {
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    color: #cdd6f4; 
+    margin-bottom: 15px; 
+    text-align: left; 
+}
+
+/* Responsive adjustments------ */
+@media (max-width: 768px) {
+    .experience-item {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    .experience-item::after {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .experience-item:hover::after {
+        width: 90%;
+    }
+
+    .experience-details {
+        width: 100%;
+        margin-left: 65px;
+        margin-right: 10px;
+    }
+
+    #Hood_College p,
+    #International_Help p {
+        font-size: 1.25rem;
+    }
+
+    .experience-details h3 {
+        font-size: 1.8rem; /* Slightly smaller size for mobile */
+        margin-bottom: 10px; /* Less space for tighter layouts */
+    }
+}
+
 
 
 /* Projects section -------------------------------------------------------------------------------------------------*/
@@ -657,7 +804,7 @@ a {
 }
 
 .about-section {
-    padding-bottom: 600px;
+    padding-bottom: 650px;
 }
 
 @media (max-width: 768px) {
@@ -670,139 +817,30 @@ a {
         margin-bottom: 20px;
     }
 }
-
-
 /*Footer section + icons --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/* Footer section + icons */
 .site-footer {
     background-color: #12121d;
     color: #cdd6f4;
     text-align: center;
     padding: 20px 0;
     position: relative;
-    width: 100%; /* Ensuring it spans the full width without 'bottom: 0;' */
+    width: 100%; 
 }
-
 .footer-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px; /* Space between text and icons */
 }
-
 .footer-icons i {
-    font-size: 24px; /* Icon size */
+    font-size: 35px; /* Icon size */
     color: #cdd6f4; /* Icon color */
     margin: 0 10px; /* Space between icons */
 }
-
 .footer-icons i:hover {
     color: #ffffff; /* Hover effect for icons */
 }
-
-.about-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    gap: 20px; 
-}
-
-.about-box {
-    width: 80%; 
-    background-color: #12121d;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    color: #cdd6f4;
-    font-size: 1.125rem;
-    text-align: left; 
-}
-
-.about-section p{
-    margin-bottom: 20px;
-    margin-left: 30px;
-    font-size: 1.3rem;
-}
-
-.tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px; 
-    padding: 0 20px; 
-}
-
-.tech-column {
-    min-width: 150px; 
-}
-
-.tech-item {
-    display: block;
-    text-indent: 0;
-    padding-left: 15px;
-}
-
-@media (max-width: 768px) {
-    .tech-list {
-        flex-direction: column;
-        padding: 0 10px;  
-    }
-
-    .tech-column {
-        flex: 1 1 100%;
-        max-width: 100%;
-        margin-left: 0; 
-    }
-}
-
-@media (min-width: 769px) {
-    .tech-list {
-        flex-direction: row;
-        justify-content: flex-start; 
-    }
-
-}
-@media (min-width: 769px) {
-    .about-container {
-        flex-direction: row; 
-        align-items: center; 
-        justify-content: space-between; 
-    }
-
-    .about-content {
-        flex: 1; 
-        margin: 10px; 
-    }
-
-    .about-image {
-        flex: 0 1 50%; 
-        margin: 10px; 
-        max-width: 350px; 
-    }
-
-    .about-image img {
-        width: 100%; 
-        height: auto;
-        display: block; 
-    }
-}
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about-box {
-    opacity: 0; 
-    transform: translateY(20px);
-    animation-fill-mode: forwards; 
-}
-
-/*General stylees for the entire page excluding the #home section and inofrmation above that.----------------------------------------------------------------------------------*/
+/*General stylees for the entire page excluding the #home section and information above that.----------------------------------------------------------------------------------*/
 section {
     padding-left: 10%;
 }
@@ -815,16 +853,6 @@ section {
 #header, #home {
     margin-left: 0; /
 }
-/* Add space below the experience section */
-#experience {
-    margin-bottom: 100px; /* Adjust the value to your preference */
-}
-
-/* Add space above the projects section */
-#projects {
-    margin-top: 500px; /
-}
-
 #home {
     position: relative;
     min-height: 100vh; 
@@ -834,7 +862,6 @@ section {
     text-align: center;
     transition: opacity 0.5s ease-out;
 }
-
 .faded {
     opacity: 0;
 }
