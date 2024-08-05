@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Intersection Observer for all sections
-    const sections = document.querySelectorAll(".experience-section, .about-section, .project");
+    // Intersection Observer for sections
+    const sections = document.querySelectorAll(".experience-item, .experience-details, .about-section, .project");
     const observerOptions = {
         root: null,
         rootMargin: "0px",
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Update Experience section based on selected item
-    window.updateExperience = function (experienceId) { // Make sure this function is global
+    window.updateExperience = function (experienceId) {
         const experiences = {
             hoodCollege: {
                 name: "TA for Object-oriented Programming I",
@@ -115,4 +115,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Automatically display the first experience
     updateExperience('hoodCollege');
+});
+document.addEventListener("DOMContentLoaded", function () {
+    // ... existing code
+
+    // Apply animation classes
+    const experienceHeader = document.querySelector(".experience-header");
+    const experienceItems = document.querySelectorAll(".experience-item");
+
+    // Apply animation to header and menu items
+    setTimeout(() => {
+        experienceHeader.style.opacity = "1";
+        experienceHeader.style.transform = "translateY(0)";
+        experienceItems.forEach(item => {
+            item.style.opacity = "1";
+            item.style.transform = "translateY(0)";
+        });
+    }, 100); // Delay to allow for other animations to start
 });

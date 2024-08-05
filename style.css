@@ -551,40 +551,54 @@ a {
 
 /* Experience section styles----------------------------------------------------------- */
 
-@keyframes slideUp {
+/* Animation for fading in and sliding up */
+@keyframes fadeInUp {
     from {
-        transform: translateY(50px); /* Increased translateY value for a longer slide */
         opacity: 0;
+        transform: translateY(20px);
     }
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
-/* Experience section styles */
-.experience-section {
+.experience-header,
+.experience-menu .experience-item {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    animation: fadeInUp 1.5s ease-out forwards; /* Apply animation */
+}
+
+.experience-section {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease-out;
 }
 
 .experience-section.in-view {
     opacity: 1;
-    transform: translateY(0);
+    visibility: visible;
 }
 
-.experience-item, .experience-details {
+.experience-section:not(.in-view) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.experience-item,
+.experience-details {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-.experience-item.in-view, .experience-details.in-view {
+.experience-item.in-view,
+.experience-details.in-view {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 .experience-container {
     display: flex;
@@ -593,7 +607,6 @@ a {
     padding: 20px 0;
 }
 
-/* Experience item styles */
 .experience-item {
     padding: 5px 10px;
     cursor: pointer;
@@ -606,10 +619,10 @@ a {
     text-align: left;
 }
 
-.experience-item::after {  
+.experience-item::after {
     content: '';
     position: absolute;
-    left: 10px;
+    left: 35px;
     bottom: 13px;
     width: 0;
     height: 2.5px;
@@ -621,7 +634,6 @@ a {
     width: 83%;
 }
 
-/* Experience menu and details styling */
 .experience-menu {
     width: 32%;
     background-color: transparent;
@@ -637,12 +649,11 @@ a {
     background-color: #2a2a3d;
     border-radius: 10px;
     margin-right: 580px;
+    z-index: 1;
 }
 
 .experience-details h3,
-.experience-details p,
-#Hood_College p,
-#International_Help p {
+.experience-details p {
     color: #cdd6f4;
     margin: 0 0 10px 0;
     font-size: 1.4rem;
@@ -670,12 +681,13 @@ a {
 }
 
 .experience-details h3 {
-    font-size: 1.8rem; 
-    font-weight: bold; 
-    color: #cdd6f4; 
-    margin-bottom: 15px; 
-    text-align: left; 
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #cdd6f4;
+    margin-bottom: 15px;
+    text-align: left;
 }
+
 
 /* Responsive adjustments------ */
 @media (max-width: 768px) {
@@ -685,7 +697,7 @@ a {
     }
 
     .experience-item::after {
-        left: 10px;
+        left: 36px;
         bottom: 10px;
     }
 
@@ -833,7 +845,7 @@ a {
     margin-top: 10px; /* Space between text and icons */
 }
 .footer-icons i {
-    font-size: 35px; /* Icon size */
+    font-size: 33px; /* Icon size */
     color: #cdd6f4; /* Icon color */
     margin: 0 10px; /* Space between icons */
 }
