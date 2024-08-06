@@ -743,8 +743,8 @@ a {
 .section-divider {
     position: absolute; 
     margin-top: -35px;
-    left: 260px;
-    width: 26%; 
+    left: 265px;
+    width: 17%; 
     height: 2px; 
     background-color: #cdd6f4; 
     opacity: 0.2; 
@@ -755,6 +755,7 @@ a {
     justify-content: flex-start;
     padding: 20px;
     background-color: #12121d; 
+    padding-right: 100px;
 }
 
 .project {
@@ -768,11 +769,8 @@ a {
     flex-direction: column;
     position: relative;
     transition: transform 0.3s ease; 
+    
 }
-.project {
-    position: relative; 
-}
-
 .github-icon {
     position: absolute;
     top: 10px;  
@@ -789,7 +787,13 @@ a {
 @media (max-width: 768px) {
     .project {
         width: 100%; /* Full width on small screens */
-        margin-bottom: 20px;
+        margin-bottom: 20px;}
+
+
+        .section-divider {
+            left: 265px; /* Center the divider */
+            width: 50%; /* Adjust width for smaller screens */
+            margin-top: -35px; /* Adjust top margin */
     }
 }
 .project h3 {
@@ -803,6 +807,7 @@ a {
     color: #cdd6f4;
     flex-grow: 1;
     padding-bottom: 40px;
+    padding-top: 20px;
 }
 
 .project-footer {
