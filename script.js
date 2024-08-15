@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 timeframe: "Aug 2024 - Dec 2024",
                 description:
                     "Led discussions and held office hours for 40+ students, teaching Java programming concepts and providing constructive feedback.",
-                roleDetail:
+                roleDetail2:
                     "During this time, I assisted students with their understanding of object-oriented principles, debugging Java code, and preparing for exams. I also created supplementary materials to help students grasp complex topics more effectively.",
                 technologies: ["Java"],
             },
