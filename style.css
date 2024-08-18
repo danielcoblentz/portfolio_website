@@ -179,7 +179,7 @@ a {
 }
 
 /* Underline effect for links in fullscreen view */
-@media (min-width: 600px) {
+@media (min-width: 480px) {
     .nav-link::after {
         content: '';
         position: absolute;
@@ -258,7 +258,7 @@ a {
 }
 
 
-@media (max-width: 296px) {
+@media (max-width: 768px) {
     .hamburger {
         display: block;
     }
@@ -303,9 +303,7 @@ a {
         opacity: 1; 
     }
 }
-.name-slide-up, .occupation-slide-up, .education-slide-up {
-    animation: slideUpText 0.5s ease-out forwards; /* Speed up animations slightly */
-}
+
 @media (min-width: 769px) {
     .nav-menu {
         position: static;
@@ -402,33 +400,6 @@ a {
     margin-right: 20px;
     font-size: 1.5rem;
 }
-@media (max-width: 600px) {
-    .scroll-text {
-        font-size: 1.2rem; /* Smaller font size for better readability */
-    }
-
-    .centered-text h1 {
-        font-size: 3.3rem; /* Reduce the size of large headings */
-    }
-
-    .centered-text p {
-        font-size: 1.2rem; /* Reduce paragraph font size */
-    }
-    .arrow-box{
-        width: 30px;
-        height: 40px;
-    }
-    .down-arrow {
-        font-size: 1.5rem; /* Smaller arrow icon */
-    }
-    .nav-logo {
-        width: 25%; /* Adjust the width to suit mobile devices */
-        height: auto; /* Maintains the aspect ratio */
-        display: block; /* Ensures the image is centered if needed */
-        margin-left: 0  /* Centers the image horizontally */
-    }
-}
-
 
 /* About Me section ----------------------------------------------------------------------------------------------------------------- */
 @keyframes slideUp {
@@ -469,6 +440,7 @@ a {
     font-size: 2.6rem;
     margin-bottom: 0;
     text-align: left;
+    padding-left: 30px;
     padding-right: 10px;
 }
 
@@ -491,7 +463,7 @@ a {
 }
 
 .about-box {
-    width: 100%;
+    width: 80%;
     background-color: #12121d;
     padding: 20px;
     border-radius: 5px;
@@ -529,7 +501,7 @@ a {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .about-section h2 {
         font-size: 1.8rem;
     }
@@ -544,12 +516,9 @@ a {
         max-width: 100%;
         margin-left: 0;
     }
-    .tech-item{
-        font-size: 0.9rem;
-    }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 769px) {
     .tech-list {
         flex-direction: row;
         justify-content: flex-start;
@@ -576,18 +545,6 @@ a {
         width: 100%;
         height: auto;
         display: block;
-    }
-}
-@media (max-width: 600px) {
-    .about-section h2 {
-        font-size: 1.8rem; /* Smaller size for headings */
-    }
-
-    .about-section p {
-        font-size: 1rem; /* Smaller size for paragraph text */
-    }
-    .about-divider{
-        width: 2.5rem;
     }
 }
 
@@ -736,7 +693,7 @@ a {
 
 
 /* Responsive adjustments------ */
-@media (max-width: 296px) {
+@media (max-width: 768px) {
     .experience-item {
         width: 100%;
         font-size: 1.1rem;
@@ -830,16 +787,19 @@ a {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 296px) {
+@media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
     .project {
         width: 100%; /* Full width on small screens */
-        margin-bottom: 20px;}
+        height: auto; /* Adjust height to be responsive */
+        margin-bottom: 20px; /* Maintain bottom margin */
+    }
 
-
-        .section-divider {
-            left: 265px; /* Center the divider */
-            width: 50%; /* Adjust width for smaller screens */
-            margin-top: -35px; /* Adjust top margin */
+    .section-divider {
+        position: relative; /* Change to relative for more flexible positioning */
+        left: 50%; /* Start from the center */
+        transform: translateX(-50%); /* Shift left by half its own width to truly center */
+        width: 50%; /* Adjust width for smaller screens */
+        margin-top: -35px; /* Adjust top margin */
     }
 }
 .project h3 {
@@ -870,7 +830,7 @@ a {
     padding-bottom: 650px;
 }
 
-@media (max-width: 296px) {
+@media (max-width: 768px) {
     section {
         padding-top: 30px;
         padding-bottom: 30px;
