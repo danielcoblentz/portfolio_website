@@ -400,6 +400,35 @@ a {
     margin-right: 20px;
     font-size: 1.5rem;
 }
+/*Media queries for phones*/
+@media (max-width: 480px) {
+    .centered-section {
+        /* Keep existing layout and format */
+    }
+
+    .centered-text h1 {
+        font-size: 2.6rem; /* Adjust heading font size */
+    }
+
+    .centered-text .occupation, .centered-text .education {
+        font-size: 1rem; /* Adjust subheading font size */
+    }
+
+    .centered-text p {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    .scroll-text {
+        font-size: 1.2rem; /* Adjust scroll text font size */
+    }
+
+    .down-arrow {
+        font-size: 1.5rem; /* Adjust arrow icon font size */
+    }
+    .arrow-box{
+        font-size: 1rem;
+    }
+}
 
 /* About Me section ----------------------------------------------------------------------------------------------------------------- */
 @keyframes slideUp {
@@ -547,6 +576,46 @@ a {
         display: block;
     }
 }
+@media (max-width: 480px) {
+    .about-section {
+        padding: 40px 15px; /* Slightly reduce the padding for smaller screens */
+    }
+
+    .about-header-container {
+        padding-left: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .about-section h2 {
+        font-size: 2rem; /* Reduce the header font size */
+    }
+
+    .about-divider {
+        width: 280px; /* Adjust divider width */
+    }
+
+    .about-box {
+        font-size: 1rem; /* Adjust the font size in the about box */
+    }
+
+    .about-section p {
+        font-size: 1.1rem; /* Reduce paragraph font size */
+        margin-left: 15px; /* Adjust left margin */
+        margin-bottom: 15px; /* Adjust bottom margin */
+    }
+
+    .tech-list {
+        gap: 20px; /* Reduce gap between technology items */
+    }
+
+    .tech-item {
+        padding-left: 10px; /* Adjust padding for list items */
+    }
+    .about-divider{
+        font-size: 1rem;
+        width: 0px;
+    }
+}
+
 
 
 /* Experience section styles----------------------------------------------------------- */
