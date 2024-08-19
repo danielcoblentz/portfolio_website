@@ -1018,6 +1018,27 @@ a {
 .footer-icons i:hover {
     color: #ffffff; /* Hover effect for icons */
 }
+
+/*responsive styles for mobile*/
+@media (max-width: 480px) {
+    .site-footer {
+        padding: 10px 0; /* Reduce padding to decrease overall footer height */
+        font-size: 10px; /* Reduce font size for text within the footer */
+    }
+    .site-footer p{
+        font-size: 0.75rem;
+    }
+
+    .footer-icons {
+        margin-top: 5px; /* Reduce space between text and icons */
+    }
+
+    .footer-icons i {
+        font-size: 20px; /* Smaller icon size */
+        margin: 0 5px; /* Reduce space between icons */
+    }
+}
+
 /*General stylees for the entire page excluding the #home section and information above that.----------------------------------------------------------------------------------*/
 section {
     padding-left: 10%;
