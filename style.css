@@ -899,22 +899,6 @@ a {
     transform: scale(1.05); 
 }
 
-/* Responsive adjustments for smaller screens */
-@media (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
-    .project {
-        width: 100%; /* Full width on small screens */
-        height: auto; /* Adjust height to be responsive */
-        margin-bottom: 20px; /* Maintain bottom margin */
-    }
-
-    .section-divider {
-        position: relative; /* Change to relative for more flexible positioning */
-        left: 50%; /* Start from the center */
-        transform: translateX(-50%); /* Shift left by half its own width to truly center */
-        width: 50%; /* Adjust width for smaller screens */
-        margin-top: -35px; /* Adjust top margin */
-    }
-}
 .project h3 {
     font-size: 1.5rem;
     color: #cdd6f4;
@@ -953,37 +937,37 @@ a {
         margin-bottom: 20px;
     }
 }
-/*Responsive for mobile*/
+/*Responsive for mobile--------------------*/
 @media (max-width: 480px) {
     .projects-section h2 {
         font-size: 2rem; 
         padding-left: 10px; 
     }
     .projects-section{
-        padding-left: 0;
-        padding-right: 30px;
+       padding-left: 30px;
+       padding-right: 30px;
     }
 
     .project {
-        width: 100%; /* Make project boxes full width */
-        margin-bottom: 5px; /* Adjust margin between project boxes */
-        padding: 15px; /* Adjust padding for smaller screens */
+        width: 100%; 
+        margin-bottom: 5px; 
+        padding: 15px; 
     }
 
     .project h3 {
-        font-size: 1.3rem; /* Adjust font size for project titles */
-        margin-bottom: 15px; /* Adjust margin below titles */
+        font-size: 1.3rem; 
+        margin-bottom: 15px; 
     }
 
     .project p {
-        font-size: 1rem; /* Adjust font size for project descriptions */
-        padding-top: 15px; /* Adjust padding */
+        font-size: 1rem; 
+        padding-top: 15px; 
         padding-bottom: 30px;
     }
 
     .project-footer {
-        font-size: 0.9rem; /* Adjust font size for footer text */
-        padding-top: 8px; /* Adjust padding */
+        font-size: 0.9rem; 
+        padding-top: 8px; 
     }
 
     .section-divider {
@@ -1016,26 +1000,26 @@ a {
     margin: 0 10px; /* Space between icons */
 }
 .footer-icons i:hover {
-    color: #ffffff; /* Hover effect for icons */
+    color: #ffffff; 
 }
 
 /*responsive styles for mobile*/
 @media (max-width: 480px) {
     .site-footer {
-        padding: 10px 0; /* Reduce padding to decrease overall footer height */
-        font-size: 10px; /* Reduce font size for text within the footer */
+        padding: 10px 0; 
+        font-size: 10px; 
     }
     .site-footer p{
         font-size: 0.75rem;
     }
 
     .footer-icons {
-        margin-top: 5px; /* Reduce space between text and icons */
+        margin-top: 5px; 
     }
 
     .footer-icons i {
-        font-size: 20px; /* Smaller icon size */
-        margin: 0 5px; /* Reduce space between icons */
+        font-size: 20px; /
+        margin: 0 5px; 
     }
 }
 
