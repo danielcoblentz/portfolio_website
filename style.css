@@ -77,17 +77,6 @@ html, body {
     text-decoration: none;
     animation: bounce 2s infinite; /* Infinite bouncing animation */
 }
-
-/* Bounce animation for the arrow */
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }}
-
-
 header {
     width: 100%;
     position: fixed;
@@ -351,11 +340,11 @@ a {
 }
 
 .scroll-text {
-    animation-delay: 0.8s; /* Example delay, adjust as necessary */
+    animation-delay: 0.8s; /
 }
 
 .arrow-box {
-    animation-delay: 1s; /* Later than text to create a staggered effect */
+    animation-delay: 1s; 
 }
 
 
@@ -427,8 +416,8 @@ a {
         font-size: 0.5rem;
     }
    .nav-logo{
-    height:100%;
-    width:100%;
+    height:50px;
+    width:50px;
    }
 }
 
@@ -814,13 +803,16 @@ a {
     .experience-menu {
         width: 100%; /* Adjust menu width to be full-width on small screens */
         padding-left: 5%; /* Adjust padding for alignment */
+        margin-top: 100px;
     }
 
     .experience-details {
         width: 100%; /* Make details box full width */
-        padding: 15px; /* Adjust padding to fit content comfortably */
-        margin-top: 20px; /* Reduce margin to avoid too much spacing */
-        margin-right: 0; /* Adjust margin to fit small screens */
+        padding-right: 15px; /* Adjust padding to fit content comfortably */
+        margin-top: 0px; /* Reduce margin to avoid too much spacing */
+        margin-right: 90px; /* Adjust margin to fit small screens */
+        margin-left: 0px;
+
     }
 
     .experience-details h3,
@@ -944,7 +936,7 @@ a {
         padding-left: 10px; 
     }
     .projects-section{
-       padding-left: 30px;
+       padding-left: 2px;
        padding-right: 30px;
     }
 
@@ -1019,7 +1011,7 @@ a {
 
     .footer-icons i {
         font-size: 20px; /
-        margin: 0 5px; 
+        margin: 5px;
     }
 }
 
