@@ -402,10 +402,7 @@ a {
 }
 /*Media queries for phones*/
 @media (max-width: 480px) {
-    .centered-section {
-        /* Keep existing layout and format */
-    }
-
+   
     .centered-text h1 {
         font-size: 2.6rem; /* Adjust heading font size */
     }
@@ -415,19 +412,24 @@ a {
     }
 
     .centered-text p {
-        font-size: 1.2rem; /* Adjust paragraph font size */
+        font-size: 1.24rem; /* Adjust paragraph font size */
+        padding: 2px;
     }
 
     .scroll-text {
-        font-size: 1.2rem; /* Adjust scroll text font size */
+        font-size: 1.19rem; /* Adjust scroll text font size */
     }
 
     .down-arrow {
         font-size: 1.5rem; /* Adjust arrow icon font size */
     }
     .arrow-box{
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
+   .nav-logo{
+    height:100%;
+    width:100%;
+   }
 }
 
 /* About Me section ----------------------------------------------------------------------------------------------------------------- */
@@ -578,23 +580,23 @@ a {
 }
 @media (max-width: 480px) {
     .about-section {
-        padding: 40px 15px; /* Slightly reduce the padding for smaller screens */
+        padding: 40px 15px; 
     }
 
     .about-header-container {
-        padding-left: 15px; /* Reduce padding on smaller screens */
+        padding-left: 15px; 
     }
 
     .about-section h2 {
-        font-size: 2rem; /* Reduce the header font size */
+        font-size: 2rem; 
     }
 
     .about-divider {
-        width: 280px; /* Adjust divider width */
+        width: 280px; 
     }
 
     .about-box {
-        font-size: 1rem; /* Adjust the font size in the about box */
+        font-size: 1rem; 
     }
 
     .about-section p {
@@ -611,8 +613,8 @@ a {
         padding-left: 10px; /* Adjust padding for list items */
     }
     .about-divider{
-        font-size: 1rem;
-        width: 0px;
+        font-size: 0rem;
+        width: 25px;
     }
 }
 
@@ -793,7 +795,48 @@ a {
         margin-bottom: 10px; /* Less space for tighter layouts */
     }
 }
+/*mobile adjustments for small screens*/
+@media (max-width: 480px) {
+    .experience-container {
+        padding: 0px 0; /* Adjust padding for smaller screens */
+    }
 
+    .experience-item {
+        font-size: 1.1rem; /* Adjust font size for better readability */
+        padding: 5px 8px; /* Adjust padding to fit small screens better */
+    }
+
+    .experience-item::after {
+        left: 10px; /* Adjust pseudo-element positioning for smaller screens */
+        bottom: 8px; /* Adjust pseudo-element positioning for smaller screens */
+    }
+
+    .experience-menu {
+        width: 100%; /* Adjust menu width to be full-width on small screens */
+        padding-left: 5%; /* Adjust padding for alignment */
+    }
+
+    .experience-details {
+        width: 100%; /* Make details box full width */
+        padding: 15px; /* Adjust padding to fit content comfortably */
+        margin-top: 20px; /* Reduce margin to avoid too much spacing */
+        margin-right: 0; /* Adjust margin to fit small screens */
+    }
+
+    .experience-details h3,
+    .experience-details p {
+        font-size: 1.2rem; /* Reduce font size for headers and paragraphs */
+    }
+
+    .experience-details .tech-item {
+        font-size: 1.1rem; /* Adjust font size for technology items */
+    }
+
+    .experience-details h3 {
+        font-size: 1.6rem; /* Adjust heading font size to be smaller */
+        margin-bottom: 10px; /* Reduce bottom margin */
+    }
+}
 
 
 /* Projects section -------------------------------------------------------------------------------------------------*/
@@ -825,9 +868,10 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 20px;
+    padding: 10px;
     background-color: #12121d; 
     padding-right: 100px;
+    width: 90%;
 }
 
 .project {
@@ -909,6 +953,48 @@ a {
         margin-bottom: 20px;
     }
 }
+/*Responsive for mobile*/
+@media (max-width: 480px) {
+    .projects-section h2 {
+        font-size: 2rem; 
+        padding-left: 10px; 
+    }
+    .projects-section{
+        padding-left: 0;
+        padding-right: 30px;
+    }
+
+    .project {
+        width: 100%; /* Make project boxes full width */
+        margin-bottom: 5px; /* Adjust margin between project boxes */
+        padding: 15px; /* Adjust padding for smaller screens */
+    }
+
+    .project h3 {
+        font-size: 1.3rem; /* Adjust font size for project titles */
+        margin-bottom: 15px; /* Adjust margin below titles */
+    }
+
+    .project p {
+        font-size: 1rem; /* Adjust font size for project descriptions */
+        padding-top: 15px; /* Adjust padding */
+        padding-bottom: 30px;
+    }
+
+    .project-footer {
+        font-size: 0.9rem; /* Adjust font size for footer text */
+        padding-top: 8px; /* Adjust padding */
+    }
+
+    .section-divider {
+        
+        left:calc(188px - 0px);
+        top: 56px;
+        width: 25px; /* Reduce width for smaller screens */
+        
+    }
+}
+
 /*Footer section + icons --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .site-footer {
     background-color: #12121d;
