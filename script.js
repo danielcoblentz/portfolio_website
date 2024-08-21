@@ -117,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
     updateExperience('hoodCollege');
 });
 document.addEventListener("DOMContentLoaded", function () {
-    // ... existing code
 
     // Apply animation classes
     const experienceHeader = document.querySelector(".experience-header");
@@ -132,4 +131,25 @@ document.addEventListener("DOMContentLoaded", function () {
             item.style.transform = "translateY(0)";
         });
     }, 100); // Delay to allow for other animations to start
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const homeSection = document.querySelector('#home'); // Adjust this selector to match your home section's ID or class
+
+    const options = {
+        root: null, // using the viewport as the root
+        threshold: 0.5, // trigger when 50% of the 'home' section is visible
+        rootMargin: "0px"
+    };
+
+    const observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                entry.target.classList.add('fade-out');
+            } else {
+                entry.target.classList.remove('fade-out');
+            }
+        });
+    }, options);
+
+    observer.observe(homeSection);
 });

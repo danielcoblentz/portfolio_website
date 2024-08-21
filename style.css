@@ -133,7 +133,7 @@ a {
 }
 /* Increase font size of links in the dropdown menu */
 .nav-item .nav-link {
-    font-size: 1.4rem; 
+    font-size: 1.3rem; 
 }
 
 
@@ -179,12 +179,10 @@ a {
         background-color: #cdd6f4;
         transition: width 0.3s ease; 
     }
-
-    .nav-link:hover::after {
-        width: 100%;
-    }
 }
-
+.nav-link:hover::after {
+    width: 100%;
+}
 .nav-link:hover {
     color: #cdd6f4;
 }
@@ -1038,4 +1036,8 @@ section {
 }
 .faded {
     opacity: 0;
+}
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
