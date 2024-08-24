@@ -773,8 +773,11 @@ a {
     }
 
     .experience-item::after {
-        left: 10px; 
+        left: 15px; 
         bottom: 8px; 
+    }
+    .experience-item:hover::after {
+        width: 62%;
     }
 
     .experience-menu {
