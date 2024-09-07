@@ -599,7 +599,7 @@ a {
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-.fade-in-section.is-visible { /* State of the elements when they are in view */
+.fade-in-section.is-visible { 
     opacity: 1;
     transform: translateY(0px);
 }
@@ -622,12 +622,14 @@ a {
     width: 15%;
     padding: 10px;
 }
-
 .experience-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
     cursor: pointer;
     width: 100%;
-    border-left: 2px solid #686868; 
+    border-left: 2px solid #4D4D4D; 
     color: #A6A6A6;
     opacity: 0.6; 
     transition: color 0.3s ease, opacity 0.3s ease, border-left-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for all properties */
@@ -709,10 +711,12 @@ a {
         width: 100%; 
         display: flex; 
         flex-wrap: nowrap; 
+        overflow-x:auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .experience-item {
-        flex: 1 1 auto; 
+        flex: 0 0 auto; 
         padding: 10px;
         border-left: none !important; 
         border-bottom: 2px solid transparent; 
@@ -727,7 +731,7 @@ a {
         opacity: 1;
         color: #fff;
         background-color: #1C1C2D;
-        border-bottom: 2px solid #fff; /* White bottom border for highlighted state */
+        border-bottom: 2px solid #fff; 
     }
 
     .experience-details {
@@ -783,7 +787,7 @@ a {
         opacity: 1;
         color: #fff;
         background-color: #1C1C2D;
-        border-bottom: 2px solid #fff; /* White bottom border for highlighted state */
+        border-bottom: 2px solid #fff; 
     }
 
     .experience-details {
