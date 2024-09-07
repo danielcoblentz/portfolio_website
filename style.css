@@ -1,4 +1,4 @@
-/* General styles */
+/* General styles ofr hte home section + hamburger menu */
 * {
     padding: 0;
     margin: 0;
@@ -13,7 +13,7 @@ html, body {
     height: 100%;
     background-color: #12121d; 
     color: #cdd6f4; 
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth; 
 }
 @keyframes slideUpText {
     from {
@@ -21,7 +21,7 @@ html, body {
         opacity: 0; 
     }
     to {
-        transform: translateY(0); /* End at the original position */
+        transform: translateY(0); 
         opacity: 1; 
     }
 }
@@ -69,7 +69,6 @@ html, body {
     font-size: 2rem;
     color: #cdd6f4;
     text-decoration: none;
-    animation: bounce 2s infinite; /* Infinite bouncing animation */
 }
 header {
     width: 100%;
@@ -78,7 +77,7 @@ header {
     left: 0;
     background-color: rgba(30, 30, 46, 0.95); /* Semi-transparent background */
     transition: backdrop-filter 0.3s ease-in-out; /* Smooth transition for blur effect */
-    z-index: 1000; /* Ensures the header is above other content */
+    z-index: 1000; 
 }
 .nav-branding {
     display: flex;
@@ -173,7 +172,7 @@ a {
     width: 100%;
 }
 .nav-link:hover {
-    color: #cdd6f4;
+    color: #e6eafa;
 }
 
 .hamburger {
@@ -289,8 +288,8 @@ a {
 }
 
 .dropdown-footer hr {
-    transition: width 4s ease; /* Adjust duration to synchronize with link animations */
-    width: 0; /* Start with 0 width */
+    transition: width 4s ease; 
+    width: 0; 
 }
 @keyframes fadeUp {
     from {
@@ -374,24 +373,24 @@ a {
 @media (max-width: 480px) {
    
     .centered-text h1 {
-        font-size: 2.6rem; /* Adjust heading font size */
+        font-size: 2.6rem; 
     }
 
     .centered-text .occupation, .centered-text .education {
-        font-size: 1rem; /* Adjust subheading font size */
+        font-size: 1rem; 
     }
 
     .centered-text p {
-        font-size: 1.24rem; /* Adjust paragraph font size */
+        font-size: 1.24rem; 
         padding: 2px;
     }
 
     .scroll-text {
-        font-size: 1.19rem; /* Adjust scroll text font size */
+        font-size: 1.19rem; 
     }
 
     .down-arrow {
-        font-size: 1.5rem; /* Adjust arrow icon font size */
+        font-size: 1.5rem; 
     }
     .arrow-box{
         font-size: 0.5rem;
@@ -403,12 +402,15 @@ a {
    .nav-link{
     font-size: 1.25rem;
    }
+   .footer-link{
+    font-size: 1rem;
+   }
 }
 /* About Me section ----------------------------------------------------------------------------------------------------------------- */
 /*section animation (slide-up)*/
 @keyframes slideUp {
     from {
-        transform: translateY(60px); /* Increased translateY value for a longer slide */
+        transform: translateY(60px); 
         opacity: 0;
     }
     to {
@@ -425,7 +427,7 @@ a {
     align-items: flex-start;
     opacity: 0;
     transform: translateY(50px); /* Match the starting point with the keyframes */
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out; /* Increase duration to 1.5s */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out; 
 }
 
 .about-section.in-view {
@@ -444,8 +446,8 @@ a {
     font-size: 2.6rem;
     margin-bottom: 0;
     text-align: left;
-    padding-left: 30px;
-    padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
 }
 
 .about-divider {
@@ -484,7 +486,7 @@ a {
 .about-section p {
     margin-bottom: 20px;
     margin-left: 30px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .tech-list {
@@ -565,10 +567,6 @@ a {
         font-size: 2rem; 
     }
 
-    .about-divider {
-        width: 280px; 
-    }
-
     .about-box {
         font-size: 1rem; 
     }
@@ -588,229 +586,230 @@ a {
     }
     .about-divider{
         font-size: 0rem;
-        width: 25px;
+        left:calc(207px - 0px);
+        top: 23px;
+        width: 100px; 
     }
 }
 /* Experience section styles----------------------------------------------------------- */
-/* Animation for fading in and sliding up */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-.experience-header,
-.experience-menu .experience-item {
+
+
+.fade-in-section { /* Animation for fading in and sliding up */
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-    animation: fadeInUp 1.5s ease-out forwards; /* Apply animation */
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+.fade-in-section.is-visible { /* State of the elements when they are in view */
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 .experience-section {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 2s ease-out;
-}
-.experience-section.in-view {
-    opacity: 1;
-    visibility: visible;
-}
-.experience-section:not(.in-view) {
-    opacity: 0;
-    visibility: hidden;
-}
-.experience-item,
-.experience-details {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
-}
-.experience-item.in-view,
-.experience-details.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
-.experience-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 20px 0;
-    margin-top: -20px;
-}
-.experience-item {
-    padding: 5px 10px;
-    cursor: pointer;
-    margin: 5px 0;
-    position: relative;
-    color: #cdd6f4;
-    font-size: 1.3rem;
-    transition: color 0.3s ease;
-    width: 60%;
-    text-align: left;
-}
-.experience-item::after {
-    content: '';
-    position: absolute;
-    left: 35px;
-    bottom: 13px;
-    width: 0;
-    height: 2.5px;
-    background-color: #cdd6f4;
-    transition: width 0.3s ease;
-}
-.experience-item:hover::after {
-    width: 95%;
-}
-.experience-menu {
-    width: 32%;
-    background-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 8%;
-    margin-bottom:100px;
-}
-
-.experience-details {
-    width: 65%;
     padding: 20px;
-    background-color: #2a2a3d;
-    margin-top: 50px;
-    border-radius: 10px;
-    margin-right: 580px;
-    z-index: 1;
+    padding-bottom: 100px;
 }
 
-.experience-details h3,
-.experience-details p {
-    color: #cdd6f4;
-    margin: 0 0 10px 0;
-    font-size: 1.4rem;
-}
-
-.experience-details p,
-.experience-details .tech-item {
-    font-size: 1.3rem;
-    margin-top: 20px;
-}
-
-.experience-details .tech-item {
+.experience-container {
     display: flex;
-    align-items: center;
-    margin: 5px 0;
+    width: 100%;
+    margin-left: 30px;
+    margin-bottom: 350px;
 }
 
-.experience-details .tech-item i {
-    margin-right: 10px;
-    color: #cdd6f4;
+.experience-menu {
+    width: 15%;
+    padding: 10px;
 }
 
-#tech-icons i {
-    font-size: 18px;
+.experience-item {
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-left: 2px solid #686868; 
+    color: #A6A6A6;
+    opacity: 0.6; 
+    transition: color 0.3s ease, opacity 0.3s ease, border-left-color 0.3s ease, background-color 0.3s ease; /* Smooth transition for all properties */
 }
-.experience-details h3 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #cdd6f4;
-    margin-bottom: 15px;
-    text-align: left;
+
+.experience-item:hover, .experience-item.highlighted {
+    opacity: 1; 
+    color: #fff; 
+    background-color: #1C1C2D
 }
-/* Responsive adjustments for slightly larger screen sizes------ */
-@media (max-width: 768px) {
-    .experience-item {
-        width: 100%;
-        font-size: 1.1rem;
-    }
 
-    .experience-item::after {
-        left: 36px;
-        bottom: 10px;
-    }
-
-    .experience-item:hover::after {
-        width: 30%;
-    }
-
-    .experience-details {
-        width: 100%;
-        margin-left: 65px;
-        margin-right: 10px;
-    }
-
-    #Hood_College p,
-    #International_Help p {
-        font-size: 1.25rem;
-    }
-
-    .experience-details h3 {
-        font-size: 1.8rem; 
-        margin-bottom: 10px; 
-    }
-    .experience-menu {
-        width: 100%; 
-        padding-left: 5%; 
-        margin-top: 75px;
-        margin-bottom: 15px;
-    }
-
+.experience-item.highlighted {
+    border-left: 2px solid #fff; 
 }
-/*mobile adjustments for small screens*/
+.experience-details {
+    width: 70%;
+    padding: 20px;
+    padding-top: 5px;
+}
+.experience-header h2 {
+    font-size: 2.6rem;
+    margin-bottom: 100px;
+    padding-left: 30px;
+}
+.company-name, .time-frame, .role-description, .role-detail {/* Styles for titles and text within details */
+    color: #cdd6f4; 
+    padding: 5px 0;
+    line-height: 1.5;
+    font-size: 4rem;
+}
+.timeframe {
+    padding-bottom: 15px;
+    font-size: 1rem;
+}
+
+.role-detail {
+    position: relative; 
+    padding-left: 30px; 
+    margin-bottom: 10px; 
+    font-size: 1.1rem;
+}
+
+.role-detail i {
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    margin-right: 3px; 
+    color: #fff; 
+}
+
+.experience-divider { /*dividing line after experience text*/
+    position: absolute;
+    margin-top: -125px;
+    left: 305px;
+    width: 17%;
+    height: 2px;
+    background-color: #cdd6f4;
+    opacity: 0.2;
+}
+.ri-arrow-right-s-fill, .ri-calendar-2-line {
+    color: #cdd6f4; 
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.detail-container h3 {
+    font-size: 2.2rem; 
+    padding-bottom: 10px;
+}
+
+/*Media queries for small devices*/
 @media (max-width: 480px) {
-    #hood_College p{
-        margin-top: 100px;
-    }
     .experience-container {
-        padding: 0px 0; 
-    }
-
-    .experience-item {
-        font-size: 1.1rem; 
-        padding: 5px 8px;
-    }
-
-    .experience-item::after {
-        left: 15px; 
-        bottom: 8px; 
-    }
-    .experience-item:hover::after {
-        width: 62%;
+        flex-direction: column; 
+        margin-left: 0;
+        margin-bottom: 20px;
     }
 
     .experience-menu {
         width: 100%; 
-        padding-left: 5%; 
-        margin-top: 75px;
+        display: flex; 
+        flex-wrap: nowrap; 
+    }
+
+    .experience-item {
+        flex: 1 1 auto; 
+        padding: 10px;
+        border-left: none !important; 
+        border-bottom: 2px solid transparent; 
+        box-sizing: border-box; 
+        white-space: nowrap; 
+        transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease; /* Smooth transitions */
+        border-bottom: 2px solid #686868;
+        margin-top: 10%;
+    }
+
+    .experience-item:hover, .experience-item.highlighted {
+        opacity: 1;
+        color: #fff;
+        background-color: #1C1C2D;
+        border-bottom: 2px solid #fff; /* White bottom border for highlighted state */
     }
 
     .experience-details {
-        width: 100%; 
-        padding-right: 15px;
-        margin-top: 0px; 
-        margin-right: 90px; 
-        margin-left: 0px;
-
+        width: 100%; /* Full width for detail display */
+        padding: 20px;
     }
 
-    .experience-details h3,
-    .experience-details p {
-        font-size: 1.2rem; 
+    .experience-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        padding-left: 10px;
     }
 
-    .experience-details .tech-item {
-        font-size: 1.1rem; 
+    .experience-divider {
+        left:calc(200px - 0px);
+        top: 144px;
+        width: 70px; 
     }
 
-    .experience-details h3 {
-        font-size: 1.6rem; 
-        margin-bottom: 10px; 
+    .detail-container h3 {
+        font-size: 1.6rem;
+        padding-bottom: 5px;
+        margin-top: 10%;
     }
 }
-/* Projects section -------------------------------------------------------------------------------------------------*/
+/* Media queries for small to medium devices */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
 
+    .experience-menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .experience-item {
+        flex: 1 1 auto;
+        padding: 10px;
+        border-left: none !important;
+        border-bottom: 2px solid transparent;
+        box-sizing: border-box;
+        white-space: nowrap;
+        transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+        border-bottom: 2px solid #686868;
+        margin-top: 10%;
+    }
+
+    .experience-item:hover, .experience-item.highlighted {
+        opacity: 1;
+        color: #fff;
+        background-color: #1C1C2D;
+        border-bottom: 2px solid #fff; /* White bottom border for highlighted state */
+    }
+
+    .experience-details {
+        width: 100%; /* Full width for detail display */
+        padding: 20px;
+    }
+
+    .experience-header h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .experience-divider {
+        left:calc(220px - 0px);
+        top: 147px;
+        width:100px; 
+    }
+
+    .detail-container h3 {
+        font-size: 1.6rem;
+        padding-bottom: 5px;
+        margin-top: 10%;
+    }
+}
+/* Projects section styles -------------------------------------------------------------------------------------------------*/
 .section-header {
     width: 100%; 
     text-align: left; 
@@ -829,7 +828,7 @@ a {
     position: absolute; 
     margin-top: -35px;
     left: 265px;
-    width: 17%; 
+    width:17%; 
     height: 2px; 
     background-color: #cdd6f4; 
     opacity: 0.2; 
@@ -840,7 +839,7 @@ a {
     justify-content: flex-start;
     padding: 10px;
     background-color: #12121d; 
-    padding-right: 100px;
+    padding-right: 80px;
     width: 90%;
 }
 
@@ -876,27 +875,25 @@ a {
 }
 
 .project p {
-    font-size: 1.27rem;
+    font-size: 1.15rem;
     color: #cdd6f4;
     flex-grow: 1;
     padding-bottom: 40px;
     padding-top: 20px;
 }
-
 .project-footer {
     font-size: 1rem;
     color: #cdd6f4;
     padding-top: 10px;
 }
-
 #projects {
     margin-bottom: 100px;
 }
-
 .about-section {
-    padding-bottom: 650px;
+    padding-bottom: 400px;
 }
 
+/*Responsive for tablets and simi-small devices--------------------*/
 @media (max-width: 768px) {
     section {
         padding-top: 30px;
@@ -904,7 +901,17 @@ a {
     }
     .project {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+    .projects-section h2 {
+        font-size: 2rem; 
+        padding-left: 10px; 
+    }
+    .section-divider {
+        left:calc(195px - 0px);
+        top: 56px;
+        width: 100px; 
     }
 }
 /*Responsive for mobile--------------------*/
@@ -941,14 +948,12 @@ a {
     }
 
     .section-divider {
-        
         left:calc(188px - 0px);
         top: 56px;
-        width: 25px; /* Reduce width for smaller screens */
-        
+        width: 125px; /* Reduce width for smaller screens */
     }
 }
-/*Footer section + icons --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Footer section + icons styles--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 .site-footer {
     background-color: #12121d;
     color: #cdd6f4;
@@ -957,21 +962,24 @@ a {
     position: relative;
     width: 100%; 
 }
+.site-footer p{
+    font-size: .9rem;
+}
 .footer-icons {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px; /* Space between text and icons */
+    margin-top: 10px; 
 }
-.footer-icons i {
-    font-size: 33px; /* Icon size */
-    color: #cdd6f4; /* Icon color */
-    margin: 0 10px; /* Space between icons */
+
+.footer-icons i { /* Space between icons and size of icons */
+    font-size: 25px; 
+    color: #cdd6f4; 
+    margin: 0 10px; 
 }
 .footer-icons i:hover {
     color: #ffffff; 
 }
-
 /*responsive styles for mobile*/
 @media (max-width: 480px) {
     .site-footer {
@@ -987,10 +995,11 @@ a {
     }
 
     .footer-icons i {
-        font-size: 20px; 
+        font-size: 15px; 
         margin: 5px;
     }
 }
+
 
 /*General stylees for the entire page excluding the #home section and information above that.----------------------------------------------------------------------------------*/
 section {

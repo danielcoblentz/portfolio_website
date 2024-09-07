@@ -68,53 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
     sections.forEach((section) => {
         sectionObserver.observe(section);
     });
-
-    // Update Experience section based on selected item
-    window.updateExperience = function (experienceId) {
-        const experiences = {
-            hoodCollege: {
-                name: "TA for Object-oriented Programming I",
-                timeframe: "Aug 2024 - Dec 2024",
-                description:
-                    "Led discussions and held office hours for 40+ students, teaching Java programming concepts and providing constructive feedback.",
-                roleDetail2:
-                    "During this time, I assisted students with their understanding of object-oriented principles, debugging Java code, and preparing for exams. I also created supplementary materials to help students grasp complex topics more effectively.",
-                technologies: ["Java"],
-            },
-            internationalHelp: {
-                name: "Web Development Intern @ International Help",
-                timeframe: "May 2024 - Aug 2024",
-                description:
-                    "Led the cleaning, analysis, and visualization of diverse datasets sourced from their database and used Google Data Studio to reflect those insights onto their website.",
-                roleDetail:
-                    "My role involved significant data manipulation and visualization tasks. I streamlined the process of data cleaning and ensured the accurate presentation of data on the website, making it accessible to a broader audience. Additionally, I collaborated with team members to develop new features and improve the user interface of the site.",
-                technologies: ["HTML", "CSS", "Google Data Studio"],
-            },
-        };
-
-        const experience = experiences[experienceId];
-
-        if (experience) {
-            document.getElementById("company-name").textContent = experience.name;
-            document.getElementById("time-frame").innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="height: 1em; vertical-align: middle; fill: #cdd6f4;"><path d="M12,19a1,1,0,1,0-1-1A1,1,0,0,0,12,19Zm5,0a1,1,0,1,0-1-1A1,1,0,0,0,17,19Zm0-4a1,1,0,1,0-1-1A1,1,0,0,0,17,15Zm-5,0a1,1,0,1,0-1-1A1,1,0,0,0,12,15ZM19,3H18V2a1,1,0,0,0-2,0V3H8V2A1,1,0,0,0,6,2V3H5A3,3,0,0,0,2,6V20a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V6A3,3,0,0,0,19,3Zm1,17a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V11H20ZM20,9H4V6A1,1,0,0,1,5,5H6V6A1,1,0,0,0,8,6V5h8V6a1,1,0,0,0,2,0V5h1a1,1,0,0,1,1,1ZM7,15a1,1,0,1,0-1-1A1,1,0,0,0,7,15Zm0,4a1,1,0,1,0-1-1A1,1,0,0,0,7,19Z"></path></svg> ${experience.timeframe}`;
-            document.getElementById("role-description").textContent = experience.description;
-            document.getElementById("role-detail").textContent = experience.roleDetail;
-
-            const techIcons = document.getElementById("tech-icons");
-            techIcons.innerHTML = "<p>Technologies and Frameworks I've Worked With and Learned:</p>";
-            experience.technologies.forEach((tech) => {
-                const techItem = document.createElement("div");
-                techItem.className = "tech-item";
-                techItem.innerHTML = `<i class="ri-arrow-right-s-fill"></i> ${tech}`;
-                techIcons.appendChild(techItem);
-            });
-        } else {
-            console.error("Experience not found for ID:", experienceId);
-        }
-    };
-
-    // Automatically display the first experience
-    updateExperience('hoodCollege');
 });
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -152,4 +105,54 @@ document.addEventListener("DOMContentLoaded", function() {
     }, options);
 
     observer.observe(homeSection);
+});
+
+//good after this line
+// Function to toggle the visibility of experience details and manage highlighting
+function toggleExperienceVisibility(selectedId) {
+    // Get all detail containers
+    var details = document.getElementsByClassName('detail-container');
+    for (var i = 0; i < details.length; i++) {
+        // Hide all details
+        details[i].style.display = 'none';
+    }
+
+    // Get all experience items and remove the 'highlighted' class
+    var items = document.getElementsByClassName('experience-item');
+    for (var j = 0; j < items.length; j++) {
+        items[j].classList.remove('highlighted');
+    }
+
+    // Show the selected detail and add 'highlighted' class to the selected item
+    var detailToShow = document.getElementById('details_' + selectedId);
+    if (detailToShow.style.display === 'none') {
+        detailToShow.style.display = 'block';
+        document.getElementById(selectedId).classList.add('highlighted');
+    } else {
+        detailToShow.style.display = 'none';
+        document.getElementById(selectedId).classList.remove('highlighted');
+    }
+}
+
+// Event listener for DOM content loaded to automatically display the first experience's details
+document.addEventListener("DOMContentLoaded", function() {
+    toggleExperienceVisibility('Hood_College');  // Adjust if your default choice changes
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }, {
+        root: null, // observing for viewport
+        rootMargin: '0px',
+        threshold: 0.2 // Trigger when 20% of the element is in view
+    });
+
+    // Target elements that require the fade-in effect
+    const fadeInElements = document.querySelectorAll('.fade-in-section');
+    fadeInElements.forEach(element => observer.observe(element));
 });
