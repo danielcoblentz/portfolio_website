@@ -486,7 +486,7 @@ a {
 .about-section p {
     margin-bottom: 20px;
     margin-left: 30px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .tech-list {
@@ -572,7 +572,7 @@ a {
     }
 
     .about-section p {
-        font-size: 1.1rem; 
+        font-size: 1rem; 
         margin-left: 15px; 
         margin-bottom: 15px; 
     }
@@ -669,7 +669,7 @@ a {
     position: relative; 
     padding-left: 30px; 
     margin-bottom: 10px; 
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .role-detail i {
@@ -713,6 +713,20 @@ a {
         flex-wrap: nowrap; 
         overflow-x:auto;
         -webkit-overflow-scrolling: touch;
+        scrollbar-color: #cdd6f4;
+    }
+
+    .experience-menu::-webkit-scrollbar {
+        width: 6px; /* Width of the vertical scrollbar */
+        height: 6px; /* Height of the horizontal scrollbar */
+    }
+    
+    .experience-menu::-webkit-scrollbar-thumb {
+        background-color: #686868; /* Color of the scroll thumb */
+    }
+    
+    .experience-menu::-webkit-scrollbar-track {
+        background-color: transparent; /* Color of the scroll track */
     }
 
     .experience-item {
@@ -770,7 +784,18 @@ a {
         display: flex;
         flex-wrap: nowrap;
     }
-
+    .experience-menu::-webkit-scrollbar {
+        width: 6px; /* Width of the vertical scrollbar */
+        height: 6px; /* Height of the horizontal scrollbar */
+    }
+    
+    .experience-menu::-webkit-scrollbar-thumb {
+        background-color: #686868; 
+    }
+    
+    .experience-menu::-webkit-scrollbar-track {
+        background-color: transparent; 
+    }
     .experience-item {
         flex: 1 1 auto;
         padding: 10px;
