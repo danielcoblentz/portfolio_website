@@ -172,7 +172,7 @@ a {
     width: 100%;
 }
 .nav-link:hover {
-    color: #cdd6f4;
+    color: #e6eafa;
 }
 
 .hamburger {
@@ -402,6 +402,9 @@ a {
    .nav-link{
     font-size: 1.25rem;
    }
+   .footer-link{
+    font-size: 1rem;
+   }
 }
 /* About Me section ----------------------------------------------------------------------------------------------------------------- */
 /*section animation (slide-up)*/
@@ -443,8 +446,8 @@ a {
     font-size: 2.6rem;
     margin-bottom: 0;
     text-align: left;
-    padding-left: 30px;
-    padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 5px;
 }
 
 .about-divider {
@@ -483,7 +486,7 @@ a {
 .about-section p {
     margin-bottom: 20px;
     margin-left: 30px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .tech-list {
@@ -564,10 +567,6 @@ a {
         font-size: 2rem; 
     }
 
-    .about-divider {
-        width: 280px; 
-    }
-
     .about-box {
         font-size: 1rem; 
     }
@@ -587,11 +586,11 @@ a {
     }
     .about-divider{
         font-size: 0rem;
-        width: 25px;
+        left:calc(207px - 0px);
+        top: 23px;
+        width: 100px; 
     }
 }
-
-
 /* Experience section styles----------------------------------------------------------- */
 
 
@@ -609,6 +608,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 20px;
+    padding-bottom: 100px;
 }
 
 .experience-container {
@@ -667,7 +667,7 @@ a {
     position: relative; 
     padding-left: 30px; 
     margin-bottom: 10px; 
-    font-size: 1rem;
+    font-size: 1.1rem;
 }
 
 .role-detail i {
@@ -697,7 +697,7 @@ a {
     padding-bottom: 10px;
 }
 
-/*Media queries ofr small devices*/
+/*Media queries for small devices*/
 @media (max-width: 480px) {
     .experience-container {
         flex-direction: column; 
@@ -744,7 +744,7 @@ a {
     .experience-divider {
         left:calc(200px - 0px);
         top: 144px;
-        width: 80px; 
+        width: 70px; 
     }
 
     .detail-container h3 {
@@ -753,9 +753,62 @@ a {
         margin-top: 10%;
     }
 }
+/* Media queries for small to medium devices */
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
 
+    .experience-menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+    }
 
+    .experience-item {
+        flex: 1 1 auto;
+        padding: 10px;
+        border-left: none !important;
+        border-bottom: 2px solid transparent;
+        box-sizing: border-box;
+        white-space: nowrap;
+        transition: color 0.3s ease, opacity 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease;
+        border-bottom: 2px solid #686868;
+        margin-top: 10%;
+    }
 
+    .experience-item:hover, .experience-item.highlighted {
+        opacity: 1;
+        color: #fff;
+        background-color: #1C1C2D;
+        border-bottom: 2px solid #fff; /* White bottom border for highlighted state */
+    }
+
+    .experience-details {
+        width: 100%; /* Full width for detail display */
+        padding: 20px;
+    }
+
+    .experience-header h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    .experience-divider {
+        left:calc(220px - 0px);
+        top: 147px;
+        width:100px; 
+    }
+
+    .detail-container h3 {
+        font-size: 1.6rem;
+        padding-bottom: 5px;
+        margin-top: 10%;
+    }
+}
 /* Projects section styles -------------------------------------------------------------------------------------------------*/
 .section-header {
     width: 100%; 
@@ -786,7 +839,7 @@ a {
     justify-content: flex-start;
     padding: 10px;
     background-color: #12121d; 
-    padding-right: 100px;
+    padding-right: 80px;
     width: 90%;
 }
 
@@ -822,7 +875,7 @@ a {
 }
 
 .project p {
-    font-size: 1.27rem;
+    font-size: 1.15rem;
     color: #cdd6f4;
     flex-grow: 1;
     padding-bottom: 40px;
@@ -837,7 +890,7 @@ a {
     margin-bottom: 100px;
 }
 .about-section {
-    padding-bottom: 650px;
+    padding-bottom: 400px;
 }
 
 /*Responsive for tablets and simi-small devices--------------------*/
@@ -848,7 +901,17 @@ a {
     }
     .project {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+    .projects-section h2 {
+        font-size: 2rem; 
+        padding-left: 10px; 
+    }
+    .section-divider {
+        left:calc(195px - 0px);
+        top: 56px;
+        width: 100px; 
     }
 }
 /*Responsive for mobile--------------------*/
@@ -887,7 +950,7 @@ a {
     .section-divider {
         left:calc(188px - 0px);
         top: 56px;
-        width: 80px; /* Reduce width for smaller screens */
+        width: 125px; /* Reduce width for smaller screens */
     }
 }
 /*Footer section + icons styles--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
