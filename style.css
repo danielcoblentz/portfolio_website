@@ -551,6 +551,8 @@ a {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 5px;
+        transform: translate(-30px);
     }
 }
 /*mobile adjustments for small screens*/
@@ -589,6 +591,13 @@ a {
         left:calc(207px - 0px);
         top: 23px;
         width: 100px; 
+    }
+    .about-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 5px;
+        transform: translate(-20px);
     }
 }
 /* Experience section styles----------------------------------------------------------- */
