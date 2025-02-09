@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--import files + libraries-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@latest/devicon.min.css">
     <title>TA_experience details</title>
 </head>
-<body>
+<body> <!--keep same header nav bar as home page-->
     <header id="header">
         <nav class="navbar">
             <a href="#home" class="nav-branding">
                 <img src="/Portfolio logo.png" alt="Logo" class="nav-logo">
             </a>
+            
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="/index.html?section=about" class="nav-link">About me</a>
+                    <a href="#about" class="nav-link">About me</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.html" class="nav-link">Experience</a>
+                    <a href="#experience" class="nav-link">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/index.html" class="nav-link">Projects</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
                     <a href="/Daniel_Coblentz_Resume (6).pdf" target="_blank" class="nav-link">Resume</a>
                 </li>
+                <div class="dropdown-footer">
+                    <hr>
+                    <div class="footer-text">
+                        <a href="mailto:Dan@thecoblentzs.com" class="footer-link">Email</a>
+                        <a href="https://github.com/danielcoblentz" class="footer-link">GitHub</a>
+                        <a href="https://www.linkedin.com/in/danielcoblentz/" class="footer-link">LinkedIn</a>
+                    </div>
+                </div>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -38,6 +48,20 @@
         </nav>
     </header>
 
+    <!--define the left side nav bar-->
+    <nav class="experience-nav" role="navigation" aria-label="Contents">
+        <span role="heading" aria-level="2" class="experience-nav__heading">Contents</span>
+        <ul class="experience-nav__list">
+            <li><a class="experience-nav__link" href="#overview">Overview</a></li>
+            <li><a class="experience-nav__link" href="#role">Role</a></li>
+            <li><a class="experience-nav__link" href="#skills">Skills</a></li>
+            <li><a class="experience-nav__link" href="#timeline">Timeline</a></li>
+            <li><a class="experience-nav__link" href="#tools">Tools</a></li>
+            <li><a class="experience-nav__link" href="#experience">Experience</a></li>
+        </ul>
+    </nav>
+
+    <!--main content for info-->
     <section class="tech-doc-content">
         <article id="overview" class="fade-section">
             <!-- title -->
@@ -64,12 +88,32 @@
                 </div>
             </div>
             <div class="experience-description">
-                <h3>Teaching Experience</h3>
-                <p>As an Undergraduate TA for CS 201 and 202, I developed comprehensive lesson plans and conducted weekly workshops to reinforce object-oriented programming concepts. My responsibilities included providing individualized code reviews, debugging assistance, and creating supplemental learning materials that improved average exam scores by 15% across both courses.</p>
+                <h3>Overview</h3>
+                <p>As an undergraduate teaching assistant for CS 201 and CS 202, I’ve had the opportunity to combine my passion for learning with my love of teaching. 
+                   In this role, I support students in mastering object-oriented programming concepts, data structures, and algorithms.</p>
+
+                <p>My primary responsibilities include conducting code reviews for assignments and projects, where I provide detailed, constructive feedback to help students improve their coding practices. 
+                   I also host weekly office hours to answer questions, clarify challenging topics, and solidify students’ understanding of course material.</p>
+
+                <p>To further support learning, I create supplementary study materials, including video tutorials, written guides, and practice problems with solutions. 
+                   These resources are designed to help students review key concepts and prepare for exams.</p>
+            </div>
+
+            <div class="Key-contributions">
+                <h3>Key contributions</h3>
+                <p></p>
+            </div>
+
+            <div class="sub_item">
+                <h3>Code Reviews & Feedback</h3>
+                <p class="role-detail"><i class="ri-arrow-right-s-fill"></i>Reviewed student code for clarity, efficiency, and adherence to best practices. </p>
+                <p class="role-detail"><i class="ri-arrow-right-s-fill"></i>Provided actionable feedback to help students improve their problem-solving and coding skills.</p>
+                <p class="role-detail"><i class="ri-arrow-right-s-fill"></i>Received positive feedback from students and instructors for my ability to explain complex concepts in an accessible way.</p>
             </div>
         </article>
     </section>
 
+    <!--link to js for header functions-->
     <script src="/experience_details/exp.js"></script>
     <script src="/script.js"></script>
 </body>
