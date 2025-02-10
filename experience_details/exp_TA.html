@@ -10,8 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@latest/devicon.min.css">
     <title>TA_experience details</title>
+    <!-- Optional: Smooth scrolling -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
 </head>
-<body> <!--keep same header nav bar as home page-->
+<body> 
+    <!-- Keep same header nav bar as home page -->
     <header id="header">
         <nav class="navbar">
             <a href="#home" class="nav-branding">
@@ -48,22 +55,22 @@
         </nav>
     </header>
 
-    <!--define the left side nav bar-->
+    <!-- Define the left side nav bar -->
     <nav class="experience-nav" role="navigation" aria-label="Contents">
         <span role="heading" aria-level="2" class="experience-nav__heading">Contents</span>
         <ul class="experience-nav__list">
-            <li><a class="experience-nav__link" href="#overview">Overview</a></li>
-            <li><a class="experience-nav__link" href="#role">Role</a></li>
-            <li><a class="experience-nav__link" href="#skills">Skills</a></li>
-            <li><a class="experience-nav__link" href="#timeline">Timeline</a></li>
-            <li><a class="experience-nav__link" href="#tools">Tools</a></li>
-            <li><a class="experience-nav__link" href="#experience">Experience</a></li>
+            <li><a class="experience-nav__link experience-nav__link--selected" href="#overview">Overview</a></li>
+            <li><a class="experience-nav__link" href="#materials">Supplementary materials</a></li>
+            <li><a class="experience-nav__link" href="#office-hrs">Office hours</a></li>
+            <li><a class="experience-nav__link" href="#timeline">Previous courses</a></li>
         </ul>
     </nav>
 
-    <!--main content for info-->
+    <!-- Main content for info -->
     <section class="tech-doc-content">
-        <article id="overview" class="fade-section">
+        
+        <!-- Overview Section -->
+        <section id="overview" class="fade-section experience-section">
             <!-- title -->
             <h2>Undergraduate TA -- CS 201 & CS 202</h2>
 
@@ -87,33 +94,101 @@
                     <p>Java, Python</p>
                 </div>
             </div>
+
             <div class="experience-description">
                 <h3>Overview</h3>
-                <p>As an undergraduate teaching assistant for CS 201 and CS 202, I’ve had the opportunity to combine my passion for learning with my love of teaching. 
-                   In this role, I support students in mastering object-oriented programming concepts, data structures, and algorithms.</p>
+                <p>
+                  As an undergraduate teaching assistant for CS 201 and CS 202, I’ve had 
+                  the opportunity to combine my passion for learning with my love of teaching. 
+                  In this role, I support students in mastering object-oriented programming 
+                  concepts, data structures, and algorithms.
+                </p>
 
-                <p>My primary responsibilities include conducting code reviews for assignments and projects, where I provide detailed, constructive feedback to help students improve their coding practices. 
-                   I also host weekly office hours to answer questions, clarify challenging topics, and solidify students’ understanding of course material.</p>
+                <p>
+                  My primary responsibilities include conducting code reviews for assignments 
+                  and projects, where I provide detailed, constructive feedback to help 
+                  students improve their coding practices. I also host weekly office hours 
+                  to answer questions, clarify challenging topics, and solidify students’ 
+                  understanding of course material.
+                </p>
 
-                <p>To further support learning, I create supplementary study materials, including video tutorials, written guides, and practice problems with solutions. 
-                   These resources are designed to help students review key concepts and prepare for exams.</p>
+                <p>
+                  To further support learning, I create supplementary study materials, 
+                  including video tutorials, written guides, and practice problems with 
+                  solutions. These resources are designed to help students review key 
+                  concepts and prepare for exams.
+                </p>
             </div>
 
             <div class="Key-contributions">
                 <h3>Key contributions</h3>
-                <p></p>
+                <!--add content below -->
             </div>
 
             <div class="sub_item">
                 <h3>Code Reviews & Feedback</h3>
-                <p class="role-detail"><i class="ri-arrow-right-s-fill"></i>Reviewed student code for clarity, efficiency, and adherence to best practices. </p>
-                <p class="role-detail"><i class="ri-arrow-right-s-fill"></i>Provided actionable feedback to help students improve their problem-solving and coding skills.</p>
-                <p class="role-detail"><i class="ri-arrow-right-s-fill"></i>Received positive feedback from students and instructors for my ability to explain complex concepts in an accessible way.</p>
+                <p class="role-detail">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    Reviewed student code for clarity, efficiency, and adherence to best practices.
+                </p>
+                <p class="role-detail">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    Provided actionable feedback to help students improve their problem-solving 
+                    and coding skills.
+                </p>
+                <p class="role-detail">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    Received positive feedback from students and instructors for my ability to 
+                    explain complex concepts in an accessible way.
+                </p>
             </div>
-        </article>
+        </section>
+
+        <!-- maerials -->
+        <section id="materials" class="experience-section">
+            <h2>Supplementary Materials</h2>
+            <p>
+                <p class="role-detail">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    Developed weekly practice problems and solutions to reinforce course material.
+
+                </p>
+
+                <p class="role-detail">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    Solved practice midterm and final exam problems in review sessions, posted solutions in the materials document.
+
+                </p>
+
+                <p class="role-detail">
+                    <i class="ri-arrow-right-s-fill"></i>
+                    Shared these resources on the course platform, where they became a go-to study tool for many students.
+
+                </p>
+            </p>
+        </section>
+
+        <!-- Office hrs -->
+        <section id="office-hrs" class="experience-section">
+            <h2>Office hrs</h2>
+            <p>
+                <!-- Content for office hrs section-->
+                content here
+            </p>
+        </section>
+
+        <section id="courses" class=" experience-section">
+            <h2>previous courses</h2>
+            <p>
+                <h3>CS 201 – Object-Oriented Programming I</h3>
+                <p>This was where I really started getting comfortable with Java and object-oriented programming concepts. 
+                   I helped students get a strong grasp on fundamental ideas like classes, inheritance, and polymorphism. It was also great to see students go from struggling with syntax to confidently implementing their own small projects by the end of the semester.</p>
+            </p>
+        </section>
+
     </section>
 
-    <!--link to js for header functions-->
+    <!-- Link to JS for header functions -->
     <script src="/experience_details/exp.js"></script>
     <script src="/script.js"></script>
 </body>
