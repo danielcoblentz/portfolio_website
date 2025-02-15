@@ -6,7 +6,7 @@ body {
     display: flex;
     padding-top: 100px;
     background-color: #101218; 
-    color: #fff; 
+    color: #cdd6f4; 
 }
 html {
     scroll-behavior: smooth;
@@ -21,9 +21,10 @@ html {
 
 .tech-doc-content h2 {
     font-size: 1.5rem;
-    color: #fff;
+    color: #cdd6f4;
     text-align: center; 
     margin-bottom: 20px; 
+    font-weight: bolder;
 }
 /*main image under role title*/
 .ta-image {
@@ -57,6 +58,15 @@ h4 {
     font-size: 1.5rem;
     margin-bottom: 10px; 
 }
+h3 {
+    font-size: 1.5rem;
+    color: #cdd6f4;
+    margin-bottom: 1.5rem;
+    margin-top: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    font-weight: bold;
+}
 
 p {
     margin-bottom: 10px; 
@@ -77,27 +87,24 @@ p {
 
 .experience-description h3 {
     font-size: 1.5rem;
-    color: #e2e8f0;
+    color: #cdd6f4;
     margin-bottom: 1.5rem;
     margin-top: 2.5rem;
     font-weight: 600;
     text-align: center;
 }
 
-.Key-contributions h3 {
-    font-size: 1.5rem;
-    color: #e2e8f0;
-    margin-bottom: 1.5rem;
-    margin-top: 2.5rem;
-    font-weight: 600;
-    text-align: center;
+.experience-description a {
+    color: #b4befe; /* link color */
+    text-decoration: underline;
+    
 }
 
 .experience-description p {
     text-indent: 2em;
     line-height: 1.4;
     font-size: 1.1rem;
-    color: #e2e8f0;
+    color: #cdd6f4;
     margin-bottom: 2rem;
 }
 
@@ -150,3 +157,51 @@ border-left: 2px solid #fff;
     color: #fff; 
     border-left: 2px solid #fff; /* highlight  left border on hover */
 }
+
+/*media queries for other devices (mobile, tablet, desktop and large screens)*/
+/* mobile devices */
+@media (max-width: 767px) {
+    .experience-nav {
+        display: none; 
+    }
+    .tech-doc-content {
+        padding: 20px; 
+        margin: 0 10px; 
+    }
+    .categories-container {
+        flex-direction: column; 
+    }
+    .categories-left, .categories-right {
+        width: 100%; 
+        text-align: center; 
+    }
+    .experience-description p {
+        text-indent: 0; 
+    }
+}
+/* tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .experience-nav {
+        width: 150px; 
+        padding: 1rem; 
+    }
+    .tech-doc-content {
+        padding: 30px; 
+        max-width: 700px; 
+    }
+    .categories-container {
+        flex-direction: row; 
+        justify-content: space-around; 
+    }
+    .categories-left, .categories-right {
+        width: 48%; 
+    }
+}
+/* desktops and larger screens */
+@media (min-width: 1024px) {
+    .tech-doc-content {
+        padding: 40px; 
+        max-width: 800px; 
+    }
+}
+
