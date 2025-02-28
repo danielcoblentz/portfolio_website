@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Intersection Observer for sections
+    // Intersection observer for sections
     const sections = document.querySelectorAll(".experience-item, .experience-details, .about-section, .project");
     const observerOptions = {
         root: null,
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Apply animation classes
+    // apply animation classes
     const experienceHeader = document.querySelector(".experience-header");
     const experienceItems = document.querySelectorAll(".experience-item");
 
@@ -86,10 +86,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 100); // Delay to allow for other animations to start
 });
 document.addEventListener("DOMContentLoaded", function() {
-    const homeSection = document.querySelector('#home'); // Adjust this selector to match your home section's ID or class
+    const homeSection = document.querySelector('#home'); 
 
     const options = {
-        root: null, // using the viewport as the root
+        root: null, 
         threshold: 0.5, // trigger when 50% of the 'home' section is visible
         rootMargin: "0px"
     };
@@ -107,36 +107,32 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(homeSection);
 });
 
-//good after this line
-// Function to toggle the visibility of experience details and manage highlighting
+//  toggle the visibility of experience details and manage highlighting
 function toggleExperienceVisibility(selectedId) {
-    // Get all detail containers
-    var details = document.getElementsByClassName('detail-container');
-    for (var i = 0; i < details.length; i++) {
-        // Hide all details
-        details[i].style.display = 'none';
-    }
+    //hide all detail containers
+    var details = document.querySelectorAll('.detail-container');
+    details.forEach(detail => {
+        detail.style.display = 'none'; 
+    });
 
-    // Get all experience items and remove the 'highlighted' class
-    var items = document.getElementsByClassName('experience-item');
-    for (var j = 0; j < items.length; j++) {
-        items[j].classList.remove('highlighted');
-    }
+    //remove highlighting from all experience items
+    var items = document.querySelectorAll('.experience-item');
+    items.forEach(item => {
+        item.classList.remove('highlighted');
+    });
 
-    // Show the selected detail and add 'highlighted' class to the selected item
+    // Show selected detail and highlight the corresponding tab
     var detailToShow = document.getElementById('details_' + selectedId);
-    if (detailToShow.style.display === 'none') {
+    if (detailToShow) {
         detailToShow.style.display = 'block';
+        detailToShow.scrollTop = 0; // reset scroll position when switching tabs
         document.getElementById(selectedId).classList.add('highlighted');
-    } else {
-        detailToShow.style.display = 'none';
-        document.getElementById(selectedId).classList.remove('highlighted');
     }
 }
 
-// Event listener for DOM content loaded to automatically display the first experience's details
+// automatically display the experience's details
 document.addEventListener("DOMContentLoaded", function() {
-    toggleExperienceVisibility('Hood_College');  // Adjust if your default choice changes
+    toggleExperienceVisibility('ML_Research');  // change the first exp that users see
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -147,12 +143,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, {
-        root: null, // observing for viewport
+        root: null, 
         rootMargin: '0px',
-        threshold: 0.2 // Trigger when 20% of the element is in view
+        threshold: 0.2 
     });
 
-    // Target elements that require the fade-in effect
+    // get elements that require the fade-in effect
     const fadeInElements = document.querySelectorAll('.fade-in-section');
     fadeInElements.forEach(element => observer.observe(element));
 });
