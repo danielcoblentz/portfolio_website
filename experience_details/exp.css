@@ -11,6 +11,10 @@ body {
 html {
     scroll-behavior: smooth;
   }
+
+  section {
+    margin-left: 10%;
+}
 /*main content box*/
 .tech-doc-content {
     flex-grow: 1;
@@ -110,7 +114,7 @@ p {
 
 /* Left nav menu (vertical line) */
 .experience-nav {
-    width: 200px;
+    width: 250px;
     padding: 1rem 1rem 1rem 1.5rem; /* Add left padding for the line */
     position: fixed;
     top: 150px; /* Adjust based on header height (optional) */
@@ -155,10 +159,21 @@ border-left: 2px solid #fff;
 }
 .experience-nav__link:hover {
     color: #fff; 
-    border-left: 2px solid #fff; /* highlight  left border on hover */
+    border-left: 2px solid #fff; 
+}
+/* controlls indent sub-tabs under their parent category */
+.experience-nav__list .sub-tab {
+    padding: .1875rem .5rem; 
+    padding-left: 1.5rem; 
+}
+.experience-section {
+    display: block;
+    width: 100%;
+    max-width: 800px; /* Matches the Overview */
+    margin: 0 auto;
 }
 
-/*media queries for other devices (mobile, tablet, desktop and large screens)*/
+/*media queries for other devices (mobile, tablet, desktop and large screens)------------*/
 /* mobile devices */
 @media (max-width: 767px) {
     .experience-nav {

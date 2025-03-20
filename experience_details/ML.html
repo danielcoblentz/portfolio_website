@@ -48,16 +48,31 @@
             </div>
         </nav>
     </header>
+   <!-- Define the left side nav bar -->
+<nav class="experience-nav" role="navigation" aria-label="Contents">
+    <span role="heading" aria-level="2" class="experience-nav__heading">Contents</span>
+    <ul class="experience-nav__list">
+        <li><a class="experience-nav__link experience-nav__link--selected" href="#overview">Overview</a></li>
+        <li><a class="experience-nav__link" href="#materials">Background & Motivation</a></li>
+        <li><a class="experience-nav__link" href="#methodology">Methodology</a></li>
 
-    <!-- Define the left side nav bar -->
-    <nav class="experience-nav" role="navigation" aria-label="Contents">
-        <span role="heading" aria-level="2" class="experience-nav__heading">Contents</span>
-        <ul class="experience-nav__list">
-            <li><a class="experience-nav__link experience-nav__link--selected" href="#overview">Overview</a></li>
-            <li><a class="experience-nav__link" href="#materials">Key contributions</a></li>
-            <li><a class="experience-nav__link" href="#office-hrs">Supplementary materials</a></li>
-        </ul>
-    </nav>
+        <li><a class="experience-nav__link sub-tab" href="#knowledge-distillation">Knowledge Distillation</a></li>  <!-- Sub-tab -->
+        <li><a class="experience-nav__link sub-tab" href="#federated-learning">Federated Learning</a></li>          <!-- Sub-tab -->
+        <li><a class="experience-nav__link sub-tab" href="#quantization">Quantization & Compression</a></li>        <!-- Sub-tab -->
+
+        <li><a class="experience-nav__link" href="#experiments">Experiments & Results</a></li>
+        <li><a class="experience-nav__link sub-tab" href="#performance-benchmarks">Performance Benchmarks</a></li>  <!-- Sub-tab -->
+        <li><a class="experience-nav__link sub-tab" href="#edge-deployment">Edge Deployment Tests</a></li>          <!-- Sub-tab -->
+
+        <li><a class="experience-nav__link" href="#timeline">Project Timeline</a></li>
+        <li><a class="experience-nav__link" href="#challenges">Challenges & Solutions</a></li>
+        <li><a class="experience-nav__link sub-tab" href="#technical-challenges">Technical Challenges</a></li>      <!-- Sub-tab -->
+        <li><a class="experience-nav__link sub-tab" href="#optimization-strategies">Optimization Strategies</a></li><!-- Sub-tab -->
+
+        <li><a class="experience-nav__link" href="#future-work">Future Work</a></li>
+    </ul>
+</nav>
+
 
     <!-- Main content for info -->
     <section class="tech-doc-content">
@@ -66,17 +81,15 @@
         <section id="overview" class="fade-section experience-section">
             <!-- title -->
             <h2>Machine Learning Research Assistant</h2>
-
             <!-- image -->
-            <img src="your-image.jpg" alt="TA" class="ta-image">
-
+            <img src="your-image.jpg" alt="TA" class="ta-image"> <!--replace-->
             <!-- categories -->
             <div class="categories-container">
                 <div class="categories-left">
                     <h4>Role</h4>
                     <p>ML Research Assistant</p>
                     <h4>Skills</h4>
-                    <p>LLM's</p>
+                    <p>Large language models</p>
                     <p>Python</p>
                     <p></p>
                 </div>
@@ -84,83 +97,108 @@
                     <h4>Timeline</h4>
                     <p>Fall 2024 - Present</p>
                     <h4>Tools</h4>
-                    <p>Java, Python</p>
+                    <p>Python, Hugging face, Ollama</p>
+                    
                 </div>
             </div>
 
             <div class="experience-description">
                 <h3>Overview</h3>
                 <p>
-                  As an undergraduate teaching assistant for CS 201 and CS 202, I’ve had 
-                  the opportunity to combine my passion for learning with my love of teaching. 
-                  In this role, I support students in mastering object-oriented programming 
-                  concepts, data structures, and algorithms.
+                    Large language models (<a href="https://developers.google.com/machine-learning/resources/intro-llms" target="_blank">LLMs</a>) have revolutionized natural language processing
+                    (<a href="https://www.ibm.com/think/topics/natural-language-processing" target="_blank">NLP</a>), enabling advanced human-like text understanding and generation. 
+                    However, deploying these models on edge devices such as smartphones, IoT sensors, and embedded systems remains a challenge due to high computational demands, memory constraints, 
+                    and the diverse nature of edge hardware.
                 </p>
-
                 <p>
-                  My primary responsibilities include conducting code reviews for assignments 
-                  and projects, where I provide detailed, constructive feedback to help 
-                  students improve their coding practices. I also host weekly office hours 
-                  to answer questions, clarify challenging topics, and solidify students’ 
-                  understanding of course material.
-                </p>
-
+                    This ongoing research aims to develop AI systems that can organize, adapt, and optimize themselves dynamically to meet diverse user requirements while ensuring privacy and efficiency. 
+                    By utilizing knowledge distillation, this project transfers the reasoning and language capabilities of a 14-billion-parameter teacher model (DeepSeek-R1-14B) into more compact student models (Qwen and LLaMA3). 
+                    The goal is to close the performance gap between small and large-scale models while ensuring edge feasibility, reducing computational overhead without sacrificing accuracy.</p>
                 <p>
-                    To further support learning, I create supplementary 
-                    <a href="https://docs.google.com/document/d/1dn_eKVyUhfyfCUyqA4bXEY8RGuBM8KtZO2JvKMnha9g/edit?usp=sharing">study materials</a>, 
-                    including video tutorials, written guides, and practice problems with solutions. These resources are designed to help students review key concepts and prepare for exams.
-                </p>
-                
-            </div>
-
-            <div class="Key-contributions">
-                <h3>Key contributions</h3>
-                <!--add content below -->
-            </div>
-
-            <div class="sub_item">
-                <p class="role-detail">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    Reviewed student code for clarity, efficiency, and adherence to best practices.
-                </p>
-                <p class="role-detail">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    Provided actionable feedback to help students improve their problem-solving 
-                    and coding skills.
-                </p>
-                <p class="role-detail">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    Received positive feedback from students and instructors for my ability to 
-                    explain complex concepts in an accessible way.
+                    Building on the vision of connected intelligence this project integrates GPT-driven automation for task-oriented communication, <a href="https://research.ibm.com/blog/what-is-federated-learning" target="_blank">federated learning</a>,
+                    and model coordination, enabling efficient AI orchestration across edge devices. Through comparative experiments, we evaluate the accuracy of distilled models before and after training, while also assessing practical edge deployment on low-power hardware.
                 </p>
             </div>
-        </section>
 
-        <!-- maerials -->
-        <section id="materials" class="experience-section">
-            <h3>Supplementary Materials</h3>
-            <p>
-                <p class="role-detail">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    Developed weekly practice problems and solutions to reinforce course material.
+            <!-- Background & motivation -->
+    <section id="materials" class="experience-section">
+        <h3>Background & Motivation</h3>
+        <p>Large-scale AI models have achieved impressive breakthroughs in natural language processing (NLP), code generation, and task automation, but they are often too large and resource-intensive for real-world edge applications. Existing approaches rely on cloud-based processing, which introduces concerns related to:
 
-                </p>
-
-                <p class="role-detail">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    Solved practice midterm and final exam problems in review sessions, posted solutions in the materials document.
-
-                </p>
-
-                <p class="role-detail">
-                    <i class="ri-arrow-right-s-fill"></i>
-                    Shared these resources on the course platform, where they became a go-to study tool for many students.
-
-                </p>
-            </p>
-        </section>
-
+            Latency: Cloud inference leads to delays in real-time applications like autonomous systems, healthcare, and robotics.
+            Privacy & Security: Sensitive user data must be sent to external servers, increasing the risk of breaches.
+            Energy Efficiency: Continuous cloud communication consumes high bandwidth and energy, making it unsuitable for power-limited devices.</p>
     </section>
+
+    <!-- Methodology -->
+    <section id="methodology" class="experience-section">
+        <h3>Methodology</h3>
+        <p></p>
+
+        <!-- Sub-tabs under Methodology -->
+        <section id="knowledge-distillation" class="experience-subsection">
+            <h4>Knowledge Distillation</h4>
+            <p></p>
+        </section>
+
+        <section id="federated-learning" class="experience-subsection">
+            <h4>Federated Learning</h4>
+            <p></p>
+        </section>
+
+        <section id="quantization" class="experience-subsection">
+            <h4>Quantization & Compression</h4>
+            <p></p>
+        </section>
+    </section>
+
+    <!-- Experiments & Results -->
+    <section id="experiments" class="experience-section">
+        <h3>Experiments & Results</h3>
+        <p></p>
+
+        <!-- Sub-tabs under Experiments & Results -->
+        <section id="performance-benchmarks" class="experience-subsection">
+            <h4>Performance Benchmarks</h4>
+            <p></p>
+        </section>
+
+        <section id="edge-deployment" class="experience-subsection">
+            <h4>Edge Deployment Tests</h4>
+            <p></p>
+        </section>
+    </section>
+
+    <!-- Project Timeline -->
+    <section id="timeline" class="experience-section">
+        <h3>Project Timeline</h3>
+        <p></p>
+    </section>
+
+    <!-- Challenges & Solutions -->
+    <section id="challenges" class="experience-section">
+        <h3>Challenges & Solutions</h3>
+        <p></p>
+
+        <!-- Sub-tabs under Challenges & Solutions -->
+        <section id="technical-challenges" class="experience-subsection">
+            <h4>Technical Challenges</h4>
+            <p></p>
+        </section>
+
+        <section id="optimization-strategies" class="experience-subsection">
+            <h4>Optimization Strategies</h4>
+            <p></p>
+        </section>
+    </section>
+
+    <!-- Future work -->
+    <section id="future-work" class="experience-section">
+        <h3>Future Work</h3>
+        <p></p>
+    </section>
+
+</section>
 
     <!-- Link to JS for header functions -->
     <script src="/experience_details/exp.js"></script>
