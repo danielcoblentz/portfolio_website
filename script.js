@@ -132,7 +132,7 @@ function toggleExperienceVisibility(selectedId) {
 
 // automatically display the experience's details
 document.addEventListener("DOMContentLoaded", function() {
-    toggleExperienceVisibility('ML_Research');  // change the first exp that users see
+    toggleExperienceVisibility('ML_Research_CA');  // change the first exp that users see
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -151,4 +151,28 @@ document.addEventListener("DOMContentLoaded", function() {
     // get elements that require the fade-in effect
     const fadeInElements = document.querySelectorAll('.fade-in-section');
     fadeInElements.forEach(element => observer.observe(element));
+
+    //function to center the tabs on click(mainly only for small screen devices)
+    function centerTab(tab) {
+        const container = tab.parentElement;
+        const tabOffset = tab.offsetLeft;
+        const tabWidth = tab.offsetWidth;
+        const containerWidth = container.offsetWidth;
+    
+        const scrollPosition = tabOffset - (containerWidth / 2) + (tabWidth / 2);
+    
+        container.scrollTo({
+            left: scrollPosition,
+            behavior: 'smooth'
+        });
+    }
+    
+    document.querySelectorAll('.experience-item').forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll('.experience-item').forEach(t => t.classList.remove('highlighted'));
+            tab.classList.add('highlighted');
+            centerTab(tab);
+        });
+    });
+    
 });

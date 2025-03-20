@@ -1,7 +1,6 @@
-//im new to js dont cook me to hard
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll(".experience-nav__link");
-    const sections = document.querySelectorAll(".experience-section");
+    const sections = document.querySelectorAll(".experience-section, .experience-subsection");
 
     // smooth scroll when clicking a nav link
     navLinks.forEach(link => {

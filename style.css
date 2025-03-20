@@ -100,9 +100,10 @@ li {
 }
 
 a {
-    color: #cdd6f4;;
+    color: #cdd6f4;
     text-decoration: none;
 }
+
 
 .navbar {
     display: flex;
@@ -791,6 +792,7 @@ a {
         width: 100%;
         display: flex;
         flex-wrap: nowrap;
+        overflow-x: auto;
     }
     .experience-menu::-webkit-scrollbar {
         width: 6px; /* Width of the vertical scrollbar */

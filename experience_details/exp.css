@@ -13,38 +13,34 @@ html {
   }
 
   section {
-    margin-left: 10%;
+    margin-left: 0;
+    padding-left: 0;
 }
+
 /*main content box*/
 .tech-doc-content {
     flex-grow: 1;
     padding: 40px;
-    max-width: 800px; 
+    max-width: 945px; 
     margin: 0 auto;
 }
 
 .tech-doc-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color: #cdd6f4;
     text-align: center; 
     margin-bottom: 20px; 
     font-weight: bolder;
 }
 /*main image under role title*/
-.ta-image {
-    display: block;
-    margin: 0 auto; 
-    max-width: 100%; 
-    height: auto;
-    margin-bottom: 20px; 
-}
+
 /*controls the following (Role, Skills, Timeline, Tools)*/
 .categories-container {
     display: flex;
     justify-content: space-between; 
     margin-top: 20px; 
+    gap: 170px;
 }
-
 .categories-left, .categories-right {
     width: 45%; 
 }
@@ -54,24 +50,24 @@ html {
 }
 
 .categories-right {
-    text-align: right; 
+    text-align: left; 
 }
 
 h4 {
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 10px; 
+    margin-top: 3rem;
 }
 h3 {
     font-size: 1.5rem;
     color: #cdd6f4;
     margin-bottom: 1.5rem;
-    margin-top: 2.5rem;
+    margin-top: 6rem;
     font-weight: 600;
     text-align: center;
     font-weight: bold;
 }
-
 p {
     margin-bottom: 10px; 
     font-weight: 350;
@@ -88,6 +84,13 @@ p {
     width: 100%;
     margin-left: 0;
 }
+.experience-section {
+    width: 100%;
+    max-width: 945px;
+    margin: 0 auto;
+    padding: 0; 
+    box-sizing: border-box; 
+}
 
 .experience-description h3 {
     font-size: 1.5rem;
@@ -99,13 +102,11 @@ p {
 }
 
 .experience-description a {
-    color: #b4befe; /* link color */
+    color: #b4befe; 
     text-decoration: underline;
     
 }
-
 .experience-description p {
-    text-indent: 2em;
     line-height: 1.4;
     font-size: 1.1rem;
     color: #cdd6f4;
@@ -117,7 +118,7 @@ p {
     width: 250px;
     padding: 1rem 1rem 1rem 1.5rem; /* Add left padding for the line */
     position: fixed;
-    top: 150px; /* Adjust based on header height (optional) */
+    top: 150px; 
     align-self: flex-start;
     background-color: #101218; 
 }
@@ -131,15 +132,13 @@ p {
     text-transform: uppercase;
     padding-left: 0.5rem; /* align with the nav tabs */
 }
-
 /* tabs list */
 .experience-nav__list {
     list-style: none;
     padding: 0;
     margin: 0;
-    padding-left: 0.5rem; /* indent tabs */
+    padding-left: 0.5rem; /* indent tabs on nav */
 }
-
 /* tabs links */
 .experience-nav__link {
     color: #A6A6A6;
@@ -149,13 +148,12 @@ p {
     transition: all 0.3s ease;
     display: block;
     padding: 0.25rem 0;
-    border-left: 2px solid #A6A6A6; /* default border color */
-    padding-left: 0.5rem; /*  padding to align text with the border */
+    border-left: 2px solid #A6A6A6; 
+    padding-left: 0.5rem; 
 }
 .experience-nav__link--selected {
 color: #fff;
 border-left: 2px solid #fff;
-
 }
 .experience-nav__link:hover {
     color: #fff; 
@@ -169,10 +167,22 @@ border-left: 2px solid #fff;
 .experience-section {
     display: block;
     width: 100%;
-    max-width: 800px; /* Matches the Overview */
+    max-width: 945px; 
     margin: 0 auto;
+    margin-left: 0;
 }
-
+.experience-description a,
+.experience-section a {
+    color: #b4befe; 
+    text-decoration: underline; 
+}
+.ta-image {
+    width: 100%; 
+    max-width: 930px; 
+    display: block; 
+    margin: 0 auto 125px auto; 
+    border-radius: 8px; 
+}
 /*media queries for other devices (mobile, tablet, desktop and large screens)------------*/
 /* mobile devices */
 @media (max-width: 767px) {
@@ -185,6 +195,7 @@ border-left: 2px solid #fff;
     }
     .categories-container {
         flex-direction: column; 
+        gap: 20px;
     }
     .categories-left, .categories-right {
         width: 100%; 
@@ -201,8 +212,9 @@ border-left: 2px solid #fff;
         padding: 1rem; 
     }
     .tech-doc-content {
-        padding: 30px; 
-        max-width: 700px; 
+        padding: 30px 0  30px 50px; 
+        max-width: 450px; 
+        gap: 10px;
     }
     .categories-container {
         flex-direction: row; 
@@ -215,8 +227,22 @@ border-left: 2px solid #fff;
 /* desktops and larger screens */
 @media (min-width: 1024px) {
     .tech-doc-content {
-        padding: 40px; 
-        max-width: 800px; 
+        padding: 30px 0  30px 30px; 
+        max-width: 930px; 
     }
 }
-
+/* MacBook air general media query */
+@media (min-width: 1280px) {
+    
+    .tech-doc-content {
+        padding: 60px; 
+        max-width: 1200px;
+    }
+    .categories-container {
+        gap: 220px; 
+    }
+    .experience-section {
+        padding: 30px 0  30px 193px;  
+        max-width: 930px; 
+    }
+}
