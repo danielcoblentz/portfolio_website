@@ -246,3 +246,39 @@ border-left: 2px solid #fff;
         max-width: 930px; 
     }
 }
+/* Vertical monitors (portrait orientation) */
+@media (orientation: portrait) {
+    body {
+        flex-direction: row;
+    }
+    .experience-nav {
+        width: 130px;
+        position: fixed;
+        top: 150px;
+        left: 0;
+        height: calc(100vh - 150px);
+        padding: 1rem;
+    }
+    .tech-doc-content {
+        padding: 30px 30px 30px 200px; 
+        max-width: 930px; 
+        box-sizing: border-box;
+        width: 100%; 
+    }
+    .categories-container {
+        flex-direction: row; 
+        justify-content: space-around;
+        gap: 30px;
+    }
+    .categories-left, 
+    .categories-right {
+        width: 48%; 
+        text-align: left;
+    }
+    .ta-image {
+        max-width: 100%;
+        margin-bottom: 80px;
+    }
+}
+
+
