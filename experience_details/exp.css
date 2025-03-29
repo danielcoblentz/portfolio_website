@@ -281,4 +281,40 @@ border-left: 2px solid #fff;
     }
 }
 
-
+/* Phones (up to 480px) */
+@media (max-width: 480px) {
+    .experience-nav {
+      display: none;
+    }
+    .categories-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .categories-left, .categories-right {
+      width: 100%;
+      text-align: center;
+    }
+    .tech-doc-content {
+      padding: 20px;
+      margin: 0 10px;
+    }
+  }
+  /* Small tablets or larger phones (481px to 768px) */
+  @media (min-width: 481px) and (max-width: 768px) {
+    .experience-nav {
+      display: none; 
+    }
+    .categories-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .categories-left, .categories-right {
+      width: 100%;
+      text-align: center;
+    }
+    .tech-doc-content {
+      padding: 20px;
+      margin: 0 10px;
+    }
+  }
+  
